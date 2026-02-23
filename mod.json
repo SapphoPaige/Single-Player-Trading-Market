@@ -1,8 +1,8 @@
 {
   "name": "Single Player Trading Market",
   "description": "A utility to roughly incorporate the multiplayer trading economy responsibly into single player.",
-  "author": "Paige",
-  "website": "",
+  "author": "Sappho",
+  "website": "https://github.com/SapphoPaige/Single-Player-Trading-Market",
   "version": "0.4",
   "config": [
     {
