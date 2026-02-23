@@ -1,0 +1,46 @@
+{
+  "name": "Single Player Trading Market",
+  "description": "A utility to roughly incorporate the multiplayer trading economy responsibly into single player.",
+  "author": "Paige",
+  "website": "",
+  "version": "0.4",
+  "config": [
+    {
+      "id": "ecoRunes",
+      "type": "checkbox",
+      "name": "Rune Trades",
+      "description": "Enables rune conversions that align with online pricing.",
+      "defaultValue": true
+    },  
+  {
+      "id": "torchMarket",
+      "type": "checkbox",
+      "name": "Torch and Key Trades",
+      "description": "Enables the buying and selling of Keys, Uber Statues, and Torches.",
+      "defaultValue": true
+    },
+   {
+      "id": "uniqueMarket",
+      "type": "checkbox",
+      "name": "Unique and Set Trades",
+      "description": "Enables the buying and selling of Keys and Torches.",
+      "defaultValue": true
+    },
+{
+      "id": "junkMarket",
+      "type": "checkbox",
+      "name": "Junk Trades",
+      "description": "Enables the buying and selling of Keys and Torches.",
+      "defaultValue": true
+    },
+{
+      "id": "gemMarket",
+      "type": "checkbox",
+      "name": "Gem Trades",
+      "description": "Enables the buying and selling of Keys and Torches.",
+      "defaultValue": true
+    }  
+  
+ 
+]
+}
