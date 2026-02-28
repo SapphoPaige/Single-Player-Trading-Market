@@ -7,15 +7,44 @@ const uniqueitems = D2RMM.readTsv(uniqueitemsFilename);
 const setitemsFilename = 'global\\excel\\setitems.txt';
 const setitems = D2RMM.readTsv(setitemsFilename);
 
+
+
 uniqueitems.rows.forEach((row) => {
-if (config.ecoRunes && row.lvl > 99 && row['lvl req'] <= 99) {
-      row.lvl = row['lvl req'];
-    }
-    if (config.ecoRunes) {
+    if (config.allowRedrop) {
       row.nolimit = 1;
     }
   });
   D2RMM.writeTsv(uniqueitemsFilename, uniqueitems);
+
+const itemTypes = {
+  'weap': { 'name': 'Weapon', 'min_sock': 1, 'max_sock': 6 },
+  'shld': { 'name': 'Shield', 'min_sock': 1, 'max_sock': 4 },
+  'tors': { 'name': 'Body Armor', 'min_sock': 1, 'max_sock': 4 },
+  'helm': { 'name': 'Helm', 'min_sock': 1, 'max_sock': 3 },
+};
+
+if (config.servicesMarket) {
+for (let i in itemTypes) {
+  cubemain.rows.push({
+    'description': `Lazruk Quest`,
+    'enabled': 1,
+    'version': 100,
+    'numinputs': 5,
+    'input 1': `${i},nru,nos`,
+    'input 2': 'r23',
+	'input 3': 'vps',
+	'input 4': 'isc',
+	'input 5': 'tsc',
+    'output': 'useitem',
+    'mod 1': 'sock',
+    'mod 1 min': itemTypes[i]['max_sock'],
+    'mod 1 max': itemTypes[i]['max_sock'],
+    '*eol': 0,
+  });
+}
+}
+
+
 
 if (config.ecoRunes) {
 cubemain.rows.push({
@@ -194,7 +223,91 @@ cubemain.rows.push({
   });
 }
 
+if (config.gemMarket) {
+cubemain.rows.push({
+    description:
+      "Lem -> 3 P Sapphires",
+    enabled: 1,
+    version: 100,
+    numinputs: 3,
+    "input 1": "r20",
+    "input 2": "vps",
+    "input 3": "isc",
+    "output": "gpb",
+    "output b": "gpb",
+    "output c": "gpb",
+    "*eol": 0,
+  });
+}
 
+if (config.gemMarket) {
+cubemain.rows.push({
+    description:
+      "Lem -> 3 P Skulls",
+    enabled: 1,
+    version: 100,
+    numinputs: 3,
+    "input 1": "r20",
+    "input 2": "yps",
+    "input 3": "isc",
+    "output": "skz",
+    "output b": "skz",
+    "output c": "skz",
+    "*eol": 0,
+  });
+}
+
+if (config.gemMarket) {
+cubemain.rows.push({
+    description:
+      "Lem -> 3 P Rubies",
+    enabled: 1,
+    version: 100,
+    numinputs: 3,
+    "input 1": "r20",
+    "input 2": "wms",
+    "input 3": "isc",
+    "output": "gpr",
+    "output b": "gpr",
+    "output c": "gpr",
+    "*eol": 0,
+  });
+}
+
+
+if (config.gemMarket) {
+cubemain.rows.push({
+    description:
+      "Pul -> 3 P Amethysts",
+    enabled: 1,
+    version: 100,
+    numinputs: 3,
+    "input 1": "r21",
+    "input 2": "vps",
+    "input 3": "isc",
+    "output": "gpv",
+    "output b": "gpv",
+    "output c": "gpv",
+    "*eol": 0,
+  });
+}
+
+if (config.gemMarket) {
+cubemain.rows.push({
+    description:
+      "Lem -> 3 Hel",
+    enabled: 1,
+    version: 100,
+    numinputs: 3,
+    "input 1": "r20",
+    "input 2": "yps",
+    "input 3": "tsc",
+    "output": "r15",
+    "output b": "r15",
+    "output c": "r15",
+    "*eol": 0,
+  });
+}
 
 if (config.ecoRunes) {
 cubemain.rows.push({
@@ -204,7 +317,7 @@ cubemain.rows.push({
     version: 100,
     numinputs: 2,
     "input 1": "r21",
-    "input 1": "r20",
+    "input 2": "r20",
     "output": "r22",
     "*eol": 0,
   });
@@ -711,23 +824,6 @@ cubemain.rows.push({
 
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "r31 -> Defender's Bile",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r31",
-        "input 3": "jew",
-        "input 4": "gpg",
-        "output": "Defender's Bile",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.torchMarket) {
-      cubemain.rows.push({
         description: "Defender's Bile -> r29",
         enabled: 1,
         version: 100,
@@ -739,23 +835,7 @@ cubemain.rows.push({
       });
     }
 
-    if (config.torchMarket) {
-      cubemain.rows.push({
-        description: "r31 -> Guardian's Thunder",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r31",
-        "input 3": "jew",
-        "input 4": "gpw",
-        "output": "Guardian's Thunder",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
+ 
     if (config.torchMarket) {
       cubemain.rows.push({
         description: "Guardian's Thunder -> r29",
@@ -769,23 +849,7 @@ cubemain.rows.push({
       });
     }
 
-    if (config.torchMarket) {
-      cubemain.rows.push({
-        description: "r31 -> Protector's Frost",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r31",
-        "input 3": "jew",
-        "input 4": "gpb",
-        "output": "Protector's Frost",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
+  
     if (config.torchMarket) {
       cubemain.rows.push({
         description: "Protector's Frost -> r29",
@@ -799,23 +863,7 @@ cubemain.rows.push({
       });
     }
 
-    if (config.torchMarket) {
-      cubemain.rows.push({
-        description: "r31 -> Defender's Fire",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r31",
-        "input 3": "jew",
-        "input 4": "gpr",
-        "output": "Defender's Fire",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
+  
     if (config.torchMarket) {
       cubemain.rows.push({
         description: "Defender's Fire -> r29",
@@ -829,23 +877,7 @@ cubemain.rows.push({
       });
     }
 
-    if (config.torchMarket) {
-      cubemain.rows.push({
-        description: "r31 -> Protector's Stone",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r31",
-        "input 3": "jew",
-        "input 4": "skz",
-        "output": "Protector's Stone",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
+    
     if (config.torchMarket) {
       cubemain.rows.push({
         description: "Protector's Stone -> r29",
@@ -859,23 +891,7 @@ cubemain.rows.push({
       });
     }
 
-    if (config.torchMarket) {
-      cubemain.rows.push({
-        description: "r31 -> Guardian's Light",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r31",
-        "input 3": "jew",
-        "input 4": "gpv",
-        "output": "Guardian's Light",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
+  
     if (config.torchMarket) {
       cubemain.rows.push({
         description: "Guardian's Light -> r29",
@@ -893,32 +909,14 @@ cubemain.rows.push({
 if (config.torchMarket) {
 cubemain.rows.push({
     description:
-      "Ohm -> Torch",
-    enabled: 1,
-    version: 100,
-    numinputs: 3,
-    "input 1": "cm2",
-    "input 2": "r27",
-    "input 3": "vps",
-    "output": "Hellfire Torch",
-    lvl: 100,
-    ilvl: 100,
-    "*eol": 0,
-  });
-}
-
-
-if (config.torchMarket) {
-cubemain.rows.push({
-    description:
-      "Torch -> Vex Ist",
+      "Torch -> Vex Um",
     enabled: 1,
     version: 100,
     numinputs: 2,
     "input 1": "Hellfire Torch",
     "input 2": "yps",
     "output": "r26",
-    "output b": "r24",
+    "output b": "r22",
     "*eol": 0,
   });
 }
@@ -986,6 +984,227 @@ cubemain.rows.push({
   });
 }
 
+if (config.torchMarket) {
+cubemain.rows.push({
+    description:
+      "Key 1 + Pul = Key 2",
+    enabled: 1,
+    version: 100,
+    numinputs: 3,
+    "input 1": "pk1",
+    "input 2": "r21",
+    "input 4": "wms",
+    "output": "pk2",
+    "*eol": 0,
+  });
+}
+
+if (config.torchMarket) {
+cubemain.rows.push({
+    description:
+      "Key 2 + Pul = Key 3",
+    enabled: 1,
+    version: 100,
+    numinputs: 3,
+    "input 1": "pk2",
+    "input 2": "r21",
+    "input 3": "wms",
+    "output": "pk3",
+    "*eol": 0,
+  });
+}
+
+if (config.torchMarket) {
+cubemain.rows.push({
+    description:
+      "Key 3 + Pul = Key 1",
+    enabled: 1,
+    version: 100,
+    numinputs: 3,
+    "input 1": "pk3",
+    "input 2": "r21",
+    "input 3": "wms",
+    "output": "pk1",
+    "*eol": 0,
+  });
+}
+
+if (config.servicesMarket) {
+cubemain.rows.push({
+description:
+"Removes and preserves socketed items",
+enabled: 1,
+version: 100,
+numinputs: 3,
+"input 1": "any,sock",
+"input 2": "toa",
+"input 3": "wms",
+"output": "useitem,rem",
+lvl: 100,
+ilvl: 100,
+"*eol": 0,
+});
+}
+
+
+
+if (config.magicMarket) {
+cubemain.rows.push({
+description:
+"Pul for Fine Small Charm",
+enabled: 1,
+version: 100,
+numinputs: 4,
+"input 1": "cm1",
+"input 2": "r21",
+"input 3": "glw",
+"input 4": "vps",
+"output": "cm1,mag,pre=256",
+lvl: 100,
+ilvl: 100,
+"*eol": 0,
+});
+}
+
+
+if (config.magicMarket) {
+cubemain.rows.push({
+description:
+"Gul for Shimmering Small Charm",
+enabled: 1,
+version: 100,
+numinputs: 4,
+"input 1": "cm1",
+"input 2": "r25",
+"input 3": "glw",
+"input 4": "vps",
+"output": "cm1,mag,pre=322",
+lvl: 100,
+ilvl: 100,
+"*eol": 0,
+});
+}
+
+
+if (config.magicMarket) {
+cubemain.rows.push({
+description:
+"Um for Small Charm of Good Luck",
+enabled: 1,
+version: 100,
+numinputs: 4,
+"input 1": "cm1",
+"input 2": "r22",
+"input 3": "glw",
+"input 4": "vps",
+"output": "cm1,mag,suf=291",
+lvl: 100,
+ilvl: 100,
+"*eol": 0,
+});
+}
+
+if (config.magicMarket) {
+cubemain.rows.push({
+description:
+"Mal for Small Charm of Vita",
+enabled: 1,
+version: 100,
+numinputs: 4,
+"input 1": "cm1",
+"input 2": "r23",
+"input 3": "glw",
+"input 4": "vps",
+"output": "cm1,mag,suf=349",
+lvl: 100,
+ilvl: 100,
+"*eol": 0,
+});
+}
+
+if (config.magicMarket) {
+cubemain.rows.push({
+description:
+"Lem for Small Charm of Inertia",
+enabled: 1,
+version: 100,
+numinputs: 4,
+"input 1": "cm1",
+"input 2": "r20",
+"input 3": "glw",
+"input 4": "vps",
+"output": "cm1,mag,suf=401",
+lvl: 100,
+ilvl: 100,
+"*eol": 0,
+});
+}
+
+
+const SKILL_GROUPS = [
+  { name: "Bow", id: 430, rank: "r22" },
+  { name: "Passives", id: 431, rank: "r20" },
+  { name: "Javelin", id: 432, rank: "r24" },
+  { name: "Fire", id: 442, rank: "r22" },
+  { name: "Lightning", id: 443, rank: "r25" },
+  { name: "Cold", id: 444, rank: "r23" },
+  { name: "Curses", id: 454, rank: "r20" },
+  { name: "Poison and Bone", id: 455, rank: "r23" },
+  { name: "Summoning (Necro)", id: 456, rank: "r22" },
+  { name: "Combat Arts (Pal)", id: 466, rank: "r25" },
+  { name: "Offensive", id: 467, rank: "r23" },
+  { name: "Defensive", id: 468, rank: "r20" },
+  { name: "Combat Masteries", id: 478, rank: "r20" },
+  { name: "Combat Skills (Barb)", id: 479, rank: "r21" },
+  { name: "Shouts", id: 480, rank: "r22" },
+  { name: "Summoning (Druid)", id: 490, rank: "r20" },
+  { name: "Shapeshifting", id: 491, rank: "r22" },
+  { name: "Elemental", id: 492, rank: "r23" },
+  { name: "Traps", id: 502, rank: "r23" },
+  { name: "Disciplines", id: 503, rank: "r21" },
+  { name: "Martial Arts", id: 504, rank: "r22" },
+  { name: "Chaos", id: 700, rank: "r25" },
+  { name: "Eldritch", id: 701, rank: "r26" },
+  { name: "Demons", id: 702, rank: "r24" }
+];
+
+if (config.magicMarket) {
+  for (let i = 0; i < SKILL_GROUPS.length; i++) {
+    let skill = SKILL_GROUPS[i];
+    
+    let groupNum = Math.floor(i / 3) + 1;
+    let groupRank = `r${groupNum.toString().padStart(2, '0')}`;
+
+    cubemain.rows.push({
+      'description': `${skill.rank} --> ${skill.name}`,
+      'enabled': 1,
+      'version': 100,
+      'numinputs': 4,
+      'input 1': 'cm3',
+      'input 2': groupRank, 
+      'input 3': skill.rank,
+      'input 4': 'vps',
+      'output': `cm3,mag,pre=${skill.id}`,
+      lvl: 100, 
+      ilvl: 100,	
+      '*eol': 0,
+    });
+  }
+}
+
+ if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "Annihilus -> r27",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "Annihilus",
+        "output": "r27",
+	"output b": "r26",
+        "*eol": 0,
+      });
+    }
 
 
 if (config.junkMarket) {
@@ -2580,12 +2799,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Angelic Wings",
+        description: "r19 -> Angelic Wings",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "amu",
         "input 4": "gpw",
         "output": "Angelic Wings",
@@ -3487,7 +3706,7 @@ if (config.junkMarket) {
         "input 1": "vps",
         "input 2": "r24",
         "input 3": "7ws",
-        "input 4": "r24",
+        "input 4": "r23",
         "output": "Griswolds's Redemption",
         lvl: 100,
         ilvl: 100,
@@ -12607,7 +12826,7 @@ if (config.junkMarket) {
         "input 1": "vps",
         "input 2": "r24",
         "input 3": "7wh",
-        "input 4": "r24",
+        "input 4": "r23",
         "output": "Schaefer's Hammer",
         lvl: 100,
         ilvl: 100,
@@ -12727,7 +12946,7 @@ if (config.junkMarket) {
         "input 1": "vps",
         "input 2": "r24",
         "input 3": "7gd",
-        "input 4": "r24",
+        "input 4": "r23",
         "output": "The Grandfather",
         lvl: 100,
         ilvl: 100,
@@ -12937,7 +13156,7 @@ if (config.junkMarket) {
         "input 1": "vps",
         "input 2": "r21",
         "input 3": "amu",
-        "input 4": "r21",
+        "input 4": "gpw",
         "output": "The Rising Sun",
         lvl: 100,
         ilvl: 100,
@@ -13387,7 +13606,7 @@ if (config.junkMarket) {
         "input 1": "vps",
         "input 2": "r24",
         "input 3": "pa9",
-        "input 4": "r24",
+        "input 4": "r23",
         "output": "Herald of Zakarum",
         lvl: 100,
         ilvl: 100,
@@ -13867,7 +14086,7 @@ if (config.junkMarket) {
         "input 1": "vps",
         "input 2": "r24",
         "input 3": "7cr",
-        "input 4": "r24",
+        "input 4": "r23",
         "output": "Azurewrath",
         lvl: 100,
         ilvl: 100,
@@ -15097,7 +15316,7 @@ if (config.junkMarket) {
         "input 1": "vps",
         "input 2": "r26",
         "input 3": "uhm",
-        "input 4": "24",
+        "input 4": "r24",
         "output": "Nightwing's Veil",
         lvl: 100,
         ilvl: 100,
@@ -15107,13 +15326,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Nightwing's Veil -> 25",
+        description: "Nightwing's Veil -> r25",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Nightwing's Veil",
-        "output": "25",
+        "output": "r25",
         "*eol": 0,
       });
     }
@@ -15247,7 +15466,7 @@ if (config.junkMarket) {
         "input 1": "vps",
         "input 2": "r24",
         "input 3": "pae",
-        "input 4": "r24",
+        "input 4": "r23",
         "output": "Dragonscale",
         lvl: 100,
         ilvl: 100,
@@ -15607,7 +15826,7 @@ if (config.junkMarket) {
         "input 1": "vps",
         "input 2": "r24",
         "input 3": "7fl",
-        "input 4": "r24",
+        "input 4": "r23",
         "output": "Stormlash",
         lvl: 100,
         ilvl: 100,
@@ -15757,7 +15976,7 @@ if (config.junkMarket) {
         "input 1": "vps",
         "input 2": "r24",
         "input 3": "uar",
-        "input 4": "r24",
+        "input 4": "r23",
         "output": "Templar's Might",
         lvl: 100,
         ilvl: 100,
@@ -15787,7 +16006,7 @@ if (config.junkMarket) {
         "input 1": "vps",
         "input 2": "r24",
         "input 3": "obc",
-        "input 4": "r24",
+        "input 4": "r23",
         "output": "Eschuta's temper",
         lvl: 100,
         ilvl: 100,
@@ -16134,36 +16353,6 @@ if (config.junkMarket) {
         "input 1": "yps",
         "input 2": "Ironward",
         "output": "r23",
-        "*eol": 0,
-      });
-    }
-
-    if (config.uniqueMarket) {
-      cubemain.rows.push({
-        description: "r28 -> Annihilus",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r28",
-        "input 3": "cm1",
-        "input 4": "isc",
-        "output": "Annihilus",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.uniqueMarket) {
-      cubemain.rows.push({
-        description: "Annihilus -> r27",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "Annihilus",
-        "output": "r27",
         "*eol": 0,
       });
     }
@@ -16567,7 +16756,7 @@ if (config.junkMarket) {
         "input 1": "vps",
         "input 2": "r24",
         "input 3": "wa6",
-        "input 4": "r24",
+        "input 4": "r23",
         "output": "Measured Wrath",
         lvl: 100,
         ilvl: 100,
@@ -16777,7 +16966,7 @@ if (config.junkMarket) {
         "input 1": "vps",
         "input 2": "r24",
         "input 3": "utc",
-        "input 4": "r24",
+        "input 4": "r23",
         "output": "Gheed's Wager",
         lvl: 100,
         ilvl: 100,
@@ -17008,636 +17197,6 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r22 -> 7cr,sock=5",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r22",
-        "input 3": "r01",
-        "input 4": "isc",
-        "output": "7cr,sock=5",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "7cr,sock=5 -> r21",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "7cr,sock=5",
-        "output": "r21",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r24 -> 7gd,eth,sock=6",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r24",
-        "input 3": "r02",
-        "input 4": "isc",
-        "output": "7gd,eth,sock=6",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "7gd,eth,sock=6 -> r23",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "7gd,eth,sock=6",
-        "output": "r23",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r28 -> 7wa,sock=5,eth",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r28",
-        "input 3": "r02",
-        "input 4": "isc",
-        "output": "7wa,sock=5,eth",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "7wa,sock=5,eth -> r27",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "7wa,sock=5,eth",
-        "output": "r27",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r26 -> 7wa,sock=5",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r26",
-        "input 3": "r03",
-        "input 4": "isc",
-        "output": "7wa,sock=5",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "7wa,sock=5 -> r25",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "7wa,sock=5",
-        "output": "r25",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r26 -> 7wa,eth,sock=6",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r26",
-        "input 3": "r04",
-        "input 4": "isc",
-        "output": "7wa,eth,sock=6",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "7wa,eth,sock=6 -> r25",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "7wa,eth,sock=6",
-        "output": "r25",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r22 -> utp,sock=3 ",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r22",
-        "input 3": "r05",
-        "input 4": "isc",
-        "output": "utp,sock=3 ",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "utp,sock=3  -> r21",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "utp,sock=3 ",
-        "output": "r21",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r22 -> utp,sock=4",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r22",
-        "input 3": "r06",
-        "input 4": "isc",
-        "output": "utp,sock=4",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "utp,sock=4 -> r21",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "utp,sock=4",
-        "output": "r21",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r22 -> utp,eth,sock=3",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r22",
-        "input 3": "r07",
-        "input 4": "isc",
-        "output": "utp,eth,sock=3",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "utp,eth,sock=3 -> r21",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "utp,eth,sock=3",
-        "output": "r21",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r24 -> utp,eth,sock=4",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r24",
-        "input 3": "r08",
-        "input 4": "isc",
-        "output": "utp,eth,sock=4",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "utp,eth,sock=4 -> r23",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "utp,eth,sock=4",
-        "output": "r23",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r22 -> xtp,sock=3",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r22",
-        "input 3": "r09",
-        "input 4": "isc",
-        "output": "xtp,sock=3",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "xtp,sock=3 -> r21",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "xtp,sock=3",
-        "output": "r21",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r22 -> uui,sock=3",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r22",
-        "input 3": "r10",
-        "input 4": "isc",
-        "output": "uui,sock=3",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "uui,sock=3 -> r21",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "uui,sock=3",
-        "output": "r21",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r22 -> uui,sock=4",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r22",
-        "input 3": "r11",
-        "input 4": "isc",
-        "output": "uui,sock=4",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "uui,sock=4 -> r21",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "uui,sock=4",
-        "output": "r21",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r21 -> fla,sock=3",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r21",
-        "input 3": "r12",
-        "input 4": "tsc",
-        "output": "fla,sock=3",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "fla,sock=3 -> r20",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "fla,sock=3",
-        "output": "r20",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r21 -> fla,sock=4",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r21",
-        "input 3": "r12",
-        "input 4": "isc",
-        "output": "fla,sock=4",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "fla,sock=4 -> r20",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "fla,sock=4",
-        "output": "r20",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r21 -> fla,sock=5",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r21",
-        "input 3": "r13",
-        "input 4": "isc",
-        "output": "fla,sock=5",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "fla,sock=5 -> r20",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "fla,sock=5",
-        "output": "r20",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r22 -> 7s8,sock=4",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r22",
-        "input 3": "r14",
-        "input 4": "isc",
-        "output": "7s8,sock=4",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "7s8,sock=4 -> r21",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "7s8,sock=4",
-        "output": "r21",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r26 -> 7s8,ethsock=4",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r26",
-        "input 3": "r15",
-        "input 4": "isc",
-        "output": "7s8,ethsock=4",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "7s8,ethsock=4 -> r25",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "7s8,ethsock=4",
-        "output": "r25",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r21 -> uit,sock=4",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r21",
-        "input 3": "r16",
-        "input 4": "isc",
-        "output": "uit,sock=4",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "uit,sock=4 -> r20",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "uit,sock=4",
-        "output": "r20",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r21 -> crs,sock=3",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r21",
-        "input 3": "r01",
-        "input 4": "tsc",
-        "output": "crs,sock=3",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "crs,sock=3 -> r20",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "crs,sock=3",
-        "output": "r20",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r21 -> crs,sock=4",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r21",
-        "input 3": "r02",
-        "input 4": "tsc",
-        "output": "crs,sock=4",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "crs,sock=4 -> r20",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "crs,sock=4",
-        "output": "r20",
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "r21 -> crs,sock=5",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r21",
-        "input 3": "r03",
-        "input 4": "tsc",
-        "output": "crs,sock=5",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.baseMarket) {
-      cubemain.rows.push({
-        description: "crs,sock=5 -> r20",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "crs,sock=5",
-        "output": "r20",
-        "*eol": 0,
-      });
-    }
-
     if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r24 -> toa",
@@ -17664,6 +17223,992 @@ if (config.junkMarket) {
         "input 1": "yps",
         "input 2": "toa",
         "output": "r23",
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r26 -> 7wa,nor,sock=5",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r26",
+        "input 3": "r01",
+        "input 4": "glw",
+        "output": "7wa,nor,sock=5",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r24 -> 7wa,nor,eth,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r24",
+        "input 3": "r02",
+        "input 4": "glw",
+        "output": "7wa,nor,eth,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r28 -> 7wa,nor,eth,sock=5",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r28",
+        "input 3": "r03",
+        "input 4": "glw",
+        "output": "7wa,nor,eth,sock=5",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r26 -> 7wa,nor,eth,sock=6",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r26",
+        "input 3": "r04",
+        "input 4": "glw",
+        "output": "7wa,nor,eth,sock=6",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r26 -> 7wa,nor,eth",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r26",
+        "input 3": "r05",
+        "input 4": "glw",
+        "output": "7wa,nor,eth",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r24 -> 72a,nor,eth",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r24",
+        "input 3": "r06",
+        "input 4": "glw",
+        "output": "72a,nor,eth",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r22 -> 72a,nor,eth,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r07",
+        "input 4": "glw",
+        "output": "72a,nor,eth,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r24 -> 72a,nor,eth,sock=5",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r24",
+        "input 3": "r08",
+        "input 4": "glw",
+        "output": "72a,nor,eth,sock=5",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r22 -> 7fl,nor,eth,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r09",
+        "input 4": "glw",
+        "output": "7fl,nor,eth,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r21 -> 7ax,nor,eth,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "r10",
+        "input 4": "glw",
+        "output": "7ax,nor,eth,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r22 -> crs,nor,eth,sock=5",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r01",
+        "input 4": "glg",
+        "output": "crs,nor,eth,sock=5",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r21 -> 7cr,nor,sock=3",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "r02",
+        "input 4": "glg",
+        "output": "7cr,nor,sock=3",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r21 -> 7cr,nor,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "r03",
+        "input 4": "glg",
+        "output": "7cr,nor,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r21 -> 7cr,nor,sock=5",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "r04",
+        "input 4": "glg",
+        "output": "7cr,nor,sock=5",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r26 -> 7gm,nor,eth",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r26",
+        "input 3": "r05",
+        "input 4": "glg",
+        "output": "7gm,nor,eth",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r26 -> 7gm,nor,eth,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r26",
+        "input 3": "r06",
+        "input 4": "glg",
+        "output": "7gm,nor,eth,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r25 -> 7gm,nor,eth,sock=5",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r25",
+        "input 3": "r07",
+        "input 4": "glg",
+        "output": "7gm,nor,eth,sock=5",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r23 -> 7gm,nor,eth,sock=6",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r23",
+        "input 3": "r08",
+        "input 4": "glg",
+        "output": "7gm,nor,eth,sock=6",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r22 -> 7st,nor,eth",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r09",
+        "input 4": "glg",
+        "output": "7st,nor,eth",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r25 -> 7p7,nor,eth",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r25",
+        "input 3": "r10",
+        "input 4": "glg",
+        "output": "7p7,nor,eth",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r20 -> 7gs,nor,eth",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r20",
+        "input 3": "r01",
+        "input 4": "gly",
+        "output": "7gs,nor,eth",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r22 -> 7gs,nor,eth,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r02",
+        "input 4": "gly",
+        "output": "7gs,nor,eth,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r21 -> 7cm,nor,eth,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "r03",
+        "input 4": "gly",
+        "output": "7cm,nor,eth,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r23 -> 7gd,nor,eth",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r23",
+        "input 3": "r04",
+        "input 4": "gly",
+        "output": "7gd,nor,eth",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r22 -> 7gd,nor,eth,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r05",
+        "input 4": "gly",
+        "output": "7gd,nor,eth,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r22 -> 7gd,nor,sock=5",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r06",
+        "input 4": "gly",
+        "output": "7gd,nor,sock=5",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r24 -> 7gd,nor,eth,sock=5",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r24",
+        "input 3": "r07",
+        "input 4": "gly",
+        "output": "7gd,nor,eth,sock=5",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r24 -> 7gd,nor,eth,sock=6",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r24",
+        "input 3": "r08",
+        "input 4": "gly",
+        "output": "7gd,nor,eth,sock=6",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r22 -> 7s8,nor,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r09",
+        "input 4": "gly",
+        "output": "7s8,nor,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r22 -> 7s8,nor,eth",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r10",
+        "input 4": "gly",
+        "output": "7s8,nor,eth",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r27 -> 7s8,nor,eth,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r27",
+        "input 3": "r01",
+        "input 4": "glb",
+        "output": "7s8,nor,eth,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r22 -> 7s8,nor,eth,sock=5",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r02",
+        "input 4": "glb",
+        "output": "7s8,nor,eth,sock=5",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r25 -> 7vo,nor,eth,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r25",
+        "input 3": "r03",
+        "input 4": "glb",
+        "output": "7vo,nor,eth,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r27 -> 7wc,nor,eth,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r27",
+        "input 3": "r04",
+        "input 4": "glb",
+        "output": "7wc,nor,eth,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r26 -> 7pa,nor,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r26",
+        "input 3": "r05",
+        "input 4": "glb",
+        "output": "7pa,nor,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r25 -> 7h7,nor,eth,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r25",
+        "input 3": "r06",
+        "input 4": "glb",
+        "output": "7h7,nor,eth,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r25 -> 7h7,nor,eth,sock=5",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r25",
+        "input 3": "r07",
+        "input 4": "glb",
+        "output": "7h7,nor,eth,sock=5",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r20 -> fla,nor,sock=3",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r20",
+        "input 3": "r08",
+        "input 4": "glb",
+        "output": "fla,nor,sock=3",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r20 -> fla,nor,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r20",
+        "input 3": "r09",
+        "input 4": "glb",
+        "output": "fla,nor,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r20 -> fla,nor,sock=5",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r20",
+        "input 3": "r10",
+        "input 4": "glb",
+        "output": "fla,nor,sock=5",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r22 -> fla,nor,eth,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r01",
+        "input 4": "glr",
+        "output": "fla,nor,eth,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r21 -> fla,nor,eth,sock=5",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "r02",
+        "input 4": "glr",
+        "output": "fla,nor,eth,sock=5",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r20 -> crs,nor,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r20",
+        "input 3": "r03",
+        "input 4": "glr",
+        "output": "crs,nor,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r22 -> crs,nor,sock=5",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r04",
+        "input 4": "glr",
+        "output": "crs,nor,sock=5",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r20 -> crs,nor,sock=6",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r20",
+        "input 3": "r05",
+        "input 4": "glr",
+        "output": "crs,nor,sock=6",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r21 -> crs,nor,eth,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "r06",
+        "input 4": "glr",
+        "output": "crs,nor,eth,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r24 -> crs,nor,eth,sock=5",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r24",
+        "input 3": "r07",
+        "input 4": "glr",
+        "output": "crs,nor,eth,sock=5",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r20 -> uh9,nor,sock=3",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r20",
+        "input 3": "r08",
+        "input 4": "glr",
+        "output": "uh9,nor,sock=3",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r20 -> xtp,nor,sock=3",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r20",
+        "input 3": "r09",
+        "input 4": "glr",
+        "output": "xtp,nor,sock=3",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r20 -> xtp,nor,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r20",
+        "input 3": "r10",
+        "input 4": "glr",
+        "output": "xtp,nor,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r20 -> utp,nor,sock=3",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r20",
+        "input 3": "r01",
+        "input 4": "gzv",
+        "output": "utp,nor,sock=3",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r20 -> utp,nor,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r20",
+        "input 3": "r02",
+        "input 4": "gzv",
+        "output": "utp,nor,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r20 -> uui,nor,sock=3",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r20",
+        "input 3": "r03",
+        "input 4": "gzv",
+        "output": "uui,nor,sock=3",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r20 -> uui,nor,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r20",
+        "input 3": "r04",
+        "input 4": "gzv",
+        "output": "uui,nor,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r24 -> uar,nor,eth,sock=3",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r24",
+        "input 3": "r05",
+        "input 4": "gzv",
+        "output": "uar,nor,eth,sock=3",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r24 -> uar,nor,eth,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r24",
+        "input 3": "r06",
+        "input 4": "gzv",
+        "output": "uar,nor,eth,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r21 -> uit,nor,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "r07",
+        "input 4": "gzv",
+        "output": "uit,nor,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r21 -> uit,nor,eth",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "r08",
+        "input 4": "gzv",
+        "output": "uit,nor,eth",
+        lvl: 100,
+        ilvl: 100,
         "*eol": 0,
       });
     }
