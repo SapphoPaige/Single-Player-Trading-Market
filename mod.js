@@ -1,4 +1,3 @@
-
 const cubemainFilename = "global\\excel\\cubemain.txt";
 const cubemain = D2RMM.readTsv(cubemainFilename);
 
@@ -6,7 +5,6 @@ const uniqueitemsFilename = 'global\\excel\\uniqueitems.txt';
 const uniqueitems = D2RMM.readTsv(uniqueitemsFilename);
 const setitemsFilename = 'global\\excel\\setitems.txt';
 const setitems = D2RMM.readTsv(setitemsFilename);
-
 
 
 uniqueitems.rows.forEach((row) => {
@@ -1205,7 +1203,6 @@ if (config.magicMarket) {
         "*eol": 0,
       });
     }
-
 
 if (config.junkMarket) {
       cubemain.rows.push({
@@ -4892,6 +4889,126 @@ if (config.junkMarket) {
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Naj's Circlet",
+        "output": "gpg",
+        "*eol": 0,
+      });
+    }
+
+    if (config.junkMarket) {
+      cubemain.rows.push({
+        description: "r20 -> McAuley's Paragon",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r20",
+        "input 3": "cap",
+        "input 4": "tsc",
+        "output": "McAuley's Paragon",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.junkMarket) {
+      cubemain.rows.push({
+        description: "McAuley's Paragon -> gpg",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "McAuley's Paragon",
+        "output": "gpg",
+        "*eol": 0,
+      });
+    }
+
+    if (config.junkMarket) {
+      cubemain.rows.push({
+        description: "r21 -> McAuley's Riprap",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "vbt",
+        "input 4": "tsc",
+        "output": "McAuley's Riprap",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.junkMarket) {
+      cubemain.rows.push({
+        description: "McAuley's Riprap -> gpg",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "McAuley's Riprap",
+        "output": "gpg",
+        "*eol": 0,
+      });
+    }
+
+    if (config.junkMarket) {
+      cubemain.rows.push({
+        description: "r21 -> McAuley's Taboo",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "vgl",
+        "input 4": "tsc",
+        "output": "McAuley's Taboo",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.junkMarket) {
+      cubemain.rows.push({
+        description: "McAuley's Taboo -> gpg",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "McAuley's Taboo",
+        "output": "gpg",
+        "*eol": 0,
+      });
+    }
+
+    if (config.junkMarket) {
+      cubemain.rows.push({
+        description: "r21 -> McAuley's Superstition",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "bwn",
+        "input 4": "tsc",
+        "output": "McAuley's Superstition",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.junkMarket) {
+      cubemain.rows.push({
+        description: "McAuley's Superstition -> gpg",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "McAuley's Superstition",
         "output": "gpg",
         "*eol": 0,
       });
@@ -17013,6 +17130,186 @@ if (config.junkMarket) {
         "input 1": "yps",
         "input 2": "Unique Warlock Helm",
         "output": "r29",
+        "*eol": 0,
+      });
+    }
+
+    if (config.classicSunder) {
+      cubemain.rows.push({
+        description: "r22 -> Cold Rupture",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "cm3",
+        "input 4": "glb",
+        "output": "Cold Rupture",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.classicSunder) {
+      cubemain.rows.push({
+        description: "Cold Rupture -> r21",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "Cold Rupture",
+        "output": "r21",
+        "*eol": 0,
+      });
+    }
+
+    if (config.classicSunder) {
+      cubemain.rows.push({
+        description: "r22 -> Flame Rift",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "cm3",
+        "input 4": "glr",
+        "output": "Flame Rift",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.classicSunder) {
+      cubemain.rows.push({
+        description: "Flame Rift -> r21",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "Flame Rift",
+        "output": "r21",
+        "*eol": 0,
+      });
+    }
+
+    if (config.classicSunder) {
+      cubemain.rows.push({
+        description: "r22 -> Crack of the Heavens",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "cm3",
+        "input 4": "glw",
+        "output": "Crack of the Heavens",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.classicSunder) {
+      cubemain.rows.push({
+        description: "Crack of the Heavens -> r21",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "Crack of the Heavens",
+        "output": "r21",
+        "*eol": 0,
+      });
+    }
+
+    if (config.classicSunder) {
+      cubemain.rows.push({
+        description: "r22 -> Rotting Fissure",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "cm3",
+        "input 4": "glg",
+        "output": "Rotting Fissure",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.classicSunder) {
+      cubemain.rows.push({
+        description: "Rotting Fissure -> r21",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "Rotting Fissure",
+        "output": "r21",
+        "*eol": 0,
+      });
+    }
+
+    if (config.classicSunder) {
+      cubemain.rows.push({
+        description: "r22 -> Bone Break",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "cm3",
+        "input 4": "skl",
+        "output": "Bone Break",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.classicSunder) {
+      cubemain.rows.push({
+        description: "Bone Break -> r21",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "Bone Break",
+        "output": "r21",
+        "*eol": 0,
+      });
+    }
+
+    if (config.classicSunder) {
+      cubemain.rows.push({
+        description: "r22 -> Black Cleft",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "cm3",
+        "input 4": "gzv",
+        "output": "Black Cleft",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.classicSunder) {
+      cubemain.rows.push({
+        description: "Black Cleft -> r21",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "Black Cleft",
+        "output": "r21",
         "*eol": 0,
       });
     }
