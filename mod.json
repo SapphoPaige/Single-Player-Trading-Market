@@ -3,7 +3,7 @@
   "description": "A utility to roughly incorporate the multiplayer trading economy responsibly into single player.",
   "author": "Sappho",
   "website": "https://github.com/SapphoPaige/Single-Player-Trading-Market",
-  "version": "0.6",
+  "version": "0.7",
   "config": [
     {
       "id": "ecoRunes",
@@ -61,6 +61,13 @@
       "type": "checkbox",
       "name": "Services",
       "description": "Enables the buying of custom services like lazruc",
+      "defaultValue": true
+    },
+ {
+      "id": "classicSunder",
+      "type": "checkbox",
+      "name": "Classic Sunder Charms",
+      "description": "Enables the buying and selling of classic sunder charms",
       "defaultValue": true
     },
 
