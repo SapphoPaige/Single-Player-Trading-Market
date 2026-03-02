@@ -152,7 +152,7 @@ if (config.gemMarket) {
       enabled: 1,
       version: 100,
       numinputs: 12,
-      "input 1": `${runeCode},qty=2`,
+      "input 1": `${runeCode},qty=12`,
       "output": "r22",
       "*eol": 0,
     });
@@ -862,14 +862,15 @@ cubemain.rows.push({
 
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Defender's Bile -> r24 r19",
+        description: "Defender's Bile -> 2 r24 r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Defender's Bile",
         "output": "r24",
-	"output b": "r19",
+	"output b": "r24",
+	"output c": "r19",
         "*eol": 0,
       });
     }
@@ -877,14 +878,15 @@ cubemain.rows.push({
  
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Guardian's Thunder -> r24 r19",
+        description: "Guardian's Thunder -> 2 r24 r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Guardian's Thunder",
         "output": "r24",
-	"output b": "r19",
+	"output b": "r24",
+	"output c": "r19",
         "*eol": 0,
       });
     }
@@ -892,14 +894,15 @@ cubemain.rows.push({
   
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Protector's Frost -> r24 r19",
+        description: "Protector's Frost -> 2 r24 r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Protector's Frost",
         "output": "r24",
-	"output b": "r19",
+	"output b": "r24",
+	"output c": "r19",
         "*eol": 0,
       });
     }
@@ -907,14 +910,15 @@ cubemain.rows.push({
   
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Defender's Fire -> r24 r19",
+        description: "Defender's Fire -> 2 r24 r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Defender's Fire",
         "output": "r24",
-	"output b": "r19",
+	"output b": "r24",
+	"output c": "r19",
         "*eol": 0,
       });
     }
@@ -922,14 +926,15 @@ cubemain.rows.push({
     
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Protector's Stone -> r24 r19",
+        description: "Protector's Stone -> 2 r24 r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Protector's Stone",
         "output": "r24",
-	"output b": "r19",
+	"output b": "r24",
+	"output c": "r19",
         "*eol": 0,
       });
     }
@@ -937,14 +942,15 @@ cubemain.rows.push({
   
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Guardian's Light -> r29",
+        description: "Guardian's Light -> 2 r24 r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Guardian's Light",
         "output": "r24",
-	"output b": "r19",
+	"output b": "r24",
+	"output c": "r19",
         "*eol": 0,
       });
     }
