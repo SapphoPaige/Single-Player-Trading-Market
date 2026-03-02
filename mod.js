@@ -43,19 +43,58 @@ for (let i in itemTypes) {
 }
 
 
+const gemData = [
+  { name: 'Amethyst', flawless: 'gzv', perfect: 'gpv' },
+  { name: 'Diamond', flawless: 'glw', perfect: 'gpw' },
+  { name: 'Emerald', flawless: 'glg', perfect: 'gpg' },
+  { name: 'Ruby', flawless: 'glr', perfect: 'gpr' },
+  { name: 'Sapphire', flawless: 'glb', perfect: 'gpb' },
+  { name: 'Skull', flawless: 'skl', perfect: 'skz' },
+  { name: 'Topaz', flawless: 'gly', perfect: 'gpy' }
+];
+
+if (config.gemMarket) {
+for (const gem of gemData) {
+  cubemain.rows.push({
+    'description': `Perfect ${gem.name} -->3 Flawless ${gem.name}`,
+    'enabled': 1,
+    'version': 100,
+    'numinputs': 2,
+    'input 1': gem.perfect,
+    'input 2': 'yps',
+    'output': gem.flawless,
+    'output b': gem.flawless,
+    'output c': gem.flawless,
+    'lvl': 100,
+    'ilvl': 100,
+    '*eol': 0,
+  });
+}
+}
 
 if (config.ecoRunes) {
 cubemain.rows.push({
     description:
-      "Lem Cheap",
+      "Fal to Lem",
     enabled: 1,
     version: 100,
-    numinputs: 4,
-    "input 1": "r20,qty=3",
-    "input 2": "yps",
+    numinputs: 2,
+    "input 1": "r19,qty=2",
+    "output": "r20",
+    "*eol": 0,
+  });
+}
+
+if (config.ecoRunes) {
+cubemain.rows.push({
+    description:
+      "Lem to Fal",
+    enabled: 1,
+    version: 100,
+    numinputs: 1,
+    "input 1": "r20",
     "output": "r19",
-    "output b": "r18",
-    "output c": "r17",
+    "output b": "r19",
     "*eol": 0,
   });
 }
@@ -81,7 +120,7 @@ cubemain.rows.push({
 if (config.ecoRunes) {
 cubemain.rows.push({
     description:
-      "Lem Fix",
+      "Lem for Pul",
     enabled: 1,
     version: 100,
     numinputs: 2,
@@ -94,7 +133,7 @@ cubemain.rows.push({
 if (config.ecoRunes) {
 cubemain.rows.push({
     description:
-      "Pul Break",
+      "Pul for Lem",
     enabled: 1,
     version: 100,
     numinputs: 1,
@@ -112,10 +151,28 @@ if (config.gemMarket) {
       description: `10 ${runeCode} -> Um`,
       enabled: 1,
       version: 100,
-      numinputs: 11,
-      "input 1": `${runeCode},qty=10`,
-      "input 2": "vps",
+      numinputs: 12,
+      "input 1": `${runeCode},qty=2`,
       "output": "r22",
+      "*eol": 0,
+    });
+  }
+}
+
+if (config.gemMarket) {
+  for (let i = 1; i <= 18; i++) {
+    const runeCode = `r${String(i).padStart(2, "0")}`;
+    cubemain.rows.push({
+      description: `${runeCode} + Fal = 3 ${runeCode}`,
+      enabled: 1,
+      version: 100,
+      numinputs: 3,
+      "input 1": `${runeCode}`,
+      "input 2": "r19",
+      "input 3": "yps",
+      "output": `${runeCode}`,
+      "output b": `${runeCode}`,
+      "output c": `${runeCode}`,
       "*eol": 0,
     });
   }
@@ -286,23 +343,6 @@ cubemain.rows.push({
     "output": "gpv",
     "output b": "gpv",
     "output c": "gpv",
-    "*eol": 0,
-  });
-}
-
-if (config.gemMarket) {
-cubemain.rows.push({
-    description:
-      "Lem -> 3 Hel",
-    enabled: 1,
-    version: 100,
-    numinputs: 3,
-    "input 1": "r20",
-    "input 2": "yps",
-    "input 3": "tsc",
-    "output": "r15",
-    "output b": "r15",
-    "output c": "r15",
     "*eol": 0,
   });
 }
@@ -662,11 +702,11 @@ cubemain.rows.push({
 if (config.torchMarket) {
 cubemain.rows.push({
     description:
-      "Vex -> Ancient 1",
+      "Pul -> Ancient 1",
     enabled: 1,
     version: 100,
     numinputs: 3,
-    "input 1": "r26",
+    "input 1": "r21",
     "input 2": "r01",
     "input 3": "wms",
     "output": "ua1",
@@ -680,11 +720,11 @@ cubemain.rows.push({
 if (config.torchMarket) {
 cubemain.rows.push({
     description:
-      "Vex -> Ancient 2",
+      "Pul -> Ancient 2",
     enabled: 1,
     version: 100,
     numinputs: 3,
-    "input 1": "r26",
+    "input 1": "r21",
     "input 2": "r02",
     "input 3": "wms",
     "output": "ua2",
@@ -698,11 +738,11 @@ cubemain.rows.push({
 if (config.torchMarket) {
 cubemain.rows.push({
     description:
-      "Vex -> Ancient 3",
+      "Pul -> Ancient 3",
     enabled: 1,
     version: 100,
     numinputs: 3,
-    "input 1": "r26",
+    "input 1": "r21",
     "input 2": "r03",
     "input 3": "wms",
     "output": "ua3",
@@ -716,11 +756,11 @@ cubemain.rows.push({
 if (config.torchMarket) {
 cubemain.rows.push({
     description:
-      "Vex -> Ancient 4",
+      "Mal -> Ancient 4",
     enabled: 1,
     version: 100,
     numinputs: 3,
-    "input 1": "r26",
+    "input 1": "r23",
     "input 2": "r04",
     "input 3": "wms",
     "output": "ua4",
@@ -734,11 +774,11 @@ cubemain.rows.push({
 if (config.torchMarket) {
 cubemain.rows.push({
     description:
-      "Vex -> Ancient 5",
+      "Mal -> Ancient 5",
     enabled: 1,
     version: 100,
     numinputs: 3,
-    "input 1": "r26",
+    "input 1": "r23",
     "input 2": "r05",
     "input 3": "wms",
     "output": "ua5",
@@ -752,13 +792,13 @@ cubemain.rows.push({
 if (config.torchMarket) {
 cubemain.rows.push({
     description:
-      "Ancient 1 -> Vex",
+      "Ancient 1 -> Lem",
     enabled: 1,
     version: 100,
     numinputs: 2,
     "input 1": "ua1",
     "input 2": "wms",
-    "output": "r26",
+    "output": "r20",
     "*eol": 0,
   });
 }
@@ -766,13 +806,13 @@ cubemain.rows.push({
 if (config.torchMarket) {
 cubemain.rows.push({
     description:
-      "Ancient 2 -> Vex",
+      "Ancient 2 -> Lem",
     enabled: 1,
     version: 100,
     numinputs: 2,
     "input 1": "ua2",
     "input 2": "wms",
-    "output": "r26",
+    "output": "r20",
     "*eol": 0,
   });
 }
@@ -780,13 +820,13 @@ cubemain.rows.push({
 if (config.torchMarket) {
 cubemain.rows.push({
     description:
-      "Ancient 3 -> Vex",
+      "Ancient 3 -> Lem",
     enabled: 1,
     version: 100,
     numinputs: 2,
     "input 1": "ua3",
     "input 2": "wms",
-    "output": "r26",
+    "output": "r20",
     "*eol": 0,
   });
 }
@@ -794,13 +834,13 @@ cubemain.rows.push({
 if (config.torchMarket) {
 cubemain.rows.push({
     description:
-      "Ancient 4 -> Vex",
+      "Ancient 4 -> Um",
     enabled: 1,
     version: 100,
     numinputs: 2,
     "input 1": "ua4",
     "input 2": "wms",
-    "output": "r26",
+    "output": "r22",
     "*eol": 0,
   });
 }
@@ -808,13 +848,13 @@ cubemain.rows.push({
 if (config.torchMarket) {
 cubemain.rows.push({
     description:
-      "Ancient 5 -> Vex",
+      "Ancient 5 -> Um",
     enabled: 1,
     version: 100,
     numinputs: 2,
     "input 1": "ua5",
     "input 2": "wms",
-    "output": "r26",
+    "output": "r22",
     "*eol": 0,
   });
 }
@@ -822,13 +862,14 @@ cubemain.rows.push({
 
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Defender's Bile -> r29",
+        description: "Defender's Bile -> r24 r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Defender's Bile",
-        "output": "r29",
+        "output": "r24",
+	"output b": "r19",
         "*eol": 0,
       });
     }
@@ -836,13 +877,14 @@ cubemain.rows.push({
  
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Guardian's Thunder -> r29",
+        description: "Guardian's Thunder -> r24 r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Guardian's Thunder",
-        "output": "r29",
+        "output": "r24",
+	"output b": "r19",
         "*eol": 0,
       });
     }
@@ -850,13 +892,14 @@ cubemain.rows.push({
   
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Protector's Frost -> r29",
+        description: "Protector's Frost -> r24 r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Protector's Frost",
-        "output": "r29",
+        "output": "r24",
+	"output b": "r19",
         "*eol": 0,
       });
     }
@@ -864,13 +907,14 @@ cubemain.rows.push({
   
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Defender's Fire -> r29",
+        description: "Defender's Fire -> r24 r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Defender's Fire",
-        "output": "r29",
+        "output": "r24",
+	"output b": "r19",
         "*eol": 0,
       });
     }
@@ -878,13 +922,14 @@ cubemain.rows.push({
     
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Protector's Stone -> r29",
+        description: "Protector's Stone -> r24 r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Protector's Stone",
-        "output": "r29",
+        "output": "r24",
+	"output b": "r19",
         "*eol": 0,
       });
     }
@@ -898,7 +943,8 @@ cubemain.rows.push({
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Guardian's Light",
-        "output": "r29",
+        "output": "r24",
+	"output b": "r19",
         "*eol": 0,
       });
     }
