@@ -100,23 +100,6 @@ cubemain.rows.push({
 }
 
 
-if (config.gemMarket) {
-cubemain.rows.push({
-    description:
-      "Lem Cash",
-    enabled: 1,
-    version: 100,
-    numinputs: 2,
-    "input 1": "r20",
-    "input 2": "yps",
-    "output": "gpw",
-    "output b": "gpg",
-    "output c": "gpy",
-    "*eol": 0,
-  });
-}
-
-
 if (config.ecoRunes) {
 cubemain.rows.push({
     description:
@@ -148,12 +131,12 @@ if (config.gemMarket) {
   for (let i = 1; i <= 18; i++) {
     const runeCode = `r${String(i).padStart(2, "0")}`;
     cubemain.rows.push({
-      description: `10 ${runeCode} -> Um`,
+      description: `10 ${runeCode} -> Pul`,
       enabled: 1,
       version: 100,
-      numinputs: 12,
-      "input 1": `${runeCode},qty=12`,
-      "output": "r22",
+      numinputs: 10,
+      "input 1": `${runeCode},qty=10`,
+      "output": "r21",
       "*eol": 0,
     });
   }
@@ -184,9 +167,8 @@ cubemain.rows.push({
       "10 Diamond -> Pul",
     enabled: 1,
     version: 100,
-    numinputs: 11,
+    numinputs: 10,
     "input 1": "gpw,qty=10",
-    "input 2": "vps",
     "output": "r21",
     "*eol": 0,
   });
@@ -198,9 +180,8 @@ cubemain.rows.push({
       "10 Emerald -> Pul",
     enabled: 1,
     version: 100,
-    numinputs: 11,
+    numinputs: 10,
     "input 1": "gpg,qty=10",
-    "input 2": "vps",
     "output": "r21",
     "*eol": 0,
   });
@@ -212,9 +193,8 @@ cubemain.rows.push({
       "10 Sapphire -> Pul",
     enabled: 1,
     version: 100,
-    numinputs: 11,
+    numinputs: 10,
     "input 1": "gpb,qty=10",
-    "input 2": "vps",
     "output": "r21",
     "*eol": 0,
   });
@@ -227,9 +207,8 @@ cubemain.rows.push({
       "10 Topaz -> Pul",
     enabled: 1,
     version: 100,
-    numinputs: 11,
+    numinputs: 10,
     "input 1": "gpy,qty=10",
-    "input 2": "vps",
     "output": "r21",
     "*eol": 0,
   });
@@ -241,9 +220,8 @@ cubemain.rows.push({
       "10 Ruby -> Um",
     enabled: 1,
     version: 100,
-    numinputs: 11,
+    numinputs: 10,
     "input 1": "gpr,qty=10",
-    "input 2": "vps",
     "output": "r22",
     "*eol": 0,
   });
@@ -256,9 +234,8 @@ cubemain.rows.push({
       "10 Skull -> Um",
     enabled: 1,
     version: 100,
-    numinputs: 11,
+    numinputs: 10,
     "input 1": "skz,qty=10",
-    "input 2": "vps",
     "output": "r22",
     "*eol": 0,
   });
@@ -270,9 +247,8 @@ cubemain.rows.push({
       "10 Amethyst -> Mal",
     enabled: 1,
     version: 100,
-    numinputs: 11,
+    numinputs: 10,
     "input 1": "gpv,qty=10",
-    "input 2": "vps",
     "output": "r23",
     "*eol": 0,
   });
@@ -281,13 +257,96 @@ cubemain.rows.push({
 if (config.gemMarket) {
 cubemain.rows.push({
     description:
-      "Lem -> 3 P Sapphires",
+      "10 Jewels -> Pul",
+    enabled: 1,
+    version: 100,
+    numinputs: 10,
+    "input 1": "jew,qty=10",
+    "output": "r21",
+    "*eol": 0,
+  });
+}
+
+if (config.gemMarket) {
+cubemain.rows.push({
+    description:
+      "Fal -> 2 Gems",
     enabled: 1,
     version: 100,
     numinputs: 3,
-    "input 1": "r20",
-    "input 2": "vps",
-    "input 3": "isc",
+    "input 1": "jew",
+    "input 2": "r19",
+    "input 3": "vps",
+    "output": "jew,mag,pre=268,suf=350",
+    "output b": "jew,mag,pre=268,suf=350",
+    "output c": "jew,mag,pre=268,suf=350",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+if (config.gemMarket) {
+cubemain.rows.push({
+    description:
+      "Fal -> 2 P Topaz",
+    enabled: 1,
+    version: 100,
+    numinputs: 3,
+    "input 1": "r19",
+    "input 2": "gpy",
+    "input 3": "vps",
+    "output": "gpy",
+    "output b": "gpy",
+    "output c": "gpy",
+    "*eol": 0,
+  });
+}
+
+if (config.gemMarket) {
+cubemain.rows.push({
+    description:
+      "Fal -> 2 P Emerald",
+    enabled: 1,
+    version: 100,
+    numinputs: 3,
+    "input 1": "r19",
+    "input 2": "gpg",
+    "input 3": "vps",
+    "output": "gpg",
+    "output b": "gpg",
+    "output c": "gpg",
+    "*eol": 0,
+  });
+}
+
+if (config.gemMarket) {
+cubemain.rows.push({
+    description:
+      "Fal -> 2 P Diamond",
+    enabled: 1,
+    version: 100,
+    numinputs: 3,
+    "input 1": "r19",
+    "input 2": "gpw",
+    "input 3": "vps",
+    "output": "gpw",
+    "output b": "gpw",
+    "output c": "gpw",
+    "*eol": 0,
+  });
+}
+
+if (config.gemMarket) {
+cubemain.rows.push({
+    description:
+      "Fal -> 2 P Sapphires",
+    enabled: 1,
+    version: 100,
+    numinputs: 3,
+    "input 1": "r19",
+    "input 2": "gpb",
+    "input 3": "vps",
     "output": "gpb",
     "output b": "gpb",
     "output c": "gpb",
@@ -333,13 +392,13 @@ cubemain.rows.push({
 if (config.gemMarket) {
 cubemain.rows.push({
     description:
-      "Pul -> 3 P Amethysts",
+      "Lem -> 2 P Amethysts",
     enabled: 1,
     version: 100,
     numinputs: 3,
     "input 1": "r21",
     "input 2": "vps",
-    "input 3": "isc",
+    "input 3": "gpv",
     "output": "gpv",
     "output b": "gpv",
     "output c": "gpv",
@@ -1034,50 +1093,6 @@ cubemain.rows.push({
   });
 }
 
-if (config.torchMarket) {
-cubemain.rows.push({
-    description:
-      "Key 1 + Pul = Key 2",
-    enabled: 1,
-    version: 100,
-    numinputs: 3,
-    "input 1": "pk1",
-    "input 2": "r21",
-    "input 4": "wms",
-    "output": "pk2",
-    "*eol": 0,
-  });
-}
-
-if (config.torchMarket) {
-cubemain.rows.push({
-    description:
-      "Key 2 + Pul = Key 3",
-    enabled: 1,
-    version: 100,
-    numinputs: 3,
-    "input 1": "pk2",
-    "input 2": "r21",
-    "input 3": "wms",
-    "output": "pk3",
-    "*eol": 0,
-  });
-}
-
-if (config.torchMarket) {
-cubemain.rows.push({
-    description:
-      "Key 3 + Pul = Key 1",
-    enabled: 1,
-    version: 100,
-    numinputs: 3,
-    "input 1": "pk3",
-    "input 2": "r21",
-    "input 3": "wms",
-    "output": "pk1",
-    "*eol": 0,
-  });
-}
 
 if (config.servicesMarket) {
 cubemain.rows.push({
@@ -1244,26 +1259,26 @@ if (config.magicMarket) {
 
  if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Annihilus -> r27",
+        description: "Annihilus -> Lo Ohm",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Annihilus",
-        "output": "r27",
-	"output b": "r26",
+        "output": "r28",
+	"output b": "r27",
         "*eol": 0,
       });
     }
 
 if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Civerb's Ward",
+        description: "r19 -> Civerb's Ward",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "lrg",
         "input 4": "tsc",
         "output": "Civerb's Ward",
@@ -1288,12 +1303,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Civerb's Icon",
+        description: "r19 -> Civerb's Icon",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "amu",
         "input 4": "glv",
         "output": "Civerb's Icon",
@@ -1318,12 +1333,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Civerb's Cudgel",
+        description: "r19 -> Civerb's Cudgel",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "gsc",
         "input 4": "tsc",
         "output": "Civerb's Cudgel",
@@ -1346,14 +1361,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Hsarus' Iron Heel",
+        description: "r20 -> Hsarus' Iron Heel",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "mbt",
         "input 4": "tsc",
         "output": "Hsarus' Iron Heel",
@@ -1363,27 +1378,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Hsarus' Iron Heel -> gpg",
+        description: "Hsarus' Iron Heel -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Hsarus' Iron Heel",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Hsarus' Iron Fist",
+        description: "r19 -> Hsarus' Iron Fist",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "buc",
         "input 4": "tsc",
         "output": "Hsarus' Iron Fist",
@@ -1406,14 +1421,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Hsarus' Iron Stay",
+        description: "r20 -> Hsarus' Iron Stay",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "mbl",
         "input 4": "tsc",
         "output": "Hsarus' Iron Stay",
@@ -1423,27 +1438,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Hsarus' Iron Stay -> gpg",
+        description: "Hsarus' Iron Stay -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Hsarus' Iron Stay",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Cleglaw's Tooth",
+        description: "r19 -> Cleglaw's Tooth",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "lsd",
         "input 4": "tsc",
         "output": "Cleglaw's Tooth",
@@ -1468,12 +1483,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Cleglaw's Claw",
+        description: "r19 -> Cleglaw's Claw",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "sml",
         "input 4": "tsc",
         "output": "Cleglaw's Claw",
@@ -1496,14 +1511,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Cleglaw's Pincers",
+        description: "r20 -> Cleglaw's Pincers",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "mgl",
         "input 4": "tsc",
         "output": "Cleglaw's Pincers",
@@ -1513,27 +1528,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Cleglaw's Pincers -> gpg",
+        description: "Cleglaw's Pincers -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Cleglaw's Pincers",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Iratha's Collar",
+        description: "r19 -> Iratha's Collar",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "amu",
         "input 4": "glr",
         "output": "Iratha's Collar",
@@ -1558,14 +1573,14 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Iratha's Cuff",
+        description: "r19 -> Iratha's Cuff",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "tgl",
-        "input 4": "tsc",
+        "input 4": "glg",
         "output": "Iratha's Cuff",
         lvl: 100,
         ilvl: 100,
@@ -1588,14 +1603,14 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Iratha's Coil",
+        description: "r19 -> Iratha's Coil",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "crn",
-        "input 4": "tsc",
+        "input 4": "glg",
         "output": "Iratha's Coil",
         lvl: 100,
         ilvl: 100,
@@ -1618,14 +1633,14 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Iratha's Cord",
+        description: "r19 -> Iratha's Cord",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "tbl",
-        "input 4": "tsc",
+        "input 4": "glg",
         "output": "Iratha's Cord",
         lvl: 100,
         ilvl: 100,
@@ -1648,12 +1663,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Isenhart's Lightbrand",
+        description: "r19 -> Isenhart's Lightbrand",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "bsd",
         "input 4": "tsc",
         "output": "Isenhart's Lightbrand",
@@ -1678,12 +1693,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Isenhart's Parry",
+        description: "r19 -> Isenhart's Parry",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "gts",
         "input 4": "tsc",
         "output": "Isenhart's Parry",
@@ -1708,12 +1723,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Isenhart's Case",
+        description: "r19 -> Isenhart's Case",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "brs",
         "input 4": "tsc",
         "output": "Isenhart's Case",
@@ -1738,12 +1753,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Isenhart's Horns",
+        description: "r19 -> Isenhart's Horns",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "fhl",
         "input 4": "tsc",
         "output": "Isenhart's Horns",
@@ -1768,12 +1783,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Vidala's Barb",
+        description: "r19 -> Vidala's Barb",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "lbb",
         "input 4": "glb",
         "output": "Vidala's Barb",
@@ -1798,12 +1813,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Vidala's Fetlock",
+        description: "r19 -> Vidala's Fetlock",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "tbt",
         "input 4": "tsc",
         "output": "Vidala's Fetlock",
@@ -1828,12 +1843,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Vidala's Ambush",
+        description: "r19 -> Vidala's Ambush",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "lea",
         "input 4": "tsc",
         "output": "Vidala's Ambush",
@@ -1858,14 +1873,14 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Vidala's Snare",
+        description: "r19 -> Vidala's Snare",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "amu",
-        "input 4": "tsc",
+        "input 4": "glg",
         "output": "Vidala's Snare",
         lvl: 100,
         ilvl: 100,
@@ -1886,14 +1901,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Milabrega's Orb",
+        description: "r20 -> Milabrega's Orb",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "kit",
         "input 4": "tsc",
         "output": "Milabrega's Orb",
@@ -1903,27 +1918,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Milabrega's Orb -> gpg",
+        description: "Milabrega's Orb -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Milabrega's Orb",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Milabrega's Rod",
+        description: "r20 -> Milabrega's Rod",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "wsp",
         "input 4": "tsc",
         "output": "Milabrega's Rod",
@@ -1933,15 +1948,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Milabrega's Rod -> gpg",
+        description: "Milabrega's Rod -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Milabrega's Rod",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
@@ -1978,12 +1993,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Milabrega's Robe",
+        description: "r19 -> Milabrega's Robe",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "aar",
         "input 4": "tsc",
         "output": "Milabrega's Robe",
@@ -2008,12 +2023,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Cathan's Rule",
+        description: "r19 -> Cathan's Rule",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "bst",
         "input 4": "gly",
         "output": "Cathan's Rule",
@@ -2038,12 +2053,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Cathan's Mesh",
+        description: "r19 -> Cathan's Mesh",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "chn",
         "input 4": "tsc",
         "output": "Cathan's Mesh",
@@ -2068,12 +2083,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Cathan's Visage",
+        description: "r19 -> Cathan's Visage",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "msk",
         "input 4": "tsc",
         "output": "Cathan's Visage",
@@ -2098,12 +2113,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Cathan's Sigil",
+        description: "r19 -> Cathan's Sigil",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "amu",
         "input 4": "gly",
         "output": "Cathan's Sigil",
@@ -2128,12 +2143,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Cathan's Seal",
+        description: "r19 -> Cathan's Seal",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "rin",
         "input 4": "tsc",
         "output": "Cathan's Seal",
@@ -2158,12 +2173,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Tancred's Crowbill",
+        description: "r19 -> Tancred's Crowbill",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "mpi",
         "input 4": "tsc",
         "output": "Tancred's Crowbill",
@@ -2188,12 +2203,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Tancred's Spine",
+        description: "r19 -> Tancred's Spine",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "ful",
         "input 4": "tsc",
         "output": "Tancred's Spine",
@@ -2218,12 +2233,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Tancred's Hobnails",
+        description: "r19 -> Tancred's Hobnails",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "lbt",
         "input 4": "tsc",
         "output": "Tancred's Hobnails",
@@ -2248,12 +2263,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Tancred's Weird",
+        description: "r19 -> Tancred's Weird",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "amu",
         "input 4": "glw",
         "output": "Tancred's Weird",
@@ -2278,12 +2293,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Tancred's Skull",
+        description: "r19 -> Tancred's Skull",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "bhm",
         "input 4": "tsc",
         "output": "Tancred's Skull",
@@ -2306,7 +2321,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Sigon's Gage",
         enabled: 1,
@@ -2323,20 +2338,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Sigon's Gage -> gpg",
+        description: "Sigon's Gage -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Sigon's Gage",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Sigon's Visor",
         enabled: 1,
@@ -2353,20 +2368,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Sigon's Visor -> gpg",
+        description: "Sigon's Visor -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Sigon's Visor",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Sigon's Shelter",
         enabled: 1,
@@ -2383,20 +2398,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Sigon's Shelter -> gpg",
+        description: "Sigon's Shelter -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Sigon's Shelter",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Sigon's Sabot",
         enabled: 1,
@@ -2413,29 +2428,29 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Sigon's Sabot -> gpg",
+        description: "Sigon's Sabot -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Sigon's Sabot",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Sigon's Wrap",
+        description: "r20 -> Sigon's Wrap",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "hbl",
-        "input 4": "tsc",
+        "input 4": "glg",
         "output": "Sigon's Wrap",
         lvl: 100,
         ilvl: 100,
@@ -2443,27 +2458,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Sigon's Wrap -> gpg",
+        description: "Sigon's Wrap -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Sigon's Wrap",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Sigon's Guard",
+        description: "r20 -> Sigon's Guard",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "tow",
         "input 4": "tsc",
         "output": "Sigon's Guard",
@@ -2473,27 +2488,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Sigon's Guard -> gpg",
+        description: "Sigon's Guard -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Sigon's Guard",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Infernal Cranium",
+        description: "r20 -> Infernal Cranium",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "cap",
         "input 4": "tsc",
         "output": "Infernal Cranium",
@@ -2503,27 +2518,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Infernal Cranium -> gpg",
+        description: "Infernal Cranium -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Infernal Cranium",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Infernal Torch",
+        description: "r20 -> Infernal Torch",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "gwn",
         "input 4": "tsc",
         "output": "Infernal Torch",
@@ -2533,27 +2548,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Infernal Torch -> gpg",
+        description: "Infernal Torch -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Infernal Torch",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r20 -> Infernal Sign",
+        description: "r19 -> Infernal Sign",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r20",
+        "input 2": "r19",
         "input 3": "tbl",
         "input 4": "tsc",
         "output": "Infernal Sign",
@@ -2576,14 +2591,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Berserker's Headgear",
+        description: "r20 -> Berserker's Headgear",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "hlm",
         "input 4": "tsc",
         "output": "Berserker's Headgear",
@@ -2593,27 +2608,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Berserker's Headgear -> gpg",
+        description: "Berserker's Headgear -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Berserker's Headgear",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Berserker's Hauberk",
+        description: "r20 -> Berserker's Hauberk",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "spl",
         "input 4": "tsc",
         "output": "Berserker's Hauberk",
@@ -2623,27 +2638,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Berserker's Hauberk -> gpg",
+        description: "Berserker's Hauberk -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Berserker's Hauberk",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Berserker's Hatchet",
+        description: "r20 -> Berserker's Hatchet",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "2ax",
         "input 4": "tsc",
         "output": "Berserker's Hatchet",
@@ -2653,20 +2668,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Berserker's Hatchet -> gpg",
+        description: "Berserker's Hatchet -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Berserker's Hatchet",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Death's Hand",
         enabled: 1,
@@ -2683,20 +2698,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Death's Hand -> gpg",
+        description: "Death's Hand -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Death's Hand",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Death's Guard",
         enabled: 1,
@@ -2713,27 +2728,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Death's Guard -> gpg",
+        description: "Death's Guard -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Death's Guard",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Death's Touch",
+        description: "r20 -> Death's Touch",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "wsd",
         "input 4": "tsc",
         "output": "Death's Touch",
@@ -2743,27 +2758,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Death's Touch -> gpg",
+        description: "Death's Touch -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Death's Touch",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Angelic Sickle",
+        description: "r19 -> Angelic Sickle",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "sbr",
         "input 4": "tsc",
         "output": "Angelic Sickle",
@@ -2788,12 +2803,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Angelic Mantle",
+        description: "r19 -> Angelic Mantle",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "rng",
         "input 4": "tsc",
         "output": "Angelic Mantle",
@@ -2816,7 +2831,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r20 -> Angelic Halo",
         enabled: 1,
@@ -2833,27 +2848,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Angelic Halo -> gpg",
+        description: "Angelic Halo -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Angelic Halo",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r19 -> Angelic Wings",
+        description: "r20 -> Angelic Wings",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r19",
+        "input 2": "r20",
         "input 3": "amu",
         "input 4": "gpw",
         "output": "Angelic Wings",
@@ -2863,27 +2878,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Angelic Wings -> gpg",
+        description: "Angelic Wings -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Angelic Wings",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Arctic Horn",
+        description: "r19 -> Arctic Horn",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "swb",
         "input 4": "tsc",
         "output": "Arctic Horn",
@@ -2908,12 +2923,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Arctic Furs",
+        description: "r19 -> Arctic Furs",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "qui",
         "input 4": "tsc",
         "output": "Arctic Furs",
@@ -2938,12 +2953,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Arctic Binding",
+        description: "r19 -> Arctic Binding",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "vbl",
         "input 4": "tsc",
         "output": "Arctic Binding",
@@ -2968,12 +2983,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r20 -> Arctic Mitts",
+        description: "r19 -> Arctic Mitts",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r20",
+        "input 2": "r19",
         "input 3": "tgl",
         "input 4": "tsc",
         "output": "Arctic Mitts",
@@ -2998,12 +3013,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r20 -> Arcanna's Sign",
+        description: "r19 -> Arcanna's Sign",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r20",
+        "input 2": "r19",
         "input 3": "amu",
         "input 4": "tsc",
         "output": "Arcanna's Sign",
@@ -3028,12 +3043,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Arcanna's Deathwand",
+        description: "r19 -> Arcanna's Deathwand",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "wst",
         "input 4": "tsc",
         "output": "Arcanna's Deathwand",
@@ -3058,12 +3073,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Arcanna's Head",
+        description: "r19 -> Arcanna's Head",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "skp",
         "input 4": "tsc",
         "output": "Arcanna's Head",
@@ -3088,12 +3103,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Arcanna's Flesh",
+        description: "r19 -> Arcanna's Flesh",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "ltp",
         "input 4": "tsc",
         "output": "Arcanna's Flesh",
@@ -3118,12 +3133,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> Natalya's Totem",
+        description: "r23 -> Natalya's Totem",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r23",
         "input 3": "xh9",
         "input 4": "tsc",
         "output": "Natalya's Totem",
@@ -3135,13 +3150,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Natalya's Totem -> r21",
+        description: "Natalya's Totem -> r22",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Natalya's Totem",
-        "output": "r21",
+        "output": "r22",
         "*eol": 0,
       });
     }
@@ -3176,7 +3191,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Natalya's Shadow",
         enabled: 1,
@@ -3193,15 +3208,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Natalya's Shadow -> gpg",
+        description: "Natalya's Shadow -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Natalya's Shadow",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
@@ -3236,7 +3251,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Aldur's Stony Gaze",
         enabled: 1,
@@ -3253,20 +3268,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Aldur's Stony Gaze -> gpg",
+        description: "Aldur's Stony Gaze -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Aldur's Stony Gaze",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Aldur's Deception",
         enabled: 1,
@@ -3283,27 +3298,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Aldur's Deception -> gpg",
+        description: "Aldur's Deception -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Aldur's Deception",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Aldur's Gauntlet",
+        description: "r20 -> Aldur's Gauntlet",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "9mt",
         "input 4": "tsc",
         "output": "Aldur's Gauntlet",
@@ -3313,15 +3328,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Aldur's Gauntlet -> gpg",
+        description: "Aldur's Gauntlet -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Aldur's Gauntlet",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
@@ -3416,7 +3431,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Immortal King's Detail",
         enabled: 1,
@@ -3433,20 +3448,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Immortal King's Detail -> gpg",
+        description: "Immortal King's Detail -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Immortal King's Detail",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Immortal King's Forge",
         enabled: 1,
@@ -3463,20 +3478,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Immortal King's Forge -> gpg",
+        description: "Immortal King's Forge -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Immortal King's Forge",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Immortal King's Pillar",
         enabled: 1,
@@ -3493,20 +3508,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Immortal King's Pillar -> gpg",
+        description: "Immortal King's Pillar -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Immortal King's Pillar",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Immortal King's Stone Crusher",
         enabled: 1,
@@ -3523,27 +3538,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Immortal King's Stone Crusher -> gpg",
+        description: "Immortal King's Stone Crusher -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Immortal King's Stone Crusher",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> Tal Rasha's Fire-Spun Cloth",
+        description: "r20 -> Tal Rasha's Fire-Spun Cloth",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r20",
         "input 3": "zmb",
         "input 4": "tsc",
         "output": "Tal Rasha's Fire-Spun Cloth",
@@ -3555,13 +3570,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Tal Rasha's Fire-Spun Cloth -> r21",
+        description: "Tal Rasha's Fire-Spun Cloth -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Tal Rasha's Fire-Spun Cloth",
-        "output": "r21",
+        "output": "r19",
         "*eol": 0,
       });
     }
@@ -3658,12 +3673,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> Tal Rasha's Horadric Crest",
+        description: "r21 -> Tal Rasha's Horadric Crest",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r21",
         "input 3": "xsk",
         "input 4": "tsc",
         "output": "Tal Rasha's Horadric Crest",
@@ -3675,13 +3690,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Tal Rasha's Horadric Crest -> r21",
+        description: "Tal Rasha's Horadric Crest -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Tal Rasha's Horadric Crest",
-        "output": "r21",
+        "output": "r20",
         "*eol": 0,
       });
     }
@@ -3716,14 +3731,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Griswold's Heart",
+        description: "r20 -> Griswold's Heart",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "xar",
         "input 4": "tsc",
         "output": "Griswold's Heart",
@@ -3733,15 +3748,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Griswold's Heart -> gpg",
+        description: "Griswold's Heart -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Griswold's Heart",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
@@ -3836,14 +3851,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Trang-Oul's Scales",
+        description: "r20 -> Trang-Oul's Scales",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "xul",
         "input 4": "tsc",
         "output": "Trang-Oul's Scales",
@@ -3853,15 +3868,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Trang-Oul's Scales -> gpg",
+        description: "Trang-Oul's Scales -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Trang-Oul's Scales",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
@@ -3898,12 +3913,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> Trang-Oul's Claws",
+        description: "r21 -> Trang-Oul's Claws",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r21",
         "input 3": "xmg",
         "input 4": "tsc",
         "output": "Trang-Oul's Claws",
@@ -3915,13 +3930,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Trang-Oul's Claws -> r21",
+        description: "Trang-Oul's Claws -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Trang-Oul's Claws",
-        "output": "r21",
+        "output": "r20",
         "*eol": 0,
       });
     }
@@ -3986,7 +4001,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> M'avina's Embrace",
         enabled: 1,
@@ -4003,27 +4018,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "M'avina's Embrace -> gpg",
+        description: "M'avina's Embrace -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "M'avina's Embrace",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> M'avina's Icy Clutch",
+        description: "r20 -> M'avina's Icy Clutch",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "xtg",
         "input 4": "tsc",
         "output": "M'avina's Icy Clutch",
@@ -4033,27 +4048,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "M'avina's Icy Clutch -> gpg",
+        description: "M'avina's Icy Clutch -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "M'avina's Icy Clutch",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> M'avina's Tenet",
+        description: "r20 -> M'avina's Tenet",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "zvb",
         "input 4": "tsc",
         "output": "M'avina's Tenet",
@@ -4063,27 +4078,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "M'avina's Tenet -> gpg",
+        description: "M'avina's Tenet -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "M'avina's Tenet",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> M'avina's Caster",
+        description: "r21 -> M'avina's Caster",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r21",
         "input 3": "amc",
         "input 4": "tsc",
         "output": "M'avina's Caster",
@@ -4106,14 +4121,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r19 -> Telling of Beads",
+        description: "r21 -> Telling of Beads",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r19",
+        "input 2": "r21",
         "input 3": "amu",
         "input 4": "tsc",
         "output": "Telling of Beads",
@@ -4123,20 +4138,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Telling of Beads -> gpg",
+        description: "Telling of Beads -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Telling of Beads",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Laying of Hands",
         enabled: 1,
@@ -4153,27 +4168,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Laying of Hands -> gpg",
+        description: "Laying of Hands -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Laying of Hands",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Rite of Passage",
+        description: "r19 -> Rite of Passage",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xlb",
         "input 4": "tsc",
         "output": "Rite of Passage",
@@ -4198,12 +4213,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Spiritual Custodian",
+        description: "r19 -> Spiritual Custodian",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "uui",
         "input 4": "tsc",
         "output": "Spiritual Custodian",
@@ -4226,14 +4241,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Credendum",
+        description: "r20 -> Credendum",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "umc",
         "input 4": "tsc",
         "output": "Credendum",
@@ -4243,27 +4258,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Credendum -> gpg",
+        description: "Credendum -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Credendum",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Dangoon's Teaching",
+        description: "r20 -> Dangoon's Teaching",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "7ma",
         "input 4": "tsc",
         "output": "Dangoon's Teaching",
@@ -4273,27 +4288,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Dangoon's Teaching -> gpg",
+        description: "Dangoon's Teaching -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Dangoon's Teaching",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Heaven's Taebaek",
+        description: "r20 -> Heaven's Taebaek",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "uts",
         "input 4": "tsc",
         "output": "Heaven's Taebaek",
@@ -4303,27 +4318,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Heaven's Taebaek -> gpg",
+        description: "Heaven's Taebaek -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Heaven's Taebaek",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Haemosu's Adament",
+        description: "r19 -> Haemosu's Adament",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xrs",
         "input 4": "tsc",
         "output": "Haemosu's Adament",
@@ -4346,7 +4361,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Ondal's Almighty",
         enabled: 1,
@@ -4363,15 +4378,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Ondal's Almighty -> gpg",
+        description: "Ondal's Almighty -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Ondal's Almighty",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
@@ -4406,14 +4421,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Wilhelm's Pride",
+        description: "r20 -> Wilhelm's Pride",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "ztb",
         "input 4": "tsc",
         "output": "Wilhelm's Pride",
@@ -4423,27 +4438,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Wilhelm's Pride -> gpg",
+        description: "Wilhelm's Pride -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Wilhelm's Pride",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Magnus' Skin",
+        description: "r20 -> Magnus' Skin",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "xvg",
         "input 4": "tsc",
         "output": "Magnus' Skin",
@@ -4453,20 +4468,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Magnus' Skin -> gpg",
+        description: "Magnus' Skin -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Magnus' Skin",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Wihtstan's Guard",
         enabled: 1,
@@ -4483,27 +4498,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Wihtstan's Guard -> gpg",
+        description: "Wihtstan's Guard -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Wihtstan's Guard",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r20 -> Hwanin's Splendor",
+        description: "r19 -> Hwanin's Splendor",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r20",
+        "input 2": "r19",
         "input 3": "xrn",
         "input 4": "tsc",
         "output": "Hwanin's Splendor",
@@ -4528,12 +4543,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Hwanin's Refuge",
+        description: "r19 -> Hwanin's Refuge",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xcl",
         "input 4": "tsc",
         "output": "Hwanin's Refuge",
@@ -4558,12 +4573,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r20 -> Hwanin's Seal",
+        description: "r19 -> Hwanin's Seal",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r20",
+        "input 2": "r19",
         "input 3": "mbl",
         "input 4": "tsc",
         "output": "Hwanin's Seal",
@@ -4588,12 +4603,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Hwanin's Justice",
+        description: "r19 -> Hwanin's Justice",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9vo",
         "input 4": "tsc",
         "output": "Hwanin's Justice",
@@ -4618,12 +4633,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Sazabi's Cobalt Redeemer",
+        description: "r19 -> Sazabi's Cobalt Redeemer",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "7ls",
         "input 4": "tsc",
         "output": "Sazabi's Cobalt Redeemer",
@@ -4646,14 +4661,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Sazabi's Ghost Liberator",
+        description: "r20 -> Sazabi's Ghost Liberator",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "upl",
         "input 4": "tsc",
         "output": "Sazabi's Ghost Liberator",
@@ -4663,27 +4678,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Sazabi's Ghost Liberator -> gpg",
+        description: "Sazabi's Ghost Liberator -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Sazabi's Ghost Liberator",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Sazabi's Mental Sheath",
+        description: "r20 -> Sazabi's Mental Sheath",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "xhl",
         "input 4": "tsc",
         "output": "Sazabi's Mental Sheath",
@@ -4693,27 +4708,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Sazabi's Mental Sheath -> gpg",
+        description: "Sazabi's Mental Sheath -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Sazabi's Mental Sheath",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> Bul-Kathos' Sacred Charge",
+        description: "r21 -> Bul-Kathos' Sacred Charge",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r21",
         "input 3": "7gd",
         "input 4": "tsc",
         "output": "Bul-Kathos' Sacred Charge",
@@ -4725,25 +4740,25 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Bul-Kathos' Sacred Charge -> r21",
+        description: "Bul-Kathos' Sacred Charge -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Bul-Kathos' Sacred Charge",
-        "output": "r21",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> Bul-Kathos' Tribal Guardian",
+        description: "r21 -> Bul-Kathos' Tribal Guardian",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r21",
         "input 3": "7wd",
         "input 4": "tsc",
         "output": "Bul-Kathos' Tribal Guardian",
@@ -4755,25 +4770,25 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Bul-Kathos' Tribal Guardian -> r21",
+        description: "Bul-Kathos' Tribal Guardian -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Bul-Kathos' Tribal Guardian",
-        "output": "r21",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Cow King's Horns",
+        description: "r20 -> Cow King's Horns",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "xap",
         "input 4": "tsc",
         "output": "Cow King's Horns",
@@ -4783,27 +4798,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Cow King's Horns -> gpg",
+        description: "Cow King's Horns -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Cow King's Horns",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Cow King's Hide",
+        description: "r20 -> Cow King's Hide",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "stu",
         "input 4": "tsc",
         "output": "Cow King's Hide",
@@ -4813,27 +4828,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Cow King's Hide -> gpg",
+        description: "Cow King's Hide -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Cow King's Hide",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> Cow King's Hoofs",
+        description: "r21 -> Cow King's Hoofs",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r21",
         "input 3": "vbt",
         "input 4": "tsc",
         "output": "Cow King's Hoofs",
@@ -4858,12 +4873,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> Naj's Puzzler",
+        description: "r21 -> Naj's Puzzler",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r21",
         "input 3": "6cs",
         "input 4": "tsc",
         "output": "Naj's Puzzler",
@@ -4875,18 +4890,18 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Naj's Puzzler -> r21",
+        description: "Naj's Puzzler -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Naj's Puzzler",
-        "output": "r21",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Naj's Light Plate",
         enabled: 1,
@@ -4903,27 +4918,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Naj's Light Plate -> gpg",
+        description: "Naj's Light Plate -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Naj's Light Plate",
-        "output": "gpg",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Naj's Circlet",
+        description: "r20 -> Naj's Circlet",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "ci0",
         "input 4": "tsc",
         "output": "Naj's Circlet",
@@ -4933,27 +4948,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Naj's Circlet -> gpg",
+        description: "Naj's Circlet -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Naj's Circlet",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r20 -> McAuley's Paragon",
+        description: "r19 -> McAuley's Paragon",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r20",
+        "input 2": "r19",
         "input 3": "cap",
         "input 4": "tsc",
         "output": "McAuley's Paragon",
@@ -4976,14 +4991,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> McAuley's Riprap",
+        description: "r20 -> McAuley's Riprap",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "vbt",
         "input 4": "tsc",
         "output": "McAuley's Riprap",
@@ -4993,27 +5008,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "McAuley's Riprap -> gpg",
+        description: "McAuley's Riprap -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "McAuley's Riprap",
-        "output": "gpg",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> McAuley's Taboo",
+        description: "r19 -> McAuley's Taboo",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "vgl",
         "input 4": "tsc",
         "output": "McAuley's Taboo",
@@ -5038,12 +5053,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> McAuley's Superstition",
+        description: "r19 -> McAuley's Superstition",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "bwn",
         "input 4": "tsc",
         "output": "McAuley's Superstition",
@@ -5426,14 +5441,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Gnasher",
+        description: "r20 -> The Gnasher",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "hax",
         "input 4": "isc",
         "output": "The Gnasher",
@@ -5443,27 +5458,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "The Gnasher -> gpy",
+        description: "The Gnasher -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "The Gnasher",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Deathspade",
+        description: "r19 -> Deathspade",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "axe",
         "input 4": "isc",
         "output": "Deathspade",
@@ -5488,12 +5503,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Bladebone",
+        description: "r19 -> Bladebone",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "2ax",
         "input 4": "isc",
         "output": "Bladebone",
@@ -5548,12 +5563,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Rakescar",
+        description: "r19 -> Rakescar",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "wax",
         "input 4": "isc",
         "output": "Rakescar",
@@ -5578,12 +5593,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Fechmars Axe",
+        description: "r19 -> Fechmars Axe",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "lax",
         "input 4": "isc",
         "output": "Fechmars Axe",
@@ -5608,12 +5623,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Goreshovel",
+        description: "r19 -> Goreshovel",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "bax",
         "input 4": "isc",
         "output": "Goreshovel",
@@ -5638,12 +5653,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Chieftan",
+        description: "r19 -> The Chieftan",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "btx",
         "input 4": "isc",
         "output": "The Chieftan",
@@ -5668,12 +5683,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Brainhew",
+        description: "r19 -> Brainhew",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "gax",
         "input 4": "isc",
         "output": "Brainhew",
@@ -5698,12 +5713,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Humongous",
+        description: "r19 -> The Humongous",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "gix",
         "input 4": "isc",
         "output": "The Humongous",
@@ -5758,12 +5773,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Maelstromwrath",
+        description: "r19 -> Maelstromwrath",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "ywn",
         "input 4": "isc",
         "output": "Maelstromwrath",
@@ -5788,12 +5803,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Gravenspine",
+        description: "r19 -> Gravenspine",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "bwn",
         "input 4": "isc",
         "output": "Gravenspine",
@@ -5816,14 +5831,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Umes Lament",
+        description: "r20 -> Umes Lament",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "gwn",
         "input 4": "isc",
         "output": "Umes Lament",
@@ -5833,27 +5848,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Umes Lament -> gpy",
+        description: "Umes Lament -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Umes Lament",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Felloak",
+        description: "r19 -> Felloak",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "clb",
         "input 4": "isc",
         "output": "Felloak",
@@ -5876,7 +5891,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Knell Striker",
         enabled: 1,
@@ -5893,27 +5908,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Knell Striker -> gpy",
+        description: "Knell Striker -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Knell Striker",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Rusthandle",
+        description: "r19 -> Rusthandle",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "gsc",
         "input 4": "isc",
         "output": "Rusthandle",
@@ -5938,12 +5953,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Stormeye",
+        description: "r19 -> Stormeye",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "wsp",
         "input 4": "isc",
         "output": "Stormeye",
@@ -5968,12 +5983,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Stoutnail",
+        description: "r19 -> Stoutnail",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "spc",
         "input 4": "isc",
         "output": "Stoutnail",
@@ -5998,12 +6013,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Crushflange",
+        description: "r19 -> Crushflange",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "mac",
         "input 4": "isc",
         "output": "Crushflange",
@@ -6028,12 +6043,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Bloodrise",
+        description: "r19 -> Bloodrise",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "mst",
         "input 4": "isc",
         "output": "Bloodrise",
@@ -6058,12 +6073,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Generals Tan Do Li Ga",
+        description: "r19 -> The Generals Tan Do Li Ga",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "fla",
         "input 4": "isc",
         "output": "The Generals Tan Do Li Ga",
@@ -6088,12 +6103,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Ironstone",
+        description: "r19 -> Ironstone",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "whm",
         "input 4": "isc",
         "output": "Ironstone",
@@ -6116,14 +6131,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Bonesob",
+        description: "r20 -> Bonesob",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "mau",
         "input 4": "isc",
         "output": "Bonesob",
@@ -6133,27 +6148,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Bonesob -> gpy",
+        description: "Bonesob -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Bonesob",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Steeldriver",
+        description: "r19 -> Steeldriver",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "gma",
         "input 4": "isc",
         "output": "Steeldriver",
@@ -6176,14 +6191,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Rixots Keen",
+        description: "r20 -> Rixots Keen",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "ssd",
         "input 4": "isc",
         "output": "Rixots Keen",
@@ -6193,27 +6208,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Rixots Keen -> gpy",
+        description: "Rixots Keen -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Rixots Keen",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Blood Crescent",
+        description: "r19 -> Blood Crescent",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "scm",
         "input 4": "isc",
         "output": "Blood Crescent",
@@ -6238,12 +6253,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Krintizs Skewer",
+        description: "r19 -> Krintizs Skewer",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "sbr",
         "input 4": "isc",
         "output": "Krintizs Skewer",
@@ -6268,12 +6283,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Gleamscythe",
+        description: "r19 -> Gleamscythe",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "flc",
         "input 4": "isc",
         "output": "Gleamscythe",
@@ -6328,12 +6343,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Griswolds Edge",
+        description: "r19 -> Griswolds Edge",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "bsd",
         "input 4": "isc",
         "output": "Griswolds Edge",
@@ -6358,12 +6373,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Hellplague",
+        description: "r19 -> Hellplague",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "lsd",
         "input 4": "isc",
         "output": "Hellplague",
@@ -6388,12 +6403,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Culwens Point",
+        description: "r19 -> Culwens Point",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "wsd",
         "input 4": "isc",
         "output": "Culwens Point",
@@ -6418,12 +6433,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Shadowfang",
+        description: "r19 -> Shadowfang",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "2hs",
         "input 4": "isc",
         "output": "Shadowfang",
@@ -6448,12 +6463,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Soulflay",
+        description: "r19 -> Soulflay",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "clm",
         "input 4": "isc",
         "output": "Soulflay",
@@ -6478,12 +6493,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Kinemils Awl",
+        description: "r19 -> Kinemils Awl",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "gis",
         "input 4": "isc",
         "output": "Kinemils Awl",
@@ -6508,12 +6523,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Blacktongue",
+        description: "r19 -> Blacktongue",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "bsw",
         "input 4": "isc",
         "output": "Blacktongue",
@@ -6538,12 +6553,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Ripsaw",
+        description: "r19 -> Ripsaw",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "flb",
         "input 4": "isc",
         "output": "Ripsaw",
@@ -6568,12 +6583,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Patriarch",
+        description: "r19 -> The Patriarch",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "gsd",
         "input 4": "isc",
         "output": "The Patriarch",
@@ -6598,12 +6613,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> Gull",
+        description: "r21 -> Gull",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r21",
         "input 3": "dgr",
         "input 4": "isc",
         "output": "Gull",
@@ -6615,25 +6630,25 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Gull -> r21",
+        description: "Gull -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Gull",
-        "output": "r21",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Diggler",
+        description: "r19 -> The Diggler",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "dir",
         "input 4": "isc",
         "output": "The Diggler",
@@ -6658,12 +6673,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Jade Tan Do",
+        description: "r19 -> The Jade Tan Do",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "kri",
         "input 4": "isc",
         "output": "The Jade Tan Do",
@@ -6688,12 +6703,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Irices Shard",
+        description: "r19 -> Irices Shard",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "bld",
         "input 4": "isc",
         "output": "Irices Shard",
@@ -6718,12 +6733,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Dragon Chang",
+        description: "r19 -> The Dragon Chang",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "spr",
         "input 4": "isc",
         "output": "The Dragon Chang",
@@ -6748,12 +6763,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Razortine",
+        description: "r19 -> Razortine",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "tri",
         "input 4": "isc",
         "output": "Razortine",
@@ -6778,12 +6793,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Bloodthief",
+        description: "r19 -> Bloodthief",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "brn",
         "input 4": "isc",
         "output": "Bloodthief",
@@ -6808,12 +6823,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Lance of Yaggai",
+        description: "r19 -> Lance of Yaggai",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "spt",
         "input 4": "isc",
         "output": "Lance of Yaggai",
@@ -6838,12 +6853,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Tannr Gorerod",
+        description: "r19 -> The Tannr Gorerod",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "pik",
         "input 4": "isc",
         "output": "The Tannr Gorerod",
@@ -6868,12 +6883,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Dimoaks Hew",
+        description: "r19 -> Dimoaks Hew",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "bar",
         "input 4": "isc",
         "output": "Dimoaks Hew",
@@ -6898,12 +6913,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Steelgoad",
+        description: "r19 -> Steelgoad",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "vou",
         "input 4": "isc",
         "output": "Steelgoad",
@@ -6928,12 +6943,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Soul Harvest",
+        description: "r19 -> Soul Harvest",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "scy",
         "input 4": "isc",
         "output": "Soul Harvest",
@@ -6958,12 +6973,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Battlebranch",
+        description: "r19 -> The Battlebranch",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "pax",
         "input 4": "isc",
         "output": "The Battlebranch",
@@ -6988,12 +7003,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Woestave",
+        description: "r19 -> Woestave",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "hal",
         "input 4": "isc",
         "output": "Woestave",
@@ -7018,12 +7033,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Grim Reaper",
+        description: "r19 -> The Grim Reaper",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "wsc",
         "input 4": "isc",
         "output": "The Grim Reaper",
@@ -7048,12 +7063,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Bane Ash",
+        description: "r19 -> Bane Ash",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "sst",
         "input 4": "isc",
         "output": "Bane Ash",
@@ -7078,12 +7093,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Serpent Lord",
+        description: "r19 -> Serpent Lord",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "lst",
         "input 4": "isc",
         "output": "Serpent Lord",
@@ -7108,12 +7123,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Lazarus Spire",
+        description: "r19 -> Lazarus Spire",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "cst",
         "input 4": "isc",
         "output": "Lazarus Spire",
@@ -7138,12 +7153,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Salamander",
+        description: "r19 -> The Salamander",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "bst",
         "input 4": "isc",
         "output": "The Salamander",
@@ -7168,12 +7183,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Iron Jang Bong",
+        description: "r19 -> The Iron Jang Bong",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "wst",
         "input 4": "isc",
         "output": "The Iron Jang Bong",
@@ -7198,12 +7213,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Pluckeye",
+        description: "r19 -> Pluckeye",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "sbw",
         "input 4": "isc",
         "output": "Pluckeye",
@@ -7226,14 +7241,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Witherstring",
+        description: "r20 -> Witherstring",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "hbw",
         "input 4": "isc",
         "output": "Witherstring",
@@ -7243,27 +7258,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Witherstring -> gpy",
+        description: "Witherstring -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Witherstring",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Rimeraven",
+        description: "r19 -> Rimeraven",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "lbw",
         "input 4": "isc",
         "output": "Rimeraven",
@@ -7288,12 +7303,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Piercerib",
+        description: "r19 -> Piercerib",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "cbw",
         "input 4": "isc",
         "output": "Piercerib",
@@ -7318,12 +7333,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Pullspite",
+        description: "r19 -> Pullspite",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "sbb",
         "input 4": "isc",
         "output": "Pullspite",
@@ -7348,12 +7363,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Wizendraw",
+        description: "r19 -> Wizendraw",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "lbb",
         "input 4": "isc",
         "output": "Wizendraw",
@@ -7378,12 +7393,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Hellclap",
+        description: "r19 -> Hellclap",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "swb",
         "input 4": "isc",
         "output": "Hellclap",
@@ -7408,12 +7423,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Blastbark",
+        description: "r19 -> Blastbark",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "lwb",
         "input 4": "isc",
         "output": "Blastbark",
@@ -7438,12 +7453,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Leadcrow",
+        description: "r19 -> Leadcrow",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "lxb",
         "input 4": "isc",
         "output": "Leadcrow",
@@ -7468,12 +7483,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Ichorsting",
+        description: "r19 -> Ichorsting",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "mxb",
         "input 4": "isc",
         "output": "Ichorsting",
@@ -7498,12 +7513,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Hellcast",
+        description: "r19 -> Hellcast",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "hxb",
         "input 4": "isc",
         "output": "Hellcast",
@@ -7528,12 +7543,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Doomspittle",
+        description: "r19 -> Doomspittle",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "rxb",
         "input 4": "isc",
         "output": "Doomspittle",
@@ -7556,7 +7571,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> War Bonnet",
         enabled: 1,
@@ -7573,20 +7588,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "War Bonnet -> gpy",
+        description: "War Bonnet -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "War Bonnet",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Tarnhelm",
         enabled: 1,
@@ -7603,27 +7618,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Tarnhelm -> gpy",
+        description: "Tarnhelm -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Tarnhelm",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Coif of Glory",
+        description: "r19 -> Coif of Glory",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "hlm",
         "input 4": "isc",
         "output": "Coif of Glory",
@@ -7648,12 +7663,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Duskdeep",
+        description: "r19 -> Duskdeep",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "fhl",
         "input 4": "isc",
         "output": "Duskdeep",
@@ -7678,12 +7693,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Wormskull",
+        description: "r19 -> Wormskull",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "bhm",
         "input 4": "isc",
         "output": "Wormskull",
@@ -7708,12 +7723,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Howltusk",
+        description: "r19 -> Howltusk",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "ghm",
         "input 4": "isc",
         "output": "Howltusk",
@@ -7738,12 +7753,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Undead Crown",
+        description: "r19 -> Undead Crown",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "crn",
         "input 4": "isc",
         "output": "Undead Crown",
@@ -7768,12 +7783,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Face of Horror",
+        description: "r19 -> The Face of Horror",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "msk",
         "input 4": "isc",
         "output": "The Face of Horror",
@@ -7798,12 +7813,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> Greyform",
+        description: "r21 -> Greyform",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r21",
         "input 3": "qui",
         "input 4": "isc",
         "output": "Greyform",
@@ -7826,14 +7841,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Blinkbats Form",
+        description: "r20 -> Blinkbats Form",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "lea",
         "input 4": "isc",
         "output": "Blinkbats Form",
@@ -7843,27 +7858,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Blinkbats Form -> gpy",
+        description: "Blinkbats Form -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Blinkbats Form",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Centurion",
+        description: "r19 -> The Centurion",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "hla",
         "input 4": "isc",
         "output": "The Centurion",
@@ -7886,14 +7901,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Twitchthroe",
+        description: "r20 -> Twitchthroe",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "stu",
         "input 4": "isc",
         "output": "Twitchthroe",
@@ -7903,27 +7918,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Twitchthroe -> gpy",
+        description: "Twitchthroe -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Twitchthroe",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Darkglow",
+        description: "r19 -> Darkglow",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "rng",
         "input 4": "isc",
         "output": "Darkglow",
@@ -7948,12 +7963,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Hawkmail",
+        description: "r19 -> Hawkmail",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "scl",
         "input 4": "isc",
         "output": "Hawkmail",
@@ -7978,12 +7993,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Sparking Mail",
+        description: "r19 -> Sparking Mail",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "chn",
         "input 4": "isc",
         "output": "Sparking Mail",
@@ -8008,12 +8023,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Venomsward",
+        description: "r19 -> Venomsward",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "brs",
         "input 4": "isc",
         "output": "Venomsward",
@@ -8038,12 +8053,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Iceblink",
+        description: "r19 -> Iceblink",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "spl",
         "input 4": "isc",
         "output": "Iceblink",
@@ -8068,12 +8083,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Boneflesh",
+        description: "r19 -> Boneflesh",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "plt",
         "input 4": "isc",
         "output": "Boneflesh",
@@ -8098,12 +8113,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Rockfleece",
+        description: "r19 -> Rockfleece",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "fld",
         "input 4": "isc",
         "output": "Rockfleece",
@@ -8126,14 +8141,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Rattlecage",
+        description: "r20 -> Rattlecage",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "gth",
         "input 4": "isc",
         "output": "Rattlecage",
@@ -8143,27 +8158,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Rattlecage -> gpy",
+        description: "Rattlecage -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Rattlecage",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Goldskin",
+        description: "r20 -> Goldskin",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "ful",
         "input 4": "isc",
         "output": "Goldskin",
@@ -8173,27 +8188,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Goldskin -> gpy",
+        description: "Goldskin -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Goldskin",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Victors Silk",
+        description: "r20 -> Victors Silk",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "aar",
         "input 4": "isc",
         "output": "Victors Silk",
@@ -8203,27 +8218,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Victors Silk -> gpy",
+        description: "Victors Silk -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Victors Silk",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Heavenly Garb",
+        description: "r19 -> Heavenly Garb",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "ltp",
         "input 4": "isc",
         "output": "Heavenly Garb",
@@ -8246,14 +8261,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Pelta Lunata",
+        description: "r20 -> Pelta Lunata",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "buc",
         "input 4": "isc",
         "output": "Pelta Lunata",
@@ -8263,27 +8278,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Pelta Lunata -> gpy",
+        description: "Pelta Lunata -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Pelta Lunata",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Umbral Disk",
+        description: "r19 -> Umbral Disk",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "sml",
         "input 4": "isc",
         "output": "Umbral Disk",
@@ -8338,12 +8353,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Wall of the Eyeless",
+        description: "r19 -> Wall of the Eyeless",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "bsh",
         "input 4": "isc",
         "output": "Wall of the Eyeless",
@@ -8368,12 +8383,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Swordback Hold",
+        description: "r19 -> Swordback Hold",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "spk",
         "input 4": "isc",
         "output": "Swordback Hold",
@@ -8396,14 +8411,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Steelclash",
+        description: "r20 -> Steelclash",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "kit",
         "input 4": "isc",
         "output": "Steelclash",
@@ -8413,27 +8428,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Steelclash -> gpy",
+        description: "Steelclash -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Steelclash",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Bverrit Keep",
+        description: "r19 -> Bverrit Keep",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "tow",
         "input 4": "isc",
         "output": "Bverrit Keep",
@@ -8456,14 +8471,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Ward",
+        description: "r20 -> The Ward",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "gts",
         "input 4": "isc",
         "output": "The Ward",
@@ -8473,27 +8488,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "The Ward -> gpy",
+        description: "The Ward -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "The Ward",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> The Hand of Broc",
+        description: "r21 -> The Hand of Broc",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r21",
         "input 3": "lgl",
         "input 4": "isc",
         "output": "The Hand of Broc",
@@ -8518,12 +8533,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> Bloodfist",
+        description: "r21 -> Bloodfist",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r21",
         "input 3": "vgl",
         "input 4": "isc",
         "output": "Bloodfist",
@@ -8606,14 +8621,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Frostburn",
+        description: "r20 -> Frostburn",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "hgl",
         "input 4": "isc",
         "output": "Frostburn",
@@ -8623,15 +8638,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Frostburn -> gpy",
+        description: "Frostburn -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Frostburn",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
@@ -8668,12 +8683,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Gorefoot",
+        description: "r19 -> Gorefoot",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "vbt",
         "input 4": "isc",
         "output": "Gorefoot",
@@ -8698,12 +8713,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Treads of Cthon",
+        description: "r19 -> Treads of Cthon",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "mbt",
         "input 4": "isc",
         "output": "Treads of Cthon",
@@ -8726,14 +8741,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Goblin Toe",
+        description: "r20 -> Goblin Toe",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "tbt",
         "input 4": "isc",
         "output": "Goblin Toe",
@@ -8743,27 +8758,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Goblin Toe -> gpy",
+        description: "Goblin Toe -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Goblin Toe",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Tearhaunch",
+        description: "r20 -> Tearhaunch",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "hbt",
         "input 4": "isc",
         "output": "Tearhaunch",
@@ -8773,20 +8788,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Tearhaunch -> gpy",
+        description: "Tearhaunch -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Tearhaunch",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Lenyms Cord",
         enabled: 1,
@@ -8803,27 +8818,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Lenyms Cord -> gpy",
+        description: "Lenyms Cord -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Lenyms Cord",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Snakecord",
+        description: "r19 -> Snakecord",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "vbl",
         "input 4": "isc",
         "output": "Snakecord",
@@ -8848,12 +8863,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Nightsmoke",
+        description: "r19 -> Nightsmoke",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "mbl",
         "input 4": "isc",
         "output": "Nightsmoke",
@@ -8876,14 +8891,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Goldwrap",
+        description: "r22 -> Goldwrap",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r22",
         "input 3": "tbl",
         "input 4": "isc",
         "output": "Goldwrap",
@@ -8893,27 +8908,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Goldwrap -> gpy",
+        description: "Goldwrap -> r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Goldwrap",
-        "output": "gpy",
+        "output": "r21",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Bladebuckle",
+        description: "r19 -> Bladebuckle",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "hbl",
         "input 4": "isc",
         "output": "Bladebuckle",
@@ -8966,14 +8981,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Eye of Etlich",
+        description: "r29 -> The Eye of Etlich",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r29",
         "input 3": "amu",
         "input 4": "isc",
         "output": "The Eye of Etlich",
@@ -8983,29 +8998,29 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "The Eye of Etlich -> gpy",
+        description: "The Eye of Etlich -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "The Eye of Etlich",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Mahim-Oak Curio",
+        description: "r20 -> The Mahim-Oak Curio",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "amu",
-        "input 4": "r19",
+        "input 4": "gly",
         "output": "The Mahim-Oak Curio",
         lvl: 100,
         ilvl: 100,
@@ -9013,27 +9028,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "The Mahim-Oak Curio -> gpy",
+        description: "The Mahim-Oak Curio -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "The Mahim-Oak Curio",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r24 -> Nagelring",
+        description: "r23 -> Nagelring",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r24",
+        "input 2": "r23",
         "input 3": "rin",
         "input 4": "isc",
         "output": "Nagelring",
@@ -9056,16 +9071,16 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Manald Heal",
+        description: "r20 -> Manald Heal",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "rin",
-        "input 4": "wms",
+        "input 4": "glb",
         "output": "Manald Heal",
         lvl: 100,
         ilvl: 100,
@@ -9073,27 +9088,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Manald Heal -> gpy",
+        description: "Manald Heal -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Manald Heal",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r28 -> The Stone of Jordan",
+        description: "r29 -> The Stone of Jordan",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r28",
+        "input 2": "r29",
         "input 3": "rin",
         "input 4": "isc",
         "output": "The Stone of Jordan",
@@ -9105,25 +9120,25 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "The Stone of Jordan -> r27",
+        description: "The Stone of Jordan -> r28",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "The Stone of Jordan",
-        "output": "r27",
+        "output": "r28",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Coldkill",
+        description: "r19 -> Coldkill",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9ha",
         "input 4": "isc",
         "output": "Coldkill",
@@ -9148,12 +9163,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Butcher's Pupil",
+        description: "r19 -> Butcher's Pupil",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9ax",
         "input 4": "isc",
         "output": "Butcher's Pupil",
@@ -9178,12 +9193,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Islestrike",
+        description: "r19 -> Islestrike",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "92a",
         "input 4": "isc",
         "output": "Islestrike",
@@ -9208,12 +9223,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Pompe's Wrath",
+        description: "r19 -> Pompe's Wrath",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9mp",
         "input 4": "isc",
         "output": "Pompe's Wrath",
@@ -9238,12 +9253,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Guardian Naga",
+        description: "r19 -> Guardian Naga",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9wa",
         "input 4": "isc",
         "output": "Guardian Naga",
@@ -9268,12 +9283,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Warlord's Trust",
+        description: "r19 -> Warlord's Trust",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9la",
         "input 4": "isc",
         "output": "Warlord's Trust",
@@ -9298,12 +9313,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Spellsteel",
+        description: "r19 -> Spellsteel",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9ba",
         "input 4": "isc",
         "output": "Spellsteel",
@@ -9328,12 +9343,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Stormrider",
+        description: "r19 -> Stormrider",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9bt",
         "input 4": "isc",
         "output": "Stormrider",
@@ -9358,12 +9373,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Boneslayer Blade",
+        description: "r19 -> Boneslayer Blade",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9ga",
         "input 4": "isc",
         "output": "Boneslayer Blade",
@@ -9388,12 +9403,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Minataur",
+        description: "r19 -> The Minataur",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9gi",
         "input 4": "isc",
         "output": "The Minataur",
@@ -9418,12 +9433,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Suicide Branch",
+        description: "r19 -> Suicide Branch",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9wn",
         "input 4": "isc",
         "output": "Suicide Branch",
@@ -9448,12 +9463,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Carin Shard",
+        description: "r19 -> Carin Shard",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9yw",
         "input 4": "isc",
         "output": "Carin Shard",
@@ -9476,7 +9491,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Arm of King Leoric",
         enabled: 1,
@@ -9493,27 +9508,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Arm of King Leoric -> gpy",
+        description: "Arm of King Leoric -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Arm of King Leoric",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Blackhand Key",
+        description: "r19 -> Blackhand Key",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9gw",
         "input 4": "isc",
         "output": "Blackhand Key",
@@ -9538,12 +9553,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Dark Clan Crusher",
+        description: "r19 -> Dark Clan Crusher",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9cl",
         "input 4": "isc",
         "output": "Dark Clan Crusher",
@@ -9566,14 +9581,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Zakarum's Hand",
+        description: "r20 -> Zakarum's Hand",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "9sc",
         "input 4": "isc",
         "output": "Zakarum's Hand",
@@ -9583,27 +9598,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Zakarum's Hand -> gpy",
+        description: "Zakarum's Hand -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Zakarum's Hand",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Fetid Sprinkler",
+        description: "r19 -> The Fetid Sprinkler",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9qs",
         "input 4": "isc",
         "output": "The Fetid Sprinkler",
@@ -9626,14 +9641,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Hand of Blessed Light",
+        description: "r20 -> Hand of Blessed Light",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "9ws",
         "input 4": "isc",
         "output": "Hand of Blessed Light",
@@ -9643,27 +9658,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Hand of Blessed Light -> gpy",
+        description: "Hand of Blessed Light -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Hand of Blessed Light",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Fleshrender",
+        description: "r19 -> Fleshrender",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9sp",
         "input 4": "isc",
         "output": "Fleshrender",
@@ -9688,12 +9703,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Sureshrill Frost",
+        description: "r19 -> Sureshrill Frost",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9ma",
         "input 4": "isc",
         "output": "Sureshrill Frost",
@@ -9718,12 +9733,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Moonfall",
+        description: "r19 -> Moonfall",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9mt",
         "input 4": "isc",
         "output": "Moonfall",
@@ -9748,12 +9763,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Baezil's Vortex",
+        description: "r19 -> Baezil's Vortex",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9fl",
         "input 4": "isc",
         "output": "Baezil's Vortex",
@@ -9778,12 +9793,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Earthshaker",
+        description: "r19 -> Earthshaker",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9wh",
         "input 4": "isc",
         "output": "Earthshaker",
@@ -9808,12 +9823,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Bloodtree Stump",
+        description: "r19 -> Bloodtree Stump",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9m9",
         "input 4": "isc",
         "output": "Bloodtree Stump",
@@ -9838,12 +9853,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Gavel of Pain",
+        description: "r19 -> The Gavel of Pain",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9gm",
         "input 4": "isc",
         "output": "The Gavel of Pain",
@@ -9868,12 +9883,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Bloodletter",
+        description: "r19 -> Bloodletter",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9ss",
         "input 4": "isc",
         "output": "Bloodletter",
@@ -9896,14 +9911,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Coldsteel Eye",
+        description: "r20 -> Coldsteel Eye",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "9sm",
         "input 4": "isc",
         "output": "Coldsteel Eye",
@@ -9913,27 +9928,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Coldsteel Eye -> gpy",
+        description: "Coldsteel Eye -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Coldsteel Eye",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Hexfire",
+        description: "r19 -> Hexfire",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9sb",
         "input 4": "isc",
         "output": "Hexfire",
@@ -9986,14 +10001,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Ginther's Rift",
+        description: "r20 -> Ginther's Rift",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "9cr",
         "input 4": "isc",
         "output": "Ginther's Rift",
@@ -10003,27 +10018,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Ginther's Rift -> gpy",
+        description: "Ginther's Rift -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Ginther's Rift",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Headstriker",
+        description: "r20 -> Headstriker",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "9bs",
         "input 4": "isc",
         "output": "Headstriker",
@@ -10033,27 +10048,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Headstriker -> gpy",
+        description: "Headstriker -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Headstriker",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Plague Bearer",
+        description: "r19 -> Plague Bearer",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9ls",
         "input 4": "isc",
         "output": "Plague Bearer",
@@ -10078,12 +10093,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Atlantian",
+        description: "r19 -> The Atlantian",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9wd",
         "input 4": "isc",
         "output": "The Atlantian",
@@ -10106,14 +10121,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Crainte Vomir",
+        description: "r20 -> Crainte Vomir",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "92h",
         "input 4": "isc",
         "output": "Crainte Vomir",
@@ -10123,27 +10138,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Crainte Vomir -> gpy",
+        description: "Crainte Vomir -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Crainte Vomir",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Bing Sz Wang",
+        description: "r20 -> Bing Sz Wang",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "9cm",
         "input 4": "isc",
         "output": "Bing Sz Wang",
@@ -10153,27 +10168,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Bing Sz Wang -> gpy",
+        description: "Bing Sz Wang -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Bing Sz Wang",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Vile Husk",
+        description: "r19 -> The Vile Husk",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9gs",
         "input 4": "isc",
         "output": "The Vile Husk",
@@ -10228,12 +10243,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Todesfaelle Flamme",
+        description: "r19 -> Todesfaelle Flamme",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9fb",
         "input 4": "isc",
         "output": "Todesfaelle Flamme",
@@ -10258,12 +10273,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Swordguard",
+        description: "r19 -> Swordguard",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9gd",
         "input 4": "isc",
         "output": "Swordguard",
@@ -10288,12 +10303,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Spineripper",
+        description: "r19 -> Spineripper",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9dg",
         "input 4": "isc",
         "output": "Spineripper",
@@ -10318,12 +10333,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Heart Carver",
+        description: "r19 -> Heart Carver",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9di",
         "input 4": "isc",
         "output": "Heart Carver",
@@ -10348,12 +10363,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Blackbog's Sharp",
+        description: "r19 -> Blackbog's Sharp",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9kr",
         "input 4": "isc",
         "output": "Blackbog's Sharp",
@@ -10376,14 +10391,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.uniqueMarket) {
+    if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r24 -> Stormspike",
+        description: "r19 -> Stormspike",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r24",
+        "input 2": "r19",
         "input 3": "9bl",
         "input 4": "isc",
         "output": "Stormspike",
@@ -10393,27 +10408,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.uniqueMarket) {
+    if (config.junkMarket) {
       cubemain.rows.push({
-        description: "Stormspike -> r23",
+        description: "Stormspike -> gpy",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Stormspike",
-        "output": "r23",
+        "output": "gpy",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Impaler",
+        description: "r19 -> The Impaler",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9sr",
         "input 4": "isc",
         "output": "The Impaler",
@@ -10468,12 +10483,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Soulfeast Tine",
+        description: "r19 -> Soulfeast Tine",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9br",
         "input 4": "isc",
         "output": "Soulfeast Tine",
@@ -10526,7 +10541,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Hone Sundan",
         enabled: 1,
@@ -10543,27 +10558,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Hone Sundan -> gpy",
+        description: "Hone Sundan -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Hone Sundan",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Spire of Honor",
+        description: "r19 -> Spire of Honor",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9p9",
         "input 4": "isc",
         "output": "Spire of Honor",
@@ -10588,12 +10603,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Meat Scraper",
+        description: "r19 -> The Meat Scraper",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9b7",
         "input 4": "isc",
         "output": "The Meat Scraper",
@@ -10618,12 +10633,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Blackleach Blade",
+        description: "r19 -> Blackleach Blade",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9vo",
         "input 4": "isc",
         "output": "Blackleach Blade",
@@ -10648,12 +10663,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Athena's Wrath",
+        description: "r19 -> Athena's Wrath",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9s8",
         "input 4": "isc",
         "output": "Athena's Wrath",
@@ -10678,12 +10693,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Pierre Tombale Couant",
+        description: "r19 -> Pierre Tombale Couant",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9pa",
         "input 4": "isc",
         "output": "Pierre Tombale Couant",
@@ -10708,12 +10723,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Husoldal Evo",
+        description: "r19 -> Husoldal Evo",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9h9",
         "input 4": "isc",
         "output": "Husoldal Evo",
@@ -10738,12 +10753,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Grim's Burning Dead",
+        description: "r19 -> Grim's Burning Dead",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "9wc",
         "input 4": "isc",
         "output": "Grim's Burning Dead",
@@ -10768,12 +10783,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Razorswitch",
+        description: "r19 -> Razorswitch",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "8ss",
         "input 4": "isc",
         "output": "Razorswitch",
@@ -10858,12 +10873,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Chromatic Ire",
+        description: "r19 -> Chromatic Ire",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "8cs",
         "input 4": "isc",
         "output": "Chromatic Ire",
@@ -10888,12 +10903,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> Warpspear",
+        description: "r21 -> Warpspear",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r21",
         "input 3": "8bs",
         "input 4": "isc",
         "output": "Warpspear",
@@ -10918,12 +10933,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Skullcollector",
+        description: "r19 -> Skullcollector",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "8ws",
         "input 4": "isc",
         "output": "Skullcollector",
@@ -11038,12 +11053,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Endlesshail",
+        description: "r19 -> Endlesshail",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "8cb",
         "input 4": "isc",
         "output": "Endlesshail",
@@ -11188,12 +11203,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Langer Briser",
+        description: "r19 -> Langer Briser",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "8lx",
         "input 4": "isc",
         "output": "Langer Briser",
@@ -11218,12 +11233,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Pus Spiter",
+        description: "r19 -> Pus Spiter",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "8mx",
         "input 4": "isc",
         "output": "Pus Spiter",
@@ -11246,14 +11261,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Buriza-Do Kyanon",
+        description: "r22 -> Buriza-Do Kyanon",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r22",
         "input 3": "8hx",
         "input 4": "isc",
         "output": "Buriza-Do Kyanon",
@@ -11263,27 +11278,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Buriza-Do Kyanon -> gpy",
+        description: "Buriza-Do Kyanon -> r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Buriza-Do Kyanon",
-        "output": "gpy",
+        "output": "r21",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Demon Machine",
+        description: "r19 -> Demon Machine",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "8rx",
         "input 4": "isc",
         "output": "Demon Machine",
@@ -11306,14 +11321,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Peasent Crown",
+        description: "r20 -> Peasent Crown",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "xap",
         "input 4": "isc",
         "output": "Peasent Crown",
@@ -11323,27 +11338,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Peasent Crown -> gpy",
+        description: "Peasent Crown -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Peasent Crown",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Rockstopper",
+        description: "r20 -> Rockstopper",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "xkp",
         "input 4": "isc",
         "output": "Rockstopper",
@@ -11353,20 +11368,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Rockstopper -> gpy",
+        description: "Rockstopper -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Rockstopper",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Stealskull",
         enabled: 1,
@@ -11383,27 +11398,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Stealskull -> gpy",
+        description: "Stealskull -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Stealskull",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Darksight Helm",
+        description: "r19 -> Darksight Helm",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xhl",
         "input 4": "isc",
         "output": "Darksight Helm",
@@ -11426,7 +11441,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Valkiry Wing",
         enabled: 1,
@@ -11443,27 +11458,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Valkiry Wing -> gpy",
+        description: "Valkiry Wing -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Valkiry Wing",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r24 -> Crown of Thieves",
+        description: "r23 -> Crown of Thieves",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r24",
+        "input 2": "r23",
         "input 3": "xrn",
         "input 4": "isc",
         "output": "Crown of Thieves",
@@ -11475,25 +11490,25 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Crown of Thieves -> r23",
+        description: "Crown of Thieves -> r22",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Crown of Thieves",
-        "output": "r23",
+        "output": "r22",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Blackhorn's Face",
+        description: "r19 -> Blackhorn's Face",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xsk",
         "input 4": "isc",
         "output": "Blackhorn's Face",
@@ -11578,12 +11593,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Spirit Shroud",
+        description: "r19 -> The Spirit Shroud",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xui",
         "input 4": "isc",
         "output": "The Spirit Shroud",
@@ -11638,12 +11653,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Skin of the Flayerd One",
+        description: "r19 -> Skin of the Flayerd One",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xla",
         "input 4": "isc",
         "output": "Skin of the Flayerd One",
@@ -11668,12 +11683,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Ironpelt",
+        description: "r19 -> Ironpelt",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xtu",
         "input 4": "isc",
         "output": "Ironpelt",
@@ -11728,12 +11743,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Crow Caw",
+        description: "r19 -> Crow Caw",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xcl",
         "input 4": "isc",
         "output": "Crow Caw",
@@ -11758,12 +11773,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> Shaftstop",
+        description: "r21 -> Shaftstop",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r21",
         "input 3": "xhn",
         "input 4": "isc",
         "output": "Shaftstop",
@@ -11775,25 +11790,25 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Shaftstop -> r21",
+        description: "Shaftstop -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Shaftstop",
-        "output": "r21",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> Duriel's Shell",
+        description: "r23 -> Duriel's Shell",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r23",
         "input 3": "xrs",
         "input 4": "isc",
         "output": "Duriel's Shell",
@@ -11805,13 +11820,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Duriel's Shell -> r20",
+        description: "Duriel's Shell -> r22",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Duriel's Shell",
-        "output": "r20",
+        "output": "r22",
         "*eol": 0,
       });
     }
@@ -11865,25 +11880,25 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Guardian Angel -> r20",
+        description: "Guardian Angel -> r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Guardian Angel",
-        "output": "r20",
+        "output": "r21",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Toothrow",
+        description: "r20 -> Toothrow",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "xld",
         "input 4": "isc",
         "output": "Toothrow",
@@ -11893,27 +11908,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Toothrow -> gpy",
+        description: "Toothrow -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Toothrow",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Atma's Wail",
+        description: "r19 -> Atma's Wail",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xth",
         "input 4": "isc",
         "output": "Atma's Wail",
@@ -11936,14 +11951,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Black Hades",
+        description: "r20 -> Black Hades",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "xul",
         "input 4": "isc",
         "output": "Black Hades",
@@ -11953,27 +11968,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Black Hades -> gpy",
+        description: "Black Hades -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Black Hades",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Corpsemourn",
+        description: "r19 -> Corpsemourn",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xar",
         "input 4": "isc",
         "output": "Corpsemourn",
@@ -11996,14 +12011,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Que-Hegan's Wisdon",
+        description: "r20 -> Que-Hegan's Wisdon",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "xtp",
         "input 4": "isc",
         "output": "Que-Hegan's Wisdon",
@@ -12013,15 +12028,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Que-Hegan's Wisdon -> gpy",
+        description: "Que-Hegan's Wisdon -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Que-Hegan's Wisdon",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
@@ -12088,12 +12103,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Stormchaser",
+        description: "r19 -> Stormchaser",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xrg",
         "input 4": "isc",
         "output": "Stormchaser",
@@ -12118,12 +12133,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Tiamat's Rebuke",
+        description: "r19 -> Tiamat's Rebuke",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xit",
         "input 4": "isc",
         "output": "Tiamat's Rebuke",
@@ -12178,12 +12193,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Radimant's Sphere",
+        description: "r19 -> Radimant's Sphere",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xts",
         "input 4": "isc",
         "output": "Radimant's Sphere",
@@ -12236,14 +12251,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Lance Guard",
+        description: "r20 -> Lance Guard",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "xpk",
         "input 4": "isc",
         "output": "Lance Guard",
@@ -12253,27 +12268,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Lance Guard -> gpy",
+        description: "Lance Guard -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Lance Guard",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Venom Grip",
+        description: "r20 -> Venom Grip",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "xlg",
         "input 4": "isc",
         "output": "Venom Grip",
@@ -12283,27 +12298,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Venom Grip -> gpy",
+        description: "Venom Grip -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Venom Grip",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Gravepalm",
+        description: "r19 -> Gravepalm",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xvg",
         "input 4": "isc",
         "output": "Gravepalm",
@@ -12328,12 +12343,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Ghoulhide",
+        description: "r19 -> Ghoulhide",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xmg",
         "input 4": "isc",
         "output": "Ghoulhide",
@@ -12356,14 +12371,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Lavagout",
+        description: "r20 -> Lavagout",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "xtg",
         "input 4": "isc",
         "output": "Lavagout",
@@ -12373,27 +12388,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Lavagout -> gpy",
+        description: "Lavagout -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Lavagout",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Hellmouth",
+        description: "r19 -> Hellmouth",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "xhg",
         "input 4": "isc",
         "output": "Hellmouth",
@@ -12538,12 +12553,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r24 -> Gorerider",
+        description: "r23 -> Gorerider",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r24",
+        "input 2": "r23",
         "input 3": "xhb",
         "input 4": "isc",
         "output": "Gorerider",
@@ -12555,25 +12570,25 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Gorerider -> r23",
+        description: "Gorerider -> r22",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Gorerider",
-        "output": "r23",
+        "output": "r22",
         "*eol": 0,
       });
     }
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r24 -> String of Ears",
+        description: "r23 -> String of Ears",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r24",
+        "input 2": "r23",
         "input 3": "zlb",
         "input 4": "isc",
         "output": "String of Ears",
@@ -12585,25 +12600,25 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "String of Ears -> r23",
+        description: "String of Ears -> r22",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "String of Ears",
-        "output": "r23",
+        "output": "r22",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Razortail",
+        description: "r22 -> Razortail",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r22",
         "input 3": "zvb",
         "input 4": "isc",
         "output": "Razortail",
@@ -12613,27 +12628,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Razortail -> gpy",
+        description: "Razortail -> r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Razortail",
-        "output": "gpy",
+        "output": "r21",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Gloomstrap",
+        description: "r19 -> Gloomstrap",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "zmb",
         "input 4": "isc",
         "output": "Gloomstrap",
@@ -12656,14 +12671,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Snowclash",
+        description: "r20 -> Snowclash",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "ztb",
         "input 4": "isc",
         "output": "Snowclash",
@@ -12673,27 +12688,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Snowclash -> gpy",
+        description: "Snowclash -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Snowclash",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r24 -> Thudergod's Vigor",
+        description: "r23 -> Thudergod's Vigor",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r24",
+        "input 2": "r23",
         "input 3": "zhb",
         "input 4": "isc",
         "output": "Thudergod's Vigor",
@@ -12705,13 +12720,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Thudergod's Vigor -> r23",
+        description: "Thudergod's Vigor -> r22",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Thudergod's Vigor",
-        "output": "r23",
+        "output": "r22",
         "*eol": 0,
       });
     }
@@ -12748,12 +12763,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Veil of Steel",
+        description: "r19 -> Veil of Steel",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "uhm",
         "input 4": "isc",
         "output": "Veil of Steel",
@@ -12778,12 +12793,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> The Gladiator's Bane",
+        description: "r20 -> The Gladiator's Bane",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r20",
         "input 3": "utu",
         "input 4": "isc",
         "output": "The Gladiator's Bane",
@@ -12795,13 +12810,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "The Gladiator's Bane -> r21",
+        description: "The Gladiator's Bane -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "The Gladiator's Bane",
-        "output": "r21",
+        "output": "r19",
         "*eol": 0,
       });
     }
@@ -12838,12 +12853,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Blackoak Shield",
+        description: "r19 -> Blackoak Shield",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "uml",
         "input 4": "isc",
         "output": "Blackoak Shield",
@@ -12898,12 +12913,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Hellslayer",
+        description: "r19 -> Hellslayer",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "7bt",
         "input 4": "isc",
         "output": "Hellslayer",
@@ -12928,12 +12943,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Messerschmidt's Reaver",
+        description: "r19 -> Messerschmidt's Reaver",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "7ga",
         "input 4": "isc",
         "output": "Messerschmidt's Reaver",
@@ -12956,7 +12971,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Baranar's Star",
         enabled: 1,
@@ -12973,15 +12988,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Baranar's Star -> gpy",
+        description: "Baranar's Star -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Baranar's Star",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
@@ -13046,14 +13061,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Lightsabre",
+        description: "r20 -> Lightsabre",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "7cr",
         "input 4": "isc",
         "output": "Lightsabre",
@@ -13063,20 +13078,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Lightsabre -> gpy",
+        description: "Lightsabre -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Lightsabre",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Doombringer",
         enabled: 1,
@@ -13093,15 +13108,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Doombringer -> gpy",
+        description: "Doombringer -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Doombringer",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
@@ -13166,14 +13181,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Stormspire",
+        description: "r24 -> Stormspire",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r24",
         "input 3": "7wc",
         "input 4": "isc",
         "output": "Stormspire",
@@ -13183,15 +13198,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Stormspire -> gpy",
+        description: "Stormspire -> r23",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Stormspire",
-        "output": "gpy",
+        "output": "r23",
         "*eol": 0,
       });
     }
@@ -13286,14 +13301,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r20 -> The Cat's Eye",
+        description: "r21 -> The Cat's Eye",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r20",
+        "input 2": "r21",
         "input 3": "amu",
         "input 4": "isc",
         "output": "The Cat's Eye",
@@ -13303,29 +13318,29 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "The Cat's Eye -> gpy",
+        description: "The Cat's Eye -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "The Cat's Eye",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> The Rising Sun",
+        description: "r20 -> The Rising Sun",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "amu",
-        "input 4": "gpw",
+        "input 4": "glr",
         "output": "The Rising Sun",
         lvl: 100,
         ilvl: 100,
@@ -13333,27 +13348,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "The Rising Sun -> gpy",
+        description: "The Rising Sun -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "The Rising Sun",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Crescent Moon",
+        description: "r20 -> Crescent Moon",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "amu",
         "input 4": "r18",
         "output": "Crescent Moon",
@@ -13363,15 +13378,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Crescent Moon -> gpy",
+        description: "Crescent Moon -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Crescent Moon",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
@@ -13436,14 +13451,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Dwarf Star",
+        description: "r20 -> Dwarf Star",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "rin",
         "input 4": "gpv",
         "output": "Dwarf Star",
@@ -13453,27 +13468,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Dwarf Star -> gpy",
+        description: "Dwarf Star -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Dwarf Star",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Raven Frost",
+        description: "r22 -> Raven Frost",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r22",
         "input 3": "rin",
         "input 4": "gpb",
         "output": "Raven Frost",
@@ -13483,15 +13498,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Raven Frost -> gpy",
+        description: "Raven Frost -> r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Raven Frost",
-        "output": "gpy",
+        "output": "r21",
         "*eol": 0,
       });
     }
@@ -13526,14 +13541,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Saracen's Chance",
+        description: "r20 -> Saracen's Chance",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "amu",
         "input 4": "r16",
         "output": "Saracen's Chance",
@@ -13543,27 +13558,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Saracen's Chance -> gpy",
+        description: "Saracen's Chance -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Saracen's Chance",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r25 -> Arreat's Face",
+        description: "r24 -> Arreat's Face",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r25",
+        "input 2": "r24",
         "input 3": "baa",
         "input 4": "isc",
         "output": "Arreat's Face",
@@ -13618,36 +13633,6 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r23 -> Titan's Revenge",
-        enabled: 1,
-        version: 100,
-        numinputs: 4,
-        "input 1": "vps",
-        "input 2": "r23",
-        "input 3": "yps",
-        "input 4": "isc",
-        "output": "Titan's Revenge",
-        lvl: 100,
-        ilvl: 100,
-        "*eol": 0,
-      });
-    }
-
-    if (config.uniqueMarket) {
-      cubemain.rows.push({
-        description: "Titan's Revenge -> r22",
-        enabled: 1,
-        version: 100,
-        numinputs: 2,
-        "input 1": "yps",
-        "input 2": "Titan's Revenge",
-        "output": "r22",
-        "*eol": 0,
-      });
-    }
-
-    if (config.uniqueMarket) {
-      cubemain.rows.push({
         description: "r31 -> Titan's Revenge,eth",
         enabled: 1,
         version: 100,
@@ -13672,6 +13657,36 @@ if (config.junkMarket) {
         "input 1": "yps",
         "input 2": "Titan's Revenge,eth",
         "output": "r30",
+        "*eol": 0,
+      });
+    }
+
+    if (config.uniqueMarket) {
+      cubemain.rows.push({
+        description: "r22 -> Titan's Revenge",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "yps",
+        "input 4": "isc",
+        "output": "Titan's Revenge",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.uniqueMarket) {
+      cubemain.rows.push({
+        description: "Titan's Revenge -> r21",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "Titan's Revenge",
+        "output": "r21",
         "*eol": 0,
       });
     }
@@ -13706,14 +13721,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Lycander's Flank",
+        description: "r20 -> Lycander's Flank",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "am9",
         "input 4": "isc",
         "output": "Lycander's Flank",
@@ -13723,15 +13738,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Lycander's Flank -> gpy",
+        description: "Lycander's Flank -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Lycander's Flank",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
@@ -13858,12 +13873,42 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> The Scalper",
+        description: "r22 -> The Scalper,eth",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
         "input 2": "r22",
+        "input 3": "9ta",
+        "input 4": "isc",
+        "output": "The Scalper,eth",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.uniqueMarket) {
+      cubemain.rows.push({
+        description: "The Scalper,eth -> r21",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "The Scalper,eth",
+        "output": "r21",
+        "*eol": 0,
+      });
+    }
+
+    if (config.uniqueMarket) {
+      cubemain.rows.push({
+        description: "r21 -> The Scalper",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
         "input 3": "9ta",
         "input 4": "isc",
         "output": "The Scalper",
@@ -13886,14 +13931,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Bloodmoon",
+        description: "r20 -> Bloodmoon",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "7sb",
         "input 4": "isc",
         "output": "Bloodmoon",
@@ -13903,20 +13948,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Bloodmoon -> gpy",
+        description: "Bloodmoon -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Bloodmoon",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Djinnslayer",
         enabled: 1,
@@ -13933,15 +13978,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Djinnslayer -> gpy",
+        description: "Djinnslayer -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Djinnslayer",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
@@ -13965,13 +14010,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Deathbit -> r20",
+        description: "Deathbit -> r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Deathbit",
-        "output": "r20",
+        "output": "r21",
         "*eol": 0,
       });
     }
@@ -14006,14 +14051,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Gutsiphon",
+        description: "r20 -> Gutsiphon",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "6rx",
         "input 4": "isc",
         "output": "Gutsiphon",
@@ -14023,27 +14068,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Gutsiphon -> gpy",
+        description: "Gutsiphon -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Gutsiphon",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Razoredge",
+        description: "r19 -> Razoredge",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "7ha",
         "input 4": "isc",
         "output": "Razoredge",
@@ -14066,14 +14111,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Demonlimb",
+        description: "r20 -> Demonlimb",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "7sp",
         "input 4": "isc",
         "output": "Demonlimb",
@@ -14083,15 +14128,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Demonlimb -> gpy",
+        description: "Demonlimb -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Demonlimb",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
@@ -14216,14 +14261,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Nature's Peace",
+        description: "r22 -> Nature's Peace",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r22",
         "input 3": "rin",
         "input 4": "gpr",
         "output": "Nature's Peace",
@@ -14233,15 +14278,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Nature's Peace -> gpy",
+        description: "Nature's Peace -> r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Nature's Peace",
-        "output": "gpy",
+        "output": "r21",
         "*eol": 0,
       });
     }
@@ -14278,14 +14323,14 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Seraph's Hymn",
+        description: "r22 -> Seraph's Hymn",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r22",
         "input 3": "amu",
-        "input 4": "r20",
+        "input 4": "gpw",
         "output": "Seraph's Hymn",
         lvl: 100,
         ilvl: 100,
@@ -14295,13 +14340,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Seraph's Hymn -> r20",
+        description: "Seraph's Hymn -> r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Seraph's Hymn",
-        "output": "r20",
+        "output": "r21",
         "*eol": 0,
       });
     }
@@ -14338,12 +14383,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Horizon's Tornado",
+        description: "r19 -> Horizon's Tornado",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "7fl",
         "input 4": "isc",
         "output": "Horizon's Tornado",
@@ -14368,12 +14413,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Stone Crusher",
+        description: "r19 -> Stone Crusher",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "7wh",
         "input 4": "isc",
         "output": "Stone Crusher",
@@ -14456,7 +14501,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Cerebus",
         enabled: 1,
@@ -14473,15 +14518,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Cerebus -> gpy",
+        description: "Cerebus -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Cerebus",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
@@ -14518,12 +14563,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Souldrain",
+        description: "r19 -> Souldrain",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "umg",
         "input 4": "isc",
         "output": "Souldrain",
@@ -14548,12 +14593,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r27 -> Runemaster,eth",
+        description: "r23 -> Runemaster,eth",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r27",
+        "input 2": "r23",
         "input 3": "72a",
         "input 4": "isc",
         "output": "Runemaster,eth",
@@ -14565,13 +14610,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Runemaster,eth -> r26",
+        description: "Runemaster,eth -> r22",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Runemaster,eth",
-        "output": "r26",
+        "output": "r22",
         "*eol": 0,
       });
     }
@@ -14638,12 +14683,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Executioner's Justice",
+        description: "r19 -> Executioner's Justice",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "7gi",
         "input 4": "isc",
         "output": "Executioner's Justice",
@@ -14666,14 +14711,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Stoneraven",
+        description: "r20 -> Stoneraven",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "amd",
         "input 4": "isc",
         "output": "Stoneraven",
@@ -14683,15 +14728,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Stoneraven -> gpy",
+        description: "Stoneraven -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Stoneraven",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
@@ -14728,14 +14773,14 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Wisp",
+        description: "r23 -> Wisp",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r23",
         "input 3": "rin",
-        "input 4": "isc",
+        "input 4": "r19",
         "output": "Wisp",
         lvl: 100,
         ilvl: 100,
@@ -14745,25 +14790,25 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Wisp -> r19",
+        description: "Wisp -> r22",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Wisp",
-        "output": "r19",
+        "output": "r22",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Gargoyle's Bite",
+        description: "r19 -> Gargoyle's Bite",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "7ts",
         "input 4": "isc",
         "output": "Gargoyle's Bite",
@@ -14788,12 +14833,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r24 -> Lacerator,eth",
+        description: "r23 -> Lacerator,eth",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r24",
+        "input 2": "r23",
         "input 3": "7b8",
         "input 4": "isc",
         "output": "Lacerator,eth",
@@ -14805,18 +14850,18 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Lacerator,eth -> r23",
+        description: "Lacerator,eth -> r22",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Lacerator,eth",
-        "output": "r23",
+        "output": "r22",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Lacerator",
         enabled: 1,
@@ -14833,15 +14878,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Lacerator -> gpy",
+        description: "Lacerator -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Lacerator",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
@@ -14878,12 +14923,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Viperfork",
+        description: "r19 -> Viperfork",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "7br",
         "input 4": "isc",
         "output": "Viperfork",
@@ -14908,12 +14953,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Ethereal Edge",
+        description: "r19 -> Ethereal Edge",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "7ba",
         "input 4": "isc",
         "output": "Ethereal Edge",
@@ -14936,14 +14981,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Demonhorn's Edge",
+        description: "r22 -> Demonhorn's Edge",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r22",
         "input 3": "bad",
         "input 4": "isc",
         "output": "Demonhorn's Edge",
@@ -14953,15 +14998,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Demonhorn's Edge -> gpy",
+        description: "Demonhorn's Edge -> r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Demonhorn's Edge",
-        "output": "gpy",
+        "output": "r21",
         "*eol": 0,
       });
     }
@@ -15028,12 +15073,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Spiritkeeper",
+        description: "r19 -> Spiritkeeper",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "drd",
         "input 4": "isc",
         "output": "Spiritkeeper",
@@ -15056,14 +15101,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Hellrack",
+        description: "r20 -> Hellrack",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "6hx",
         "input 4": "isc",
         "output": "Hellrack",
@@ -15073,27 +15118,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Hellrack -> gpy",
+        description: "Hellrack -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Hellrack",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Alma Negra",
+        description: "r20 -> Alma Negra",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "pac",
         "input 4": "isc",
         "output": "Alma Negra",
@@ -15103,20 +15148,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Alma Negra -> gpy",
+        description: "Alma Negra -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Alma Negra",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Darkforge Spawn",
         enabled: 1,
@@ -15133,15 +15178,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Darkforge Spawn -> gpy",
+        description: "Darkforge Spawn -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Darkforge Spawn",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
@@ -15165,25 +15210,25 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Widowmaker -> r20",
+        description: "Widowmaker -> r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Widowmaker",
-        "output": "r20",
+        "output": "r21",
         "*eol": 0,
       });
     }
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> Bloodraven's Charge",
+        description: "r21 -> Bloodraven's Charge",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r21",
         "input 3": "amb",
         "input 4": "isc",
         "output": "Bloodraven's Charge",
@@ -15208,12 +15253,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Ghostflame",
+        description: "r19 -> Ghostflame",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "7bl",
         "input 4": "isc",
         "output": "Ghostflame",
@@ -15236,7 +15281,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Shadowkiller",
         enabled: 1,
@@ -15253,20 +15298,20 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Shadowkiller -> gpy",
+        description: "Shadowkiller -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Shadowkiller",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Gimmershred",
         enabled: 1,
@@ -15283,15 +15328,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Gimmershred -> gpy",
+        description: "Gimmershred -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Gimmershred",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
@@ -15326,14 +15371,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Windhammer",
+        description: "r20 -> Windhammer",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "7m7",
         "input 4": "isc",
         "output": "Windhammer",
@@ -15343,15 +15388,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Windhammer -> gpy",
+        description: "Windhammer -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Windhammer",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
@@ -15386,7 +15431,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Demon's Arch",
         enabled: 1,
@@ -15403,27 +15448,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Demon's Arch -> gpy",
+        description: "Demon's Arch -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Demon's Arch",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r25 -> Boneflame",
+        description: "r23 -> Boneflame",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r25",
+        "input 2": "r23",
         "input 3": "nee",
         "input 4": "isc",
         "output": "Boneflame",
@@ -15435,25 +15480,25 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Boneflame -> r23",
+        description: "Boneflame -> r22",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Boneflame",
-        "output": "r23",
+        "output": "r22",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Steelpillar",
+        description: "r19 -> Steelpillar",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "7p7",
         "input 4": "isc",
         "output": "Steelpillar",
@@ -15656,14 +15701,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Steel Carapice",
+        description: "r20 -> Steel Carapice",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "uul",
         "input 4": "isc",
         "output": "Steel Carapice",
@@ -15673,27 +15718,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Steel Carapice -> gpy",
+        description: "Steel Carapice -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Steel Carapice",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Medusa's Gaze",
+        description: "r19 -> Medusa's Gaze",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "uow",
         "input 4": "isc",
         "output": "Medusa's Gaze",
@@ -15718,12 +15763,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r22 -> Ravenlore",
+        description: "r21 -> Ravenlore",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r22",
+        "input 2": "r21",
         "input 3": "dre",
         "input 4": "isc",
         "output": "Ravenlore",
@@ -15735,13 +15780,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Ravenlore -> r21",
+        description: "Ravenlore -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Ravenlore",
-        "output": "r21",
+        "output": "r20",
         "*eol": 0,
       });
     }
@@ -15778,12 +15823,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Flamebellow",
+        description: "r19 -> Flamebellow",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "7gs",
         "input 4": "isc",
         "output": "Flamebellow",
@@ -15808,12 +15853,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r28 -> Fathom",
+        description: "r26 -> Fathom",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r28",
+        "input 2": "r26",
         "input 3": "obf",
         "input 4": "isc",
         "output": "Fathom",
@@ -15825,13 +15870,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Fathom -> r27",
+        description: "Fathom -> r25",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Fathom",
-        "output": "r27",
+        "output": "r25",
         "*eol": 0,
       });
     }
@@ -15868,12 +15913,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Spirit Ward",
+        description: "r19 -> Spirit Ward",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "uts",
         "input 4": "isc",
         "output": "Spirit Ward",
@@ -16016,14 +16061,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Halaberd's Reign",
+        description: "r22 -> Halaberd's Reign",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r22",
         "input 3": "bae",
         "input 4": "isc",
         "output": "Halaberd's Reign",
@@ -16033,27 +16078,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Halaberd's Reign -> gpy",
+        description: "Halaberd's Reign -> r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Halaberd's Reign",
-        "output": "gpy",
+        "output": "r21",
         "*eol": 0,
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Spike Thorn",
+        description: "r20 -> Spike Thorn",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "upk",
         "input 4": "isc",
         "output": "Spike Thorn",
@@ -16063,15 +16108,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Spike Thorn -> gpy",
+        description: "Spike Thorn -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Spike Thorn",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
@@ -16108,12 +16153,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Frostwind",
+        description: "r19 -> Frostwind",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "7ls",
         "input 4": "isc",
         "output": "Frostwind",
@@ -16196,7 +16241,7 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
         description: "r21 -> Firelizard's Talons",
         enabled: 1,
@@ -16213,15 +16258,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Firelizard's Talons -> gpy",
+        description: "Firelizard's Talons -> r20",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Firelizard's Talons",
-        "output": "gpy",
+        "output": "r20",
         "*eol": 0,
       });
     }
@@ -16258,12 +16303,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r24 -> Marrowwalk",
+        description: "r23 -> Marrowwalk",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r24",
+        "input 2": "r23",
         "input 3": "umb",
         "input 4": "isc",
         "output": "Marrowwalk",
@@ -16275,13 +16320,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Marrowwalk -> r23",
+        description: "Marrowwalk -> r22",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Marrowwalk",
-        "output": "r23",
+        "output": "r22",
         "*eol": 0,
       });
     }
@@ -16346,14 +16391,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Nosferatu's Coil",
+        description: "r22 -> Nosferatu's Coil",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r22",
         "input 3": "uvc",
         "input 4": "isc",
         "output": "Nosferatu's Coil",
@@ -16363,27 +16408,27 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Nosferatu's Coil -> gpy",
+        description: "Nosferatu's Coil -> r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Nosferatu's Coil",
-        "output": "gpy",
+        "output": "r21",
         "*eol": 0,
       });
     }
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r25 -> Metalgrid",
+        description: "r24 -> Metalgrid",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r25",
+        "input 2": "r24",
         "input 3": "amu",
         "input 4": "isc",
         "output": "Metalgrid",
@@ -16468,12 +16513,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r26 -> Giantskull",
+        description: "r25 -> Giantskull",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r26",
+        "input 2": "r25",
         "input 3": "uh9",
         "input 4": "isc",
         "output": "Giantskull",
@@ -16558,12 +16603,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Cranebeak",
+        description: "r19 -> Cranebeak",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "7mp",
         "input 4": "isc",
         "output": "Cranebeak",
@@ -16586,14 +16631,14 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r21 -> Nord's Tenderizer",
+        description: "r20 -> Nord's Tenderizer",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r20",
         "input 3": "7cl",
         "input 4": "isc",
         "output": "Nord's Tenderizer",
@@ -16603,15 +16648,15 @@ if (config.junkMarket) {
       });
     }
 
-    if (config.junkMarket) {
+    if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Nord's Tenderizer -> gpy",
+        description: "Nord's Tenderizer -> r19",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Nord's Tenderizer",
-        "output": "gpy",
+        "output": "r19",
         "*eol": 0,
       });
     }
@@ -16648,12 +16693,12 @@ if (config.junkMarket) {
 
     if (config.junkMarket) {
       cubemain.rows.push({
-        description: "r21 -> Wraithflight",
+        description: "r19 -> Wraithflight",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r21",
+        "input 2": "r19",
         "input 3": "7gl",
         "input 4": "isc",
         "output": "Wraithflight",
@@ -16678,12 +16723,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r24 -> Bonehew",
+        description: "r23 -> Bonehew",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r24",
+        "input 2": "r23",
         "input 3": "7o7",
         "input 4": "isc",
         "output": "Bonehew",
@@ -16695,13 +16740,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Bonehew -> r23",
+        description: "Bonehew -> r22",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Bonehew",
-        "output": "r23",
+        "output": "r22",
         "*eol": 0,
       });
     }
@@ -17075,7 +17120,7 @@ if (config.junkMarket) {
         "input 1": "vps",
         "input 2": "r29",
         "input 3": "rin",
-        "input 4": "isc",
+        "input 4": "r19",
         "output": "Opalvein",
         lvl: 100,
         ilvl: 100,
@@ -17565,13 +17610,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "toa -> r23",
+        description: "toa -> r24",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "toa",
-        "output": "r23",
+        "output": "r24",
         "*eol": 0,
       });
     }
@@ -18558,6 +18603,366 @@ if (config.junkMarket) {
         "output": "uit,nor,eth",
         lvl: 100,
         ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "r21 -> xa1",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "r11",
+        "input 4": "wms",
+        "output": "xa1",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "xa1 -> r21",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "xa1",
+        "output": "r21",
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "r21 -> xa2",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "r12",
+        "input 4": "wms",
+        "output": "xa2",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "xa2 -> r21",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "xa2",
+        "output": "r21",
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "r21 -> xa3",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "r13",
+        "input 4": "wms",
+        "output": "xa3",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "xa3 -> r21",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "xa3",
+        "output": "r21",
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "r21 -> xa4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "r14",
+        "input 4": "wms",
+        "output": "xa4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "xa4 -> r21",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "xa4",
+        "output": "r21",
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "r21 -> xa5",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r21",
+        "input 3": "r15",
+        "input 4": "wms",
+        "output": "xa5",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "xa5 -> r21",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "xa5",
+        "output": "r21",
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "r22 -> pk1",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r01",
+        "input 4": "wms",
+        "output": "pk1",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "pk1 -> r21",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "pk1",
+        "output": "r21",
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "r22 -> pk2",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r02",
+        "input 4": "wms",
+        "output": "pk2",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "pk2 -> r21",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "pk2",
+        "output": "r21",
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "r22 -> pk3",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r03",
+        "input 4": "wms",
+        "output": "pk3",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "pk3 -> r21",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "pk3",
+        "output": "r21",
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "r20 -> tes",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r20",
+        "input 3": "r01",
+        "input 4": "wms",
+        "output": "tes",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "tes -> r20",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "tes",
+        "output": "r20",
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "r20 -> ceh",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r20",
+        "input 3": "r02",
+        "input 4": "wms",
+        "output": "ceh",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "ceh -> r20",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "ceh",
+        "output": "r20",
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "r22 -> bet",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r03",
+        "input 4": "wms",
+        "output": "bet",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "bet -> r22",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "bet",
+        "output": "r22",
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "r22 -> fed",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r22",
+        "input 3": "r04",
+        "input 4": "wms",
+        "output": "fed",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+    if (config.torchMarket) {
+      cubemain.rows.push({
+        description: "fed -> r22",
+        enabled: 1,
+        version: 100,
+        numinputs: 2,
+        "input 1": "yps",
+        "input 2": "fed",
+        "output": "r22",
         "*eol": 0,
       });
     }
