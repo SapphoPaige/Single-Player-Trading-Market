@@ -3,7 +3,7 @@
   "description": "A utility to roughly incorporate the multiplayer trading economy responsibly into single player.",
   "author": "Sappho",
   "website": "https://github.com/SapphoPaige/Single-Player-Trading-Market",
-  "version": "0.9",
+  "version": "0.95",
   "config": [
     {
       "id": "ecoRunes",
@@ -56,11 +56,19 @@
       "description": "Enables the buying of Charms and other magic items",
       "defaultValue": true
     },
+
  {
       "id": "servicesMarket",
       "type": "checkbox",
       "name": "Services",
       "description": "Enables the buying of custom services like lazruc",
+      "defaultValue": true
+    },
+ {
+      "id": "rawMarket",
+      "type": "checkbox",
+      "name": "Raw Market",
+      "description": "Recipes for crafting items used in the unique and base market",
       "defaultValue": true
     },
  {
