@@ -21,6 +21,7 @@ const itemTypes = {
   'helm': { 'name': 'Helm', 'min_sock': 1, 'max_sock': 3 },
 };
 
+
 if (config.servicesMarket) {
 for (let i in itemTypes) {
   cubemain.rows.push({
@@ -28,7 +29,94 @@ for (let i in itemTypes) {
     'enabled': 1,
     'version': 100,
     'numinputs': 5,
-    'input 1': `${i},nru,nos`,
+    'input 1': `${i},mag,nos`,
+    'input 2': 'r23',
+	'input 3': 'vps',
+	'input 4': 'isc',
+	'input 5': 'tsc',
+    'output': 'useitem',
+    'mod 1': 'sock',
+    'mod 1 min': 2,
+    'mod 1 max': 2,
+    '*eol': 0,
+  });
+}
+}
+
+
+if (config.servicesMarket) {
+for (let i in itemTypes) {
+  cubemain.rows.push({
+    'description': `Lazruk Quest`,
+    'enabled': 1,
+    'version': 100,
+    'numinputs': 5,
+    'input 1': `${i},rar,nos`,
+    'input 2': 'r23',
+	'input 3': 'vps',
+	'input 4': 'isc',
+	'input 5': 'tsc',
+    'output': 'useitem',
+    'mod 1': 'sock',
+    'mod 1 min': 1,
+    'mod 1 max': 1,
+    '*eol': 0,
+  });
+}
+}
+
+
+if (config.servicesMarket) {
+for (let i in itemTypes) {
+  cubemain.rows.push({
+    'description': `Lazruk Quest`,
+    'enabled': 1,
+    'version': 100,
+    'numinputs': 5,
+    'input 1': `${i},set,nos`,
+    'input 2': 'r23',
+	'input 3': 'vps',
+	'input 4': 'isc',
+	'input 5': 'tsc',
+    'output': 'useitem',
+    'mod 1': 'sock',
+    'mod 1 min': 1,
+    'mod 1 max': 1,
+    '*eol': 0,
+  });
+}
+}
+
+if (config.servicesMarket) {
+for (let i in itemTypes) {
+  cubemain.rows.push({
+    'description': `Lazruk Quest`,
+    'enabled': 1,
+    'version': 100,
+    'numinputs': 5,
+    'input 1': `${i},uni,nos`,
+    'input 2': 'r23',
+	'input 3': 'vps',
+	'input 4': 'isc',
+	'input 5': 'tsc',
+    'output': 'useitem',
+    'mod 1': 'sock',
+    'mod 1 min': 1,
+    'mod 1 max': 1,
+    '*eol': 0,
+  });
+}
+}
+
+
+if (config.servicesMarket) {
+for (let i in itemTypes) {
+  cubemain.rows.push({
+    'description': `Lazruk Quest`,
+    'enabled': 1,
+    'version': 100,
+    'numinputs': 5,
+    'input 1': `${i},nos`,
     'input 2': 'r23',
 	'input 3': 'vps',
 	'input 4': 'isc',
@@ -72,6 +160,181 @@ for (const gem of gemData) {
 }
 }
 
+
+if (config.ecoRunes) {
+cubemain.rows.push({
+    description:
+      "8 Fal 4 Lem -> Ist",
+    enabled: 1,
+    version: 100,
+    numinputs: 12,
+    "input 1": "r19,qty=8",
+    "input 2": "r20,qty=4",
+    "output": "r24",
+    "*eol": 0,
+  });
+}
+
+
+if (config.ecoRunes) {
+cubemain.rows.push({
+    description:
+      "8 Lem -> Ist",
+    enabled: 1,
+    version: 100,
+    numinputs: 8,
+    "input 1": "r20,qty=8",
+    "output": "r24",
+    "*eol": 0,
+  });
+}
+
+
+if (config.ecoRunes) {
+cubemain.rows.push({
+    description:
+      "4 Pul -> Ist",
+    enabled: 1,
+    version: 100,
+    numinputs: 4,
+    "input 1": "r21,qty=4",
+    "output": "r24",
+    "*eol": 0,
+  });
+}
+
+if (config.ecoRunes) {
+cubemain.rows.push({
+    description:
+      "3 Mal 3 Um -> Vex",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r22,qty=3",
+    "input 2": "r23,qty=3",
+    "output": "r26",
+    "*eol": 0,
+  });
+}
+
+if (config.ecoRunes) {
+cubemain.rows.push({
+    description:
+      "8 Um -> Vex",
+    enabled: 1,
+    version: 100,
+    numinputs: 8,
+    "input 1": "r22,qty=8",
+    "output": "r26",
+    "*eol": 0,
+  });
+}
+
+if (config.ecoRunes) {
+cubemain.rows.push({
+    description:
+      "12 Pul-> Vex",
+    enabled: 1,
+    version: 100,
+    numinputs: 12,
+    "input 1": "r21,qty=12",
+    "output": "r26",
+    "*eol": 0,
+  });
+}
+
+if (config.ecoRunes) {
+cubemain.rows.push({
+    description:
+      "8 Mal -> Ohm",
+    enabled: 1,
+    version: 100,
+    numinputs: 8,
+    "input 1": "r23,qty=8",
+    "output": "r27",
+    "*eol": 0,
+  });
+}
+
+if (config.ecoRunes) {
+cubemain.rows.push({
+    description:
+      "5 Ist -> Ohm",
+    enabled: 1,
+    version: 100,
+    numinputs: 5,
+    "input 1": "r24,qty=5",
+    "output": "r27",
+    "*eol": 0,
+  });
+}
+
+if (config.ecoRunes) {
+cubemain.rows.push({
+    description:
+      "9 Ist -> Lo",
+    enabled: 1,
+    version: 100,
+    numinputs: 9,
+    "input 1": "r24,qty=9",
+    "output": "r28",
+    "*eol": 0,
+  });
+}
+
+
+if (config.ecoRunes) {
+cubemain.rows.push({
+    description:
+      "3 Vex -> Lo",
+    enabled: 1,
+    version: 100,
+    numinputs: 3,
+    "input 1": "r26,qty=3",
+    "output": "r28",
+    "*eol": 0,
+  });
+}
+
+if (config.ecoRunes) {
+cubemain.rows.push({
+    description:
+      "5 Vex -> Sur",
+    enabled: 1,
+    version: 100,
+    numinputs: 5,
+    "input 1": "r26,qty=5",
+    "output": "r29",
+    "*eol": 0,
+  });
+}
+
+if (config.ecoRunes) {
+cubemain.rows.push({
+    description:
+      "9 Vex -> Ber",
+    enabled: 1,
+    version: 100,
+    numinputs: 5,
+    "input 1": "r26,qty=9",
+    "output": "r30",
+    "*eol": 0,
+  });
+}
+
+if (config.ecoRunes) {
+cubemain.rows.push({
+    description:
+      "12 Vex -> Jah",
+    enabled: 1,
+    version: 100,
+    numinputs: 5,
+    "input 1": "r26,qty=12",
+    "output": "r31",
+    "*eol": 0,
+  });
+}
+
 if (config.ecoRunes) {
 cubemain.rows.push({
     description:
@@ -84,6 +347,7 @@ cubemain.rows.push({
     "*eol": 0,
   });
 }
+
 
 if (config.ecoRunes) {
 cubemain.rows.push({
@@ -149,10 +413,9 @@ if (config.gemMarket) {
       description: `${runeCode} + Fal = 3 ${runeCode}`,
       enabled: 1,
       version: 100,
-      numinputs: 3,
+      numinputs: 2,
       "input 1": `${runeCode}`,
       "input 2": "r19",
-      "input 3": "yps",
       "output": `${runeCode}`,
       "output b": `${runeCode}`,
       "output c": `${runeCode}`,
@@ -273,10 +536,9 @@ cubemain.rows.push({
       "Fal -> 2 Gems",
     enabled: 1,
     version: 100,
-    numinputs: 3,
+    numinputs: 2,
     "input 1": "jew",
     "input 2": "r19",
-    "input 3": "vps",
     "output": "jew,mag,pre=268,suf=350",
     "output b": "jew,mag,pre=268,suf=350",
     "output c": "jew,mag,pre=268,suf=350",
@@ -292,10 +554,9 @@ cubemain.rows.push({
       "Fal -> 2 P Topaz",
     enabled: 1,
     version: 100,
-    numinputs: 3,
+    numinputs: 2,
     "input 1": "r19",
     "input 2": "gpy",
-    "input 3": "vps",
     "output": "gpy",
     "output b": "gpy",
     "output c": "gpy",
@@ -309,10 +570,9 @@ cubemain.rows.push({
       "Fal -> 2 P Emerald",
     enabled: 1,
     version: 100,
-    numinputs: 3,
+    numinputs: 2,
     "input 1": "r19",
     "input 2": "gpg",
-    "input 3": "vps",
     "output": "gpg",
     "output b": "gpg",
     "output c": "gpg",
@@ -326,10 +586,9 @@ cubemain.rows.push({
       "Fal -> 2 P Diamond",
     enabled: 1,
     version: 100,
-    numinputs: 3,
+    numinputs: 2,
     "input 1": "r19",
     "input 2": "gpw",
-    "input 3": "vps",
     "output": "gpw",
     "output b": "gpw",
     "output c": "gpw",
@@ -343,10 +602,9 @@ cubemain.rows.push({
       "Fal -> 2 P Sapphires",
     enabled: 1,
     version: 100,
-    numinputs: 3,
+    numinputs: 2,
     "input 1": "r19",
     "input 2": "gpb",
-    "input 3": "vps",
     "output": "gpb",
     "output b": "gpb",
     "output c": "gpb",
@@ -360,10 +618,9 @@ cubemain.rows.push({
       "Lem -> 3 P Skulls",
     enabled: 1,
     version: 100,
-    numinputs: 3,
+    numinputs: 2,
     "input 1": "r20",
-    "input 2": "yps",
-    "input 3": "isc",
+    "input 2": "vps",
     "output": "skz",
     "output b": "skz",
     "output c": "skz",
@@ -377,10 +634,9 @@ cubemain.rows.push({
       "Lem -> 3 P Rubies",
     enabled: 1,
     version: 100,
-    numinputs: 3,
+    numinputs: 2,
     "input 1": "r20",
-    "input 2": "wms",
-    "input 3": "isc",
+    "input 2": "yps",
     "output": "gpr",
     "output b": "gpr",
     "output c": "gpr",
@@ -395,16 +651,46 @@ cubemain.rows.push({
       "Lem -> 2 P Amethysts",
     enabled: 1,
     version: 100,
-    numinputs: 3,
-    "input 1": "r21",
-    "input 2": "vps",
-    "input 3": "gpv",
+    numinputs: 2,
+    "input 1": "r20",
+    "input 2": "gpv",
     "output": "gpv",
     "output b": "gpv",
     "output c": "gpv",
     "*eol": 0,
   });
 }
+
+if (config.gemMarket) {
+cubemain.rows.push({
+    description:
+      "5 Topaz -> 3 P Skulls",
+    enabled: 1,
+    version: 100,
+    numinputs: 5,
+    "input 1": "gem4,qty=5",
+    "output": "skz",
+    "output b": "skz",
+    "output c": "skz",
+    "*eol": 0,
+  });
+}
+
+if (config.gemMarket) {
+cubemain.rows.push({
+    description:
+      "6 Topaz -> 3 P Amethysts",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "gem4,qty=6",
+    "output": "gpv",
+    "output b": "gpv",
+    "output c": "gpv",
+    "*eol": 0,
+  });
+}
+
 
 if (config.ecoRunes) {
 cubemain.rows.push({
@@ -921,7 +1207,7 @@ cubemain.rows.push({
 
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Defender's Bile -> 2 r24 r19",
+        description: "Defender's Bile -> 2 r24 r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
@@ -929,7 +1215,7 @@ cubemain.rows.push({
         "input 2": "Defender's Bile",
         "output": "r24",
 	"output b": "r24",
-	"output c": "r19",
+	"output c": "r21",
         "*eol": 0,
       });
     }
@@ -937,7 +1223,7 @@ cubemain.rows.push({
  
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Guardian's Thunder -> 2 r24 r19",
+        description: "Guardian's Thunder -> 2 r24 r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
@@ -945,7 +1231,7 @@ cubemain.rows.push({
         "input 2": "Guardian's Thunder",
         "output": "r24",
 	"output b": "r24",
-	"output c": "r19",
+	"output c": "r21",
         "*eol": 0,
       });
     }
@@ -953,7 +1239,7 @@ cubemain.rows.push({
   
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Protector's Frost -> 2 r24 r19",
+        description: "Protector's Frost -> 2 r24 r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
@@ -961,7 +1247,7 @@ cubemain.rows.push({
         "input 2": "Protector's Frost",
         "output": "r24",
 	"output b": "r24",
-	"output c": "r19",
+	"output c": "r21",
         "*eol": 0,
       });
     }
@@ -969,7 +1255,7 @@ cubemain.rows.push({
   
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Defender's Fire -> 2 r24 r19",
+        description: "Defender's Fire -> 2 r24 r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
@@ -977,7 +1263,7 @@ cubemain.rows.push({
         "input 2": "Defender's Fire",
         "output": "r24",
 	"output b": "r24",
-	"output c": "r19",
+	"output c": "r21",
         "*eol": 0,
       });
     }
@@ -985,7 +1271,7 @@ cubemain.rows.push({
     
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Protector's Stone -> 2 r24 r19",
+        description: "Protector's Stone -> 2 r24 r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
@@ -993,7 +1279,7 @@ cubemain.rows.push({
         "input 2": "Protector's Stone",
         "output": "r24",
 	"output b": "r24",
-	"output c": "r19",
+	"output c": "r21",
         "*eol": 0,
       });
     }
@@ -1001,7 +1287,7 @@ cubemain.rows.push({
   
     if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Guardian's Light -> 2 r24 r19",
+        description: "Guardian's Light -> 2 r24 r21",
         enabled: 1,
         version: 100,
         numinputs: 2,
@@ -1009,7 +1295,7 @@ cubemain.rows.push({
         "input 2": "Guardian's Light",
         "output": "r24",
 	"output b": "r24",
-	"output c": "r19",
+	"output c": "r21",
         "*eol": 0,
       });
     }
@@ -18607,6 +18893,59 @@ if (config.junkMarket) {
       });
     }
 
+    if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r27 -> 7br,nor,eth,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r27",
+        "input 3": "r09",
+        "input 4": "gzv",
+        "output": "7br,nor,eth,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r25 -> 7br,nor,eth",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r25",
+        "input 3": "r10",
+        "input 4": "gzv",
+        "output": "7br,nor,eth",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+if (config.baseMarket) {
+      cubemain.rows.push({
+        description: "r24 -> 7br,nor,sock=4",
+        enabled: 1,
+        version: 100,
+        numinputs: 4,
+        "input 1": "vps",
+        "input 2": "r24",
+        "input 3": "r11",
+        "input 4": "gzv",
+        "output": "7br,nor,sock=4",
+        lvl: 100,
+        ilvl: 100,
+        "*eol": 0,
+      });
+    }
+
+
+
     if (config.torchMarket) {
       cubemain.rows.push({
         description: "r21 -> xa1",
@@ -18885,7 +19224,7 @@ if (config.junkMarket) {
         numinputs: 4,
         "input 1": "vps",
         "input 2": "r20",
-        "input 3": "r02",
+        "input 3": "r03",
         "input 4": "wms",
         "output": "ceh",
         lvl: 100,
@@ -18915,7 +19254,7 @@ if (config.junkMarket) {
         numinputs: 4,
         "input 1": "vps",
         "input 2": "r22",
-        "input 3": "r03",
+        "input 3": "r04",
         "input 4": "wms",
         "output": "bet",
         lvl: 100,
@@ -18945,7 +19284,7 @@ if (config.junkMarket) {
         numinputs: 4,
         "input 1": "vps",
         "input 2": "r22",
-        "input 3": "r04",
+        "input 3": "r05",
         "input 4": "wms",
         "output": "fed",
         lvl: 100,
@@ -18966,5 +19305,10485 @@ if (config.junkMarket) {
         "*eol": 0,
       });
     }
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r05,r06,r14,r15 -> 2ax",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r05",
+    "input 3": "r06",
+    "input 4": "r14",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "2ax,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r03,r05,r12 -> 2hs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r03",
+    "input 4": "r05",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "2hs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r07,r08,r10,r13 -> 6bs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r07",
+    "input 3": "r08",
+    "input 4": "r10",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "6bs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r10,r11,r13 -> 6cb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "6cb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r12,r13,r16,r17 -> 6cs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r12",
+    "input 3": "r13",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "6cs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r06,r10,r13 -> 6hb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r06",
+    "input 4": "r10",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "6hb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r08,r09,r10 -> 6hx",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r08",
+    "input 4": "r09",
+    "input 5": "r10",
+    "input 6": "vps",
+    "output": "6hx,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r11,r12,r17 -> 6l7",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "6l7,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r08,r09,r14,r17 -> 6lb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r08",
+    "input 3": "r09",
+    "input 4": "r14",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "6lb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r05,r08,r09 -> 6ls",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r05",
+    "input 4": "r08",
+    "input 5": "r09",
+    "input 6": "vps",
+    "output": "6ls,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r04,r09,r10 -> 6lw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r04",
+    "input 4": "r09",
+    "input 5": "r10",
+    "input 6": "vps",
+    "output": "6lw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r09,r10,r11,r15 -> 6lx",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r09",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "6lx,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r06,r15,r17,r18 -> 6mx",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r06",
+    "input 3": "r15",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "6mx,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r04,r07,r15 -> 6rx",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r04",
+    "input 4": "r07",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "6rx,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r13,r14,r17,r18 -> 6s7",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r13",
+    "input 3": "r14",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "6s7,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r08,r13,r14,r17 -> 6sb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r08",
+    "input 3": "r13",
+    "input 4": "r14",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "6sb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r11,r12,r17 -> 6ss",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "6ss,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r08,r10,r13,r17,r18 -> 6sw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r08",
+    "input 2": "r10",
+    "input 3": "r13",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "6sw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r09,r13,r14,r17,r18 -> 6ws",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r09",
+    "input 2": "r13",
+    "input 3": "r14",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "6ws,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r06,r08,r11,r14 -> 72a",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r06",
+    "input 3": "r08",
+    "input 4": "r11",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "72a,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r06,r09,r10,r18 -> 72h",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r06",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "72h,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r08,r11,r12,r13,r15 -> 7ar",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r08",
+    "input 2": "r11",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "7ar,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r04,r08,r17 -> 7ax",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r04",
+    "input 4": "r08",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "7ax,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r05,r07,r18 -> 7b7",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r05",
+    "input 4": "r07",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7b7,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r07,r13,r16 -> 7b8",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r07",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "7b8,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r10,r12,r17 -> 7ba",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "7ba,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r05,r07,r09,r14 -> 7bk",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r05",
+    "input 3": "r07",
+    "input 4": "r09",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "7bk,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r08,r11,r16 -> 7bl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r08",
+    "input 4": "r11",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "7bl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r10,r12,r15,r18 -> 7br",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r10",
+    "input 3": "r12",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7br,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r08,r11,r17 -> 7bs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r08",
+    "input 4": "r11",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "7bs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r07,r13,r16,r17 -> 7bt",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r07",
+    "input 3": "r13",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "7bt,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r11,r17,r18 -> 7bw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r11",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7bw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r08,r09,r10,r12 -> 7cl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r08",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "7cl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r14,r15,r16,r17 -> 7cm",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r14",
+    "input 3": "r15",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "7cm,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r09,r10,r16 -> 7cr",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "7cr,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r07,r11,r17,r18 -> 7cs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r07",
+    "input 3": "r11",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7cs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r09,r12,r13,r16 -> 7dg",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r09",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "7dg,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r11,r12,r18 -> 7di",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7di,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r06,r07,r10 -> 7fb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r06",
+    "input 4": "r07",
+    "input 5": "r10",
+    "input 6": "vps",
+    "output": "7fb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r06,r13,r14,r16 -> 7fc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r06",
+    "input 3": "r13",
+    "input 4": "r14",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "7fc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r07,r10,r13,r16 -> 7fl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r07",
+    "input 3": "r10",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "7fl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r06,r16,r18 -> 7ga",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r06",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7ga,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r09,r16,r17 -> 7gd",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r09",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "7gd,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r05,r07,r08,r14 -> 7gi",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r05",
+    "input 3": "r07",
+    "input 4": "r08",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "7gi,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r06,r09,r12,r14 -> 7gl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r06",
+    "input 3": "r09",
+    "input 4": "r12",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "7gl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r11,r12,r13 -> 7gm",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "7gm,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r07,r10,r13,r15 -> 7gs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r07",
+    "input 3": "r10",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "7gs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r10,r12,r13,r15 -> 7gw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r10",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "7gw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r06,r07,r14 -> 7h7",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r06",
+    "input 4": "r07",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "7h7,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r08,r10,r16 -> 7ha",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r08",
+    "input 4": "r10",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "7ha,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r04,r07,r11 -> 7hw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r04",
+    "input 4": "r07",
+    "input 5": "r11",
+    "input 6": "vps",
+    "output": "7hw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r10,r12,r16 -> 7ja",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "7ja,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r08,r14,r15,r16,r18 -> 7kr",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r08",
+    "input 2": "r14",
+    "input 3": "r15",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7kr,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r09,r15,r16 -> 7la",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r09",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "7la,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r10,r13,r14 -> 7ls",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r10",
+    "input 4": "r13",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "7ls,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r06,r07,r13 -> 7lw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r06",
+    "input 4": "r07",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "7lw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r13,r14,r16,r17 -> 7m7",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r13",
+    "input 3": "r14",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "7m7,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r04,r09,r14 -> 7ma",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r04",
+    "input 4": "r09",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "7ma,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r09,r10,r13,r15 -> 7mf",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r09",
+    "input 3": "r10",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "7mf,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r05,r07,r10,r17 -> 7mp",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r05",
+    "input 3": "r07",
+    "input 4": "r10",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "7mp,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r05,r07,r14,r17 -> 7o7",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r05",
+    "input 3": "r07",
+    "input 4": "r14",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "7o7,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r08,r09,r10,r12 -> 7p7",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r08",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "7p7,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r10,r11,r12,r17 -> 7pa",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r10",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "7pa,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r07,r12,r16,r18 -> 7pi",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r07",
+    "input 3": "r12",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7pi,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r13,r16,r18 -> 7qr",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r13",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7qr,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r09,r11,r17,r18 -> 7qs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r09",
+    "input 3": "r11",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7qs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r07,r08,r10,r14 -> 7s7",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r07",
+    "input 3": "r08",
+    "input 4": "r10",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "7s7,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r13,r14,r18 -> 7s8",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r13",
+    "input 4": "r14",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7s8,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r07,r16,r17 -> 7sb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r07",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "7sb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r12,r14,r18 -> 7sc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r12",
+    "input 4": "r14",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7sc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r07,r14,r16 -> 7sm",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r07",
+    "input 4": "r14",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "7sm,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r05,r08,r13 -> 7sp",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r05",
+    "input 4": "r08",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "7sp,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r06,r07,r10,r18 -> 7sr",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r06",
+    "input 3": "r07",
+    "input 4": "r10",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7sr,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r06,r10,r12,r16 -> 7ss",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r06",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "7ss,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r08,r09,r16,r18 -> 7st",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r08",
+    "input 3": "r09",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7st,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r11,r13,r17 -> 7ta",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "7ta,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r11,r13,r15,r16 -> 7tk",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r11",
+    "input 3": "r13",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "7tk,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r08,r09,r10,r12 -> 7tr",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r08",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "7tr,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r10,r12,r18 -> 7ts",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7ts,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r07,r11,r13,r14 -> 7vo",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r07",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "7vo,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r07,r10,r14,r18 -> 7wa",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r07",
+    "input 3": "r10",
+    "input 4": "r14",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7wa,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r07,r09,r12 -> 7wb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r07",
+    "input 4": "r09",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "7wb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r07,r09,r13 -> 7wc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r07",
+    "input 4": "r09",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "7wc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r09,r14,r16,r17 -> 7wd",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r09",
+    "input 3": "r14",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "7wd,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r12,r13,r15,r16 -> 7wh",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r12",
+    "input 3": "r13",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "7wh,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r12,r13,r16,r18 -> 7wn",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r12",
+    "input 3": "r13",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7wn,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r07,r08,r09,r12 -> 7ws",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r07",
+    "input 3": "r08",
+    "input 4": "r09",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "7ws,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r07,r09,r14,r17 -> 7xf",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r07",
+    "input 3": "r09",
+    "input 4": "r14",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "7xf,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r06,r12,r16,r18 -> 7yw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r06",
+    "input 3": "r12",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "7yw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r07,r08,r10,r16 -> 8bs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r07",
+    "input 3": "r08",
+    "input 4": "r10",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "8bs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r15,r16,r17 -> 8cb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r15",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "8cb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r09,r12,r16,r18 -> 8cs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r09",
+    "input 3": "r12",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "8cs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r09,r12,r15,r16 -> 8hb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r09",
+    "input 3": "r12",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "8hb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r10,r11,r12,r18 -> 8hx",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r10",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "8hx,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r07,r12,r13,r14 -> 8l8",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r07",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "8l8,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r07,r11,r13,r16 -> 8lb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r07",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "8lb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r11,r16,r17,r18 -> 8ls",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r11",
+    "input 3": "r16",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "8ls,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r10,r11,r13,r14,r15 -> 8lw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r10",
+    "input 2": "r11",
+    "input 3": "r13",
+    "input 4": "r14",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "8lw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r07,r08,r12,r15 -> 8lx",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r07",
+    "input 3": "r08",
+    "input 4": "r12",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "8lx,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r07,r08,r09,r15 -> 8mx",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r07",
+    "input 3": "r08",
+    "input 4": "r09",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "8mx,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r08,r12,r15,r18 -> 8rx",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r08",
+    "input 3": "r12",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "8rx,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r07,r10,r15,r17 -> 8s8",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r07",
+    "input 3": "r10",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "8s8,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r07,r08,r16,r18 -> 8sb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r07",
+    "input 3": "r08",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "8sb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r08,r11,r13,r17 -> 8ss",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r08",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "8ss,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r14,r15,r16,r18 -> 8sw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r14",
+    "input 3": "r15",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "8sw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r10,r12,r13 -> 8ws",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "8ws,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r06,r10,r11,r18 -> 92a",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r06",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "92a,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r07,r12,r15,r18 -> 92h",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r07",
+    "input 3": "r12",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "92h,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r06,r07,r17 -> 9ar",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r06",
+    "input 4": "r07",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "9ar,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r06,r14,r16 -> 9ax",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r06",
+    "input 4": "r14",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9ax,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r08,r10,r14 -> 9b7",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r08",
+    "input 4": "r10",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "9b7,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r05,r10,r12 -> 9b8",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r05",
+    "input 4": "r10",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "9b8,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r09,r10,r11 -> 9b9",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r11",
+    "input 6": "vps",
+    "output": "9b9,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r05,r10,r17 -> 9ba",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r05",
+    "input 4": "r10",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "9ba,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r06,r08,r10,r11 -> 9bk",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r06",
+    "input 3": "r08",
+    "input 4": "r10",
+    "input 5": "r11",
+    "input 6": "vps",
+    "output": "9bk,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r09,r10,r18 -> 9bl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9bl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r12,r15,r16 -> 9br",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r12",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9br,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r06,r11,r14,r16 -> 9bs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r06",
+    "input 3": "r11",
+    "input 4": "r14",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9bs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r11,r12,r14,r16 -> 9bt",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r11",
+    "input 3": "r12",
+    "input 4": "r14",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9bt,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r06,r10,r15 -> 9bw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r06",
+    "input 4": "r10",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "9bw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r08,r10,r13,r14,r18 -> 9cl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r08",
+    "input 2": "r10",
+    "input 3": "r13",
+    "input 4": "r14",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9cl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r07,r09,r10,r18 -> 9cm",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r07",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9cm,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r06,r09,r11,r14 -> 9cr",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r06",
+    "input 3": "r09",
+    "input 4": "r11",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "9cr,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r10,r13,r15,r18 -> 9cs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r10",
+    "input 3": "r13",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9cs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r12,r13,r15 -> 9dg",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "9dg,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r08,r09,r13,r17 -> 9di",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r08",
+    "input 3": "r09",
+    "input 4": "r13",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "9di,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r08,r14,r15,r17 -> 9fb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r08",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "9fb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r10,r15,r16,r17 -> 9fc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r10",
+    "input 3": "r15",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "9fc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r09,r12,r16 -> 9fl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r09",
+    "input 4": "r12",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9fl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r09,r10,r15 -> 9ga",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "9ga,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r08,r09,r13,r16 -> 9gd",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r08",
+    "input 3": "r09",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9gd,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r03,r11,r16 -> 9gi",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r03",
+    "input 4": "r11",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9gi,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r11,r13,r15,r18 -> 9gl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r11",
+    "input 3": "r13",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9gl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r06,r12,r14 -> 9gm",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r06",
+    "input 4": "r12",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "9gm,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r07,r09,r13,r18 -> 9gs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r07",
+    "input 3": "r09",
+    "input 4": "r13",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9gs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r07,r10,r12,r14 -> 9gw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r07",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "9gw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r09,r11,r12,r13 -> 9h9",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r09",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "9h9,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r08,r11,r12,r15 -> 9ha",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r08",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "9ha,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r06,r07,r13,r14 -> 9hw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r06",
+    "input 3": "r07",
+    "input 4": "r13",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "9hw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r12,r14,r16 -> 9ja",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r12",
+    "input 4": "r14",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9ja,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r10,r12,r17 -> 9kr",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "9kr,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r12,r13,r16,r18 -> 9la",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r12",
+    "input 3": "r13",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9la,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r07,r12,r13,r18 -> 9ls",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r07",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9ls,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r10,r12,r15,r16 -> 9lw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r10",
+    "input 3": "r12",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9lw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r06,r08,r10,r12 -> 9m9",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r06",
+    "input 3": "r08",
+    "input 4": "r10",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "9m9,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r08,r12,r13 -> 9ma",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r08",
+    "input 4": "r12",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "9ma,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r08,r11,r13,r16 -> 9mp",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r08",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9mp,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r10,r12,r13,r17 -> 9mt",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r10",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "9mt,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r09,r13,r17,r18 -> 9p9",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r09",
+    "input 3": "r13",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9p9,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r13,r14,r18 -> 9pa",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r13",
+    "input 4": "r14",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9pa,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r09,r12,r18 -> 9pi",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r09",
+    "input 4": "r12",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9pi,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r14,r15,r16,r17,r18 -> 9qr",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r14",
+    "input 2": "r15",
+    "input 3": "r16",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9qr,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r10,r11,r14,r15 -> 9qs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r10",
+    "input 3": "r11",
+    "input 4": "r14",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "9qs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r06,r09,r13,r16 -> 9s8",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r06",
+    "input 3": "r09",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9s8,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r03,r07,r18 -> 9s9",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r03",
+    "input 4": "r07",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9s9,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r06,r07,r11,r12 -> 9sb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r06",
+    "input 3": "r07",
+    "input 4": "r11",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "9sb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r11,r12,r15,r16 -> 9sc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r11",
+    "input 3": "r12",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9sc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r09,r10,r11,r13,r17 -> 9sm",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r09",
+    "input 2": "r10",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "9sm,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r10,r14,r17 -> 9sp",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r10",
+    "input 4": "r14",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "9sp,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r09,r11,r12,r16 -> 9sr",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r09",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9sr,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r09,r13,r15,r18 -> 9ss",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r09",
+    "input 3": "r13",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9ss,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r08,r14,r17 -> 9st",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r08",
+    "input 4": "r14",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "9st,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r05,r12,r16,r17 -> 9ta",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r05",
+    "input 3": "r12",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "9ta,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r08,r10,r16,r18 -> 9tk",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r08",
+    "input 3": "r10",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9tk,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r06,r07,r10,r16 -> 9tr",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r06",
+    "input 3": "r07",
+    "input 4": "r10",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9tr,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r06,r08,r11,r13 -> 9ts",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r06",
+    "input 3": "r08",
+    "input 4": "r11",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "9ts,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r11,r12,r13,r16 -> 9vo",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r11",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9vo,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r07,r08,r11,r12 -> 9wa",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r07",
+    "input 3": "r08",
+    "input 4": "r11",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "9wa,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r07,r10,r13,r17 -> 9wb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r07",
+    "input 3": "r10",
+    "input 4": "r13",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "9wb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r07,r09,r12,r16 -> 9wc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r07",
+    "input 3": "r09",
+    "input 4": "r12",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9wc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r10,r12,r13,r17,r18 -> 9wd",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r10",
+    "input 2": "r12",
+    "input 3": "r13",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9wd,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r08,r15,r16 -> 9wh",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r08",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9wh,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r08,r11,r12,r13,r18 -> 9wn",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r08",
+    "input 2": "r11",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "9wn,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r08,r09,r10,r12 -> 9ws",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r08",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "9ws,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r05,r08,r16 -> 9xf",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r05",
+    "input 4": "r08",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "9xf,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r07,r09,r12,r13 -> 9yw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r07",
+    "input 3": "r09",
+    "input 4": "r12",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "9yw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r07,r15,r17 -> aar",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r07",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "aar,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r09,r10,r12,r18 -> am1",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r09",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "am1,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r09,r12,r15,r16 -> am2",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r09",
+    "input 3": "r12",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "am2,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r07,r09,r13 -> am3",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r07",
+    "input 4": "r09",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "am3,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r09,r11,r12,r13 -> am4",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r09",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "am4,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r09,r12,r13,r16 -> am5",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r09",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "am5,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r09,r10,r11,r17 -> am6",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r09",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "am6,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r05,r08,r16,r17 -> am7",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r05",
+    "input 3": "r08",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "am7,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r04,r14,r16 -> am8",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r04",
+    "input 4": "r14",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "am8,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r07,r15,r16,r17 -> am9",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r07",
+    "input 3": "r15",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "am9,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r07,r13,r16,r18 -> ama",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r07",
+    "input 3": "r13",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "ama,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r07,r10,r13 -> amb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r07",
+    "input 4": "r10",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "amb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r07,r10,r13,r17 -> amc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r07",
+    "input 3": "r10",
+    "input 4": "r13",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "amc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r07,r11,r12,r15 -> amd",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r07",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "amd,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r07,r08,r18 -> ame",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r07",
+    "input 4": "r08",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "ame,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r08,r11,r16,r18 -> amf",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r08",
+    "input 3": "r11",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "amf,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r04,r07,r11 -> amu",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r04",
+    "input 4": "r07",
+    "input 5": "r11",
+    "input 6": "vps",
+    "output": "amu,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r06,r07,r09 -> axe",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r06",
+    "input 4": "r07",
+    "input 5": "r09",
+    "input 6": "vps",
+    "output": "axe,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r14,r15,r16,r18 -> axf",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r14",
+    "input 3": "r15",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "axf,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r08,r09,r11 -> ba1",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r08",
+    "input 4": "r09",
+    "input 5": "r11",
+    "input 6": "vps",
+    "output": "ba1,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r11,r12,r17 -> ba2",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "ba2,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r06,r14,r15,r18 -> ba3",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r06",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "ba3,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r09,r11,r17 -> ba4",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r09",
+    "input 4": "r11",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "ba4,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r11,r14,r15,r18 -> ba5",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r11",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "ba5,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r10,r12,r17 -> ba6",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "ba6,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r05,r08,r17 -> ba7",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r05",
+    "input 4": "r08",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "ba7,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r08,r09,r10,r15 -> ba8",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r08",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "ba8,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r08,r09,r10 -> ba9",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r08",
+    "input 4": "r09",
+    "input 5": "r10",
+    "input 6": "vps",
+    "output": "ba9,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r08,r10,r11,r13,r14 -> baa",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r08",
+    "input 2": "r10",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "baa,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r07,r12,r15,r18 -> bab",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r07",
+    "input 3": "r12",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "bab,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r07,r14,r18 -> bac",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r07",
+    "input 4": "r14",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "bac,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r06,r08,r09,r12 -> bad",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r06",
+    "input 3": "r08",
+    "input 4": "r09",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "bad,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r08,r12,r13,r16 -> bae",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r08",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "bae,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r11,r15,r17 -> baf",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r11",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "baf,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r06,r10,r15,r18 -> bal",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r06",
+    "input 3": "r10",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "bal,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r11,r14,r15,r17 -> bar",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r11",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "bar,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r10,r13,r16 -> bax",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r10",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "bax,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r10,r15,r16,r17 -> bhm",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r10",
+    "input 3": "r15",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "bhm,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r06,r09,r11,r17 -> bkf",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r06",
+    "input 3": "r09",
+    "input 4": "r11",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "bkf,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r08,r12,r13,r15 -> bld",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r08",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "bld,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r05,r15,r18 -> brn",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r05",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "brn,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r05,r12,r14 -> brs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r05",
+    "input 4": "r12",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "brs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r06,r11,r14,r16 -> bsd",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r06",
+    "input 3": "r11",
+    "input 4": "r14",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "bsd,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r06,r11,r12,r15 -> bsh",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r06",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "bsh,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r06,r08,r17 -> bst",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r06",
+    "input 4": "r08",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "bst,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r12,r13,r15 -> bsw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "bsw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r07,r09,r11,r18 -> btl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r07",
+    "input 3": "r09",
+    "input 4": "r11",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "btl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r09,r14,r15,r17 -> btx",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r09",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "btx,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r06,r12,r14,r15 -> buc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r06",
+    "input 3": "r12",
+    "input 4": "r14",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "buc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r07,r11,r18 -> bwn",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r07",
+    "input 4": "r11",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "bwn,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r08,r14,r17 -> cap",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r08",
+    "input 4": "r14",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "cap,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r11,r13,r15,r17 -> cbw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r11",
+    "input 3": "r13",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "cbw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r06,r10,r12,r18 -> ces",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r06",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "ces,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r11,r13,r14 -> chn",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "chn,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r07,r10,r13,r14 -> ci0",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r07",
+    "input 3": "r10",
+    "input 4": "r13",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "ci0,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r11,r13,r14,r15 -> ci1",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r11",
+    "input 3": "r13",
+    "input 4": "r14",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "ci1,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r05,r10,r16,r18 -> ci2",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r05",
+    "input 3": "r10",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "ci2,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r07,r13,r16,r17 -> ci3",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r07",
+    "input 3": "r13",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "ci3,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r07,r13,r18 -> clb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r07",
+    "input 4": "r13",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "clb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r07,r12,r15 -> clm",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r07",
+    "input 4": "r12",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "clm,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r11,r12,r17 -> clw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "clw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r08,r09,r14,r18 -> crn",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r08",
+    "input 3": "r09",
+    "input 4": "r14",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "crn,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r11,r13,r14,r16 -> crs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r11",
+    "input 3": "r13",
+    "input 4": "r14",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "crs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r10,r11,r18 -> dgr",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "dgr,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r07,r11,r17,r18 -> dir",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r07",
+    "input 3": "r11",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "dir,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r08,r09,r11,r18 -> dr1",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r08",
+    "input 3": "r09",
+    "input 4": "r11",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "dr1,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r09,r11,r13,r18 -> dr2",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r09",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "dr2,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r06,r07,r08,r14 -> dr3",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r06",
+    "input 3": "r07",
+    "input 4": "r08",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "dr3,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r06,r12,r15,r18 -> dr4",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r06",
+    "input 3": "r12",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "dr4,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r06,r08,r15 -> dr5",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r06",
+    "input 4": "r08",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "dr5,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r09,r10,r14,r17 -> dr6",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r09",
+    "input 3": "r10",
+    "input 4": "r14",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "dr6,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r15,r16,r17,r18 -> dr7",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r15",
+    "input 3": "r16",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "dr7,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r13,r15,r17 -> dr8",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r13",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "dr8,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r14,r17,r18 -> dr9",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r14",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "dr9,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r05,r06,r15 -> dra",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r05",
+    "input 4": "r06",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "dra,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r09,r12,r13,r17 -> drb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r09",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "drb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r07,r10,r14,r18 -> drc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r07",
+    "input 3": "r10",
+    "input 4": "r14",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "drc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r05,r12,r14,r17 -> drd",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r05",
+    "input 3": "r12",
+    "input 4": "r14",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "drd,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r05,r10,r12,r16 -> dre",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r05",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "dre,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r07,r12,r13,r15 -> drf",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r07",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "drf,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r09,r10,r12,r13 -> fhl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r09",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "fhl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r07,r09,r15,r17 -> fla",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r07",
+    "input 3": "r09",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "fla,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r09,r11,r16,r17 -> flb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r09",
+    "input 3": "r11",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "flb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r05,r07,r12 -> flc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r05",
+    "input 4": "r07",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "flc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r05,r07,r11 -> fld",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r05",
+    "input 4": "r07",
+    "input 5": "r11",
+    "input 6": "vps",
+    "output": "fld,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r10,r12,r18 -> ful",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "ful,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r11,r14,r15,r16 -> gax",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r11",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "gax,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r07,r11,r14,r18 -> ghm",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r07",
+    "input 3": "r11",
+    "input 4": "r14",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "ghm,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r08,r11,r12,r16,r18 -> gis",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r08",
+    "input 2": "r11",
+    "input 3": "r12",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "gis,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r10,r12,r13,r16 -> gix",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r10",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "gix,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r10,r11,r12,r15 -> glv",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r10",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "glv,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r09,r11,r17,r18 -> gma",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r09",
+    "input 3": "r11",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "gma,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r16,r17,r18 -> gsc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r16",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "gsc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r04,r05,r15 -> gsd",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r04",
+    "input 4": "r05",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "gsd,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r09,r11,r13,r17 -> gst",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r09",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "gst,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r06,r10,r17,r18 -> gth",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r06",
+    "input 3": "r10",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "gth,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r09,r10,r16,r17 -> gts",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r09",
+    "input 3": "r10",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "gts,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r09,r12,r13,r16,r17 -> gwn",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r09",
+    "input 2": "r12",
+    "input 3": "r13",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "gwn,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r07,r10,r14,r15 -> hal",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r07",
+    "input 3": "r10",
+    "input 4": "r14",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "hal,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r04,r08,r11 -> hax",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r04",
+    "input 4": "r08",
+    "input 5": "r11",
+    "input 6": "vps",
+    "output": "hax,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r10,r14,r17,r18 -> hbl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r10",
+    "input 3": "r14",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "hbl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r07,r09,r10,r12 -> hbt",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r07",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "hbt,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r12,r16,r18 -> hbw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r12",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "hbw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r05,r06,r12,r15 -> hgl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r05",
+    "input 3": "r06",
+    "input 4": "r12",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "hgl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r07,r13,r17,r18 -> hla",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r07",
+    "input 3": "r13",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "hla,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r10,r11,r13 -> hlm",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "hlm,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r06,r09,r18 -> hxb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r06",
+    "input 4": "r09",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "hxb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r13,r14,r15,r18 -> jav",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r13",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "jav,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r06,r14,r15,r16 -> kit",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r06",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "kit,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r09,r11,r17 -> kri",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r09",
+    "input 4": "r11",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "kri,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r11,r12,r14,r18 -> ktr",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r11",
+    "input 3": "r12",
+    "input 4": "r14",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "ktr,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r06,r07,r15,r16 -> lax",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r06",
+    "input 3": "r07",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "lax,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r12,r16,r17,r18 -> lbb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r12",
+    "input 3": "r16",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "lbb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r10,r11,r12 -> lbl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "lbl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r05,r07,r12,r16 -> lbt",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r05",
+    "input 3": "r07",
+    "input 4": "r12",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "lbt,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r12,r13,r15 -> lbw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "lbw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r09,r11,r15,r17 -> lea",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r09",
+    "input 3": "r11",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "lea,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r06,r07,r10,r12 -> lgl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r06",
+    "input 3": "r07",
+    "input 4": "r10",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "lgl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r08,r14,r16,r17 -> lrg",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r08",
+    "input 3": "r14",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "lrg,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r05,r12,r17,r18 -> lsd",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r05",
+    "input 3": "r12",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "lsd,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r12,r14,r15,r17,r18 -> lst",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r12",
+    "input 2": "r14",
+    "input 3": "r15",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "lst,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r10,r13,r14,r18 -> ltp",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r10",
+    "input 3": "r13",
+    "input 4": "r14",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "ltp,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r06,r08,r12 -> lwb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r06",
+    "input 4": "r08",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "lwb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r09,r10,r11,r18 -> lxb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r09",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "lxb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r06,r08,r13 -> mac",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r06",
+    "input 4": "r08",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "mac,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r07,r10,r13,r14 -> mau",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r07",
+    "input 3": "r10",
+    "input 4": "r13",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "mau,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r06,r07,r08 -> mbl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r06",
+    "input 4": "r07",
+    "input 5": "r08",
+    "input 6": "vps",
+    "output": "mbl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r08,r10,r12,r16 -> mbt",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r08",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "mbt,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r06,r08,r09,r14 -> mgl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r06",
+    "input 3": "r08",
+    "input 4": "r09",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "mgl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r07,r12,r17,r18 -> mpi",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r07",
+    "input 3": "r12",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "mpi,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r05,r06,r12,r16 -> msk",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r05",
+    "input 3": "r06",
+    "input 4": "r12",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "msk,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r07,r09,r12,r13 -> mst",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r07",
+    "input 3": "r09",
+    "input 4": "r12",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "mst,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r08,r11,r13,r15 -> mxb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r08",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "mxb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r06,r08,r10,r15 -> ne1",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r06",
+    "input 3": "r08",
+    "input 4": "r10",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "ne1,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r08,r09,r14,r15 -> ne2",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r08",
+    "input 3": "r09",
+    "input 4": "r14",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "ne2,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r06,r07,r12,r14 -> ne3",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r06",
+    "input 3": "r07",
+    "input 4": "r12",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "ne3,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r06,r09,r12,r15 -> ne4",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r06",
+    "input 3": "r09",
+    "input 4": "r12",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "ne4,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r05,r10,r18 -> ne5",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r05",
+    "input 4": "r10",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "ne5,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r07,r10,r13,r16 -> ne6",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r07",
+    "input 3": "r10",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "ne6,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r11,r16,r18 -> ne7",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r11",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "ne7,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r08,r09,r13 -> ne8",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r08",
+    "input 4": "r09",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "ne8,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r06,r08,r13,r14 -> ne9",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r06",
+    "input 3": "r08",
+    "input 4": "r13",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "ne9,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r09,r11,r12,r13 -> nea",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r09",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "nea,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r07,r10,r13,r15 -> neb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r07",
+    "input 3": "r10",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "neb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r07,r14,r15,r16 -> nec",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r07",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "nec,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r08,r09,r12,r15 -> ned",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r08",
+    "input 3": "r09",
+    "input 4": "r12",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "ned,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r05,r08,r12,r13 -> nee",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r05",
+    "input 3": "r08",
+    "input 4": "r12",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "nee,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r03,r14,r16 -> nef",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r03",
+    "input 4": "r14",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "nef,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r10,r13,r16,r17 -> ob1",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r10",
+    "input 3": "r13",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "ob1,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r11,r13,r16 -> ob2",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "ob2,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r08,r09,r12,r15,r16 -> ob3",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r08",
+    "input 2": "r09",
+    "input 3": "r12",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "ob3,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r08,r14,r16 -> ob4",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r08",
+    "input 4": "r14",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "ob4,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r08,r14,r15,r16 -> ob5",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r08",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "ob5,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r08,r11,r17 -> ob6",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r08",
+    "input 4": "r11",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "ob6,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r07,r10,r12,r16 -> ob7",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r07",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "ob7,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r08,r09,r13,r16,r17 -> ob8",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r08",
+    "input 2": "r09",
+    "input 3": "r13",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "ob8,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r11,r12,r14,r16 -> ob9",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r11",
+    "input 3": "r12",
+    "input 4": "r14",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "ob9,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r04,r06,r14 -> oba",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r04",
+    "input 4": "r06",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "oba,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r10,r14,r15,r17 -> obb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r10",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "obb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r06,r08,r14 -> obc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r06",
+    "input 4": "r08",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "obc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r05,r06,r11 -> obd",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r05",
+    "input 4": "r06",
+    "input 5": "r11",
+    "input 6": "vps",
+    "output": "obd,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r04,r11,r17 -> obe",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r04",
+    "input 4": "r11",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "obe,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r11,r16,r17 -> obf",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r11",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "obf,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r08,r11,r12,r13 -> pa1",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r08",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "pa1,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r08,r13,r14,r15,r16 -> pa2",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r08",
+    "input 2": "r13",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "pa2,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r10,r12,r13,r15 -> pa3",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r10",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "pa3,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r10,r11,r12 -> pa4",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "pa4,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r10,r14,r15 -> pa5",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r10",
+    "input 4": "r14",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "pa5,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r08,r10,r13,r14 -> pa6",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r08",
+    "input 3": "r10",
+    "input 4": "r13",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "pa6,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r05,r07,r10 -> pa7",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r05",
+    "input 4": "r07",
+    "input 5": "r10",
+    "input 6": "vps",
+    "output": "pa7,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r10,r11,r15,r16 -> pa8",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r10",
+    "input 3": "r11",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "pa8,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r04,r08,r16 -> pa9",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r04",
+    "input 4": "r08",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "pa9,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r08,r09,r17 -> paa",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r08",
+    "input 4": "r09",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "paa,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r08,r12,r14,r15,r17 -> pab",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r08",
+    "input 2": "r12",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "pab,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r09,r11,r13,r15 -> pac",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r09",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "pac,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r12,r14,r16 -> pad",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r12",
+    "input 4": "r14",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "pad,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r07,r11,r12 -> pae",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r07",
+    "input 4": "r11",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "pae,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r06,r10,r17,r18 -> paf",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r06",
+    "input 3": "r10",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "paf,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r11,r13,r17,r18 -> pax",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r11",
+    "input 3": "r13",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "pax,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r09,r10,r12,r18 -> pik",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r09",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "pik,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r09,r14,r17,r18 -> pil",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r09",
+    "input 3": "r14",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "pil,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r07,r08,r11 -> plt",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r07",
+    "input 4": "r08",
+    "input 5": "r11",
+    "input 6": "vps",
+    "output": "plt,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r15,r16,r17,r18 -> qui",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r15",
+    "input 3": "r16",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "qui,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r06,r09,r12,r14 -> rin",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r06",
+    "input 3": "r09",
+    "input 4": "r12",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "rin,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r05,r06,r17,r18 -> rng",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r05",
+    "input 3": "r06",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "rng,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r10,r13,r15,r16 -> rxb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r10",
+    "input 3": "r13",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "rxb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r07,r09,r11 -> sbb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r07",
+    "input 4": "r09",
+    "input 5": "r11",
+    "input 6": "vps",
+    "output": "sbb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r05,r07,r15,r18 -> sbr",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r05",
+    "input 3": "r07",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "sbr,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r08,r10,r15,r17 -> sbw",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r08",
+    "input 3": "r10",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "sbw,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r03,r06,r15 -> scl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r03",
+    "input 4": "r06",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "scl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r13,r15,r17 -> scm",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r13",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "scm,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r10,r15,r18 -> scp",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r10",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "scp,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r10,r11,r14,r18 -> scy",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r10",
+    "input 3": "r11",
+    "input 4": "r14",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "scy,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r05,r06,r12,r15 -> skp",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r05",
+    "input 3": "r06",
+    "input 4": "r12",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "skp,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r04,r07,r13 -> skr",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r04",
+    "input 4": "r07",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "skr,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r09,r11,r15,r16 -> sml",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r09",
+    "input 3": "r11",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "sml,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r10,r11,r13,r17 -> spc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r10",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "spc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r07,r12,r15 -> spk",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r07",
+    "input 4": "r12",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "spk,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r08,r13,r14,r17 -> spl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r08",
+    "input 3": "r13",
+    "input 4": "r14",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "spl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r09,r12,r15 -> spr",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r09",
+    "input 4": "r12",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "spr,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r05,r08,r10,r16 -> spt",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r05",
+    "input 3": "r08",
+    "input 4": "r10",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "spt,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r08,r10,r14,r17 -> ssd",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r08",
+    "input 3": "r10",
+    "input 4": "r14",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "ssd,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r07,r08,r13,r18 -> ssp",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r07",
+    "input 3": "r08",
+    "input 4": "r13",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "ssp,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r08,r12,r15 -> sst",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r08",
+    "input 4": "r12",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "sst,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r07,r09,r13,r18 -> stu",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r07",
+    "input 3": "r09",
+    "input 4": "r13",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "stu,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r06,r11,r12,r13 -> swb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r06",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "swb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r08,r09,r14,r15 -> tax",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r08",
+    "input 3": "r09",
+    "input 4": "r14",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "tax,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r08,r10,r11 -> tbl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r08",
+    "input 4": "r10",
+    "input 5": "r11",
+    "input 6": "vps",
+    "output": "tbl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r08,r12,r16 -> tbt",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r08",
+    "input 4": "r12",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "tbt,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r11,r13,r17 -> tgl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "tgl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r06,r10,r12,r15 -> tkf",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r06",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "tkf,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r04,r07,r18 -> tow",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r04",
+    "input 4": "r07",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "tow,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r07,r12,r13,r17 -> tri",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r07",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "tri,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r07,r08,r09,r11 -> tsp",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r07",
+    "input 3": "r08",
+    "input 4": "r09",
+    "input 5": "r11",
+    "input 6": "vps",
+    "output": "tsp,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r06,r10,r12,r14 -> uap",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r06",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "uap,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r07,r10,r11,r12 -> uar",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r07",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "uar,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r05,r06,r11,r13 -> ucl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r05",
+    "input 3": "r06",
+    "input 4": "r11",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "ucl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r11,r14,r16,r17 -> uea",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r11",
+    "input 3": "r14",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "uea,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r06,r07,r16,r18 -> uh9",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r06",
+    "input 3": "r07",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "uh9,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r06,r10,r13 -> uhb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r06",
+    "input 4": "r10",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "uhb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r07,r17,r18 -> uhc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r07",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "uhc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r08,r09,r15,r16,r17 -> uhg",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r08",
+    "input 2": "r09",
+    "input 3": "r15",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "uhg,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r07,r08,r15,r16 -> uhl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r07",
+    "input 3": "r08",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "uhl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r10,r12,r14,r16 -> uhm",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r10",
+    "input 3": "r12",
+    "input 4": "r14",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "uhm,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r12,r14,r16,r18 -> uhn",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r12",
+    "input 3": "r14",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "uhn,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r07,r13,r14,r18 -> uit",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r07",
+    "input 3": "r13",
+    "input 4": "r14",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "uit,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r10,r12,r17 -> ukp",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "ukp,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r09,r14,r15 -> ula",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r09",
+    "input 4": "r14",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "ula,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r09,r10,r18 -> ulb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "ulb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r06,r10,r13,r16 -> ulc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r06",
+    "input 3": "r10",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "ulc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r06,r10,r13,r18 -> uld",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r06",
+    "input 3": "r10",
+    "input 4": "r13",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "uld,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r06,r13,r14 -> ulg",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r06",
+    "input 4": "r13",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "ulg,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r07,r14,r15,r17 -> ulm",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r07",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "ulm,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r05,r12,r13,r14 -> ult",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r05",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "ult,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r08,r14,r15,r18 -> umb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r08",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "umb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r09,r11,r16,r17 -> umc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r09",
+    "input 3": "r11",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "umc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r06,r14,r15 -> umg",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r06",
+    "input 4": "r14",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "umg,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r10,r11,r16 -> uml",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "uml,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r09,r10,r11,r13 -> ung",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r09",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "ung,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r05,r10,r15,r18 -> uow",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r05",
+    "input 3": "r10",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "uow,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r08,r09,r12,r14 -> upk",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r08",
+    "input 3": "r09",
+    "input 4": "r12",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "upk,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r05,r09,r13 -> upl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r05",
+    "input 4": "r09",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "upl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r07,r10,r13 -> urg",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r07",
+    "input 4": "r10",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "urg,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r06,r15,r18 -> urn",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r06",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "urn,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r06,r08,r09,r15 -> urs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r06",
+    "input 3": "r08",
+    "input 4": "r09",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "urs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r07,r08,r15 -> ush",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r07",
+    "input 4": "r08",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "ush,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r11,r12,r15 -> usk",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "usk,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r10,r13,r15 -> utb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r10",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "utb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r07,r15,r16,r18 -> utc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r07",
+    "input 3": "r15",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "utc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r08,r10,r11,r13,r16 -> utg",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r08",
+    "input 2": "r10",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "utg,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r05,r09,r17 -> uth",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r05",
+    "input 4": "r09",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "uth,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r04,r07,r16 -> utp",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r04",
+    "input 4": "r07",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "utp,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r06,r09,r10,r17 -> uts",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r06",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "uts,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r07,r08,r13,r14 -> utu",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r07",
+    "input 3": "r08",
+    "input 4": "r13",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "utu,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r09,r13,r18 -> uuc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r09",
+    "input 4": "r13",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "uuc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r06,r10,r11,r13 -> uui",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r06",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "uui,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r06,r09,r10,r15 -> uul",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r06",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "uul,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r10,r12,r15,r16 -> uvb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r10",
+    "input 3": "r12",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "uvb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r10,r11,r18 -> uvc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "uvc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r02,r06,r14,r17 -> uvg",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r02",
+    "input 3": "r06",
+    "input 4": "r14",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "uvg,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r08,r09,r12,r13,r15 -> vbl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r08",
+    "input 2": "r09",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "vbl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r05,r12,r13,r18 -> vbt",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r05",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "vbt,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r10,r11,r15 -> vgl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "vgl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r14,r15,r18 -> vou",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "vou,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r05,r07,r18 -> wa6",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r05",
+    "input 4": "r07",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "wa6,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r11,r15,r17 -> wac",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r11",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "wac,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r08,r16,r18 -> wae",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r08",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "wae,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r13,r15,r16 -> waf",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r13",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "waf,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r09,r10,r12,r14 -> wax",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r09",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "wax,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r10,r14,r15,r16 -> whm",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r10",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "whm,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r05,r06,r10,r18 -> wnd",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r05",
+    "input 3": "r06",
+    "input 4": "r10",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "wnd,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r08,r09,r12 -> wrb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r08",
+    "input 4": "r09",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "wrb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r07,r16,r17,r18 -> wsc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r07",
+    "input 3": "r16",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "wsc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r08,r11,r12,r13 -> wsd",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r08",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "wsd,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r09,r11,r13,r16 -> wsp",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r09",
+    "input 3": "r11",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "wsp,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r09,r14,r18 -> wst",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r09",
+    "input 4": "r14",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "wst,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r07,r12,r16,r18 -> xap",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r07",
+    "input 3": "r12",
+    "input 4": "r16",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "xap,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r09,r15,r17,r18 -> xar",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r09",
+    "input 3": "r15",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "xar,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r07,r08,r10,r18 -> xcl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r07",
+    "input 3": "r08",
+    "input 4": "r10",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "xcl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r08,r14,r16,r17 -> xea",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r08",
+    "input 3": "r14",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "xea,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r08,r09,r15,r17 -> xh9",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r08",
+    "input 3": "r09",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "xh9,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r12,r13,r17 -> xhb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "xhb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r08,r09,r13 -> xhg",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r08",
+    "input 4": "r09",
+    "input 5": "r13",
+    "input 6": "vps",
+    "output": "xhg,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r09,r16,r17 -> xhl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r09",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "xhl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r08,r13,r15 -> xhm",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r08",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "xhm,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r07,r10,r12,r17 -> xhn",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r07",
+    "input 3": "r10",
+    "input 4": "r12",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "xhn,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r04,r08,r09,r16 -> xit",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r04",
+    "input 3": "r08",
+    "input 4": "r09",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "xit,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r07,r09,r11,r17 -> xkp",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r07",
+    "input 3": "r09",
+    "input 4": "r11",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "xkp,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r07,r09,r13,r15 -> xla",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r07",
+    "input 3": "r09",
+    "input 4": "r13",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "xla,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r04,r06,r09,r15 -> xlb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r04",
+    "input 3": "r06",
+    "input 4": "r09",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "xlb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r06,r07,r14,r16 -> xld",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r06",
+    "input 3": "r07",
+    "input 4": "r14",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "xld,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r06,r09,r11,r16 -> xlg",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r06",
+    "input 3": "r09",
+    "input 4": "r11",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "xlg,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r08,r09,r11,r12,r16 -> xlm",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r08",
+    "input 2": "r09",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "xlm,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r09,r14,r18 -> xlt",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r09",
+    "input 4": "r14",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "xlt,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r06,r12,r13,r16 -> xmb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r06",
+    "input 3": "r12",
+    "input 4": "r13",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "xmb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r06,r11,r12,r15 -> xmg",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r06",
+    "input 3": "r11",
+    "input 4": "r12",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "xmg,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r08,r11,r15,r17 -> xml",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r08",
+    "input 3": "r11",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "xml,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r09,r13,r14,r16,r17 -> xng",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r09",
+    "input 2": "r13",
+    "input 3": "r14",
+    "input 4": "r16",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "xng,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r09,r10,r15,r17 -> xow",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r09",
+    "input 3": "r10",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "xow,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r08,r13,r14,r18 -> xpk",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r08",
+    "input 3": "r13",
+    "input 4": "r14",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "xpk,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r05,r10,r15,r16 -> xpl",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r05",
+    "input 3": "r10",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "xpl,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r05,r08,r17 -> xrg",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r05",
+    "input 4": "r08",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "xrg,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r10,r11,r18 -> xrn",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "xrn,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r09,r10,r12 -> xrs",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "xrs,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r08,r10,r11,r17 -> xsh",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r08",
+    "input 3": "r10",
+    "input 4": "r11",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "xsh,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r05,r07,r17,r18 -> xsk",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r05",
+    "input 3": "r07",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "xsk,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r08,r11,r12 -> xtb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r08",
+    "input 4": "r11",
+    "input 5": "r12",
+    "input 6": "vps",
+    "output": "xtb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r05,r08,r13,r14,r16 -> xtg",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r05",
+    "input 2": "r08",
+    "input 3": "r13",
+    "input 4": "r14",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "xtg,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r07,r14,r15,r16 -> xth",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r07",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r16",
+    "input 6": "vps",
+    "output": "xth,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r05,r09,r18 -> xtp",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r05",
+    "input 4": "r09",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "xtp,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r10,r11,r14,r17 -> xts",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r10",
+    "input 3": "r11",
+    "input 4": "r14",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "xts,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r06,r08,r12,r18 -> xtu",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r06",
+    "input 3": "r08",
+    "input 4": "r12",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "xtu,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r05,r07,r08 -> xuc",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r05",
+    "input 4": "r07",
+    "input 5": "r08",
+    "input 6": "vps",
+    "output": "xuc,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r03,r05,r13,r14,r17 -> xui",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r03",
+    "input 2": "r05",
+    "input 3": "r13",
+    "input 4": "r14",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "xui,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r06,r12,r13,r14,r15 -> xul",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r06",
+    "input 2": "r12",
+    "input 3": "r13",
+    "input 4": "r14",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "xul,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r06,r09,r15 -> xvb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r06",
+    "input 4": "r09",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "xvb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r07,r11,r14,r17,r18 -> xvg",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r07",
+    "input 2": "r11",
+    "input 3": "r14",
+    "input 4": "r17",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "xvg,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r03,r05,r10,r14 -> ywn",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r03",
+    "input 3": "r05",
+    "input 4": "r10",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "ywn,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r04,r05,r06,r08 -> zhb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r04",
+    "input 3": "r05",
+    "input 4": "r06",
+    "input 5": "r08",
+    "input 6": "vps",
+    "output": "zhb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r03,r04,r07,r15 -> zlb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r03",
+    "input 3": "r04",
+    "input 4": "r07",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "zlb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r05,r09,r15,r17 -> zmb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r05",
+    "input 3": "r09",
+    "input 4": "r15",
+    "input 5": "r17",
+    "input 6": "vps",
+    "output": "zmb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r01,r06,r07,r08,r15 -> ztb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r01",
+    "input 2": "r06",
+    "input 3": "r07",
+    "input 4": "r08",
+    "input 5": "r15",
+    "input 6": "vps",
+    "output": "ztb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r02,r07,r14,r15,r18 -> zvb",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r02",
+    "input 2": "r07",
+    "input 3": "r14",
+    "input 4": "r15",
+    "input 5": "r18",
+    "input 6": "vps",
+    "output": "zvb,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
 
     D2RMM.writeTsv(cubemainFilename, cubemain);
