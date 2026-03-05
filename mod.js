@@ -1545,14 +1545,14 @@ if (config.magicMarket) {
 
  if (config.torchMarket) {
       cubemain.rows.push({
-        description: "Annihilus -> Lo Ohm",
+        description: "Annihilus -> Vex Gul",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Annihilus",
-        "output": "r28",
-	"output b": "r27",
+        "output": "r26",
+	"output b": "r25",
         "*eol": 0,
       });
     }
@@ -9389,12 +9389,12 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r29 -> The Stone of Jordan",
+        description: "r27 -> The Stone of Jordan",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r29",
+        "input 2": "r27",
         "input 3": "rin",
         "input 4": "isc",
         "output": "The Stone of Jordan",
@@ -9406,13 +9406,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "The Stone of Jordan -> r28",
+        description: "The Stone of Jordan -> r26",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "The Stone of Jordan",
-        "output": "r28",
+        "output": "r26",
         "*eol": 0,
       });
     }
@@ -17369,14 +17369,14 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "r29 -> Sling",
+        description: "r28 -> Sling",
         enabled: 1,
         version: 100,
         numinputs: 4,
         "input 1": "vps",
-        "input 2": "r29",
+        "input 2": "r28",
         "input 3": "rin",
-        "input 4": "r26",
+        "input 4": "isc",
         "output": "Sling",
         lvl: 100,
         ilvl: 100,
@@ -17386,13 +17386,13 @@ if (config.junkMarket) {
 
     if (config.uniqueMarket) {
       cubemain.rows.push({
-        description: "Sling -> r28",
+        description: "Sling -> r27",
         enabled: 1,
         version: 100,
         numinputs: 2,
         "input 1": "yps",
         "input 2": "Sling",
-        "output": "r28",
+        "output": "r27",
         "*eol": 0,
       });
     }
