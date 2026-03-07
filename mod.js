@@ -1142,7 +1142,7 @@ cubemain.rows.push({
     version: 100,
     numinputs: 2,
     "input 1": "ua1",
-    "input 2": "wms",
+    "input 2": "yps",
     "output": "r20",
     "*eol": 0,
   });
@@ -1156,7 +1156,7 @@ cubemain.rows.push({
     version: 100,
     numinputs: 2,
     "input 1": "ua2",
-    "input 2": "wms",
+    "input 2": "yps",
     "output": "r20",
     "*eol": 0,
   });
@@ -1170,7 +1170,7 @@ cubemain.rows.push({
     version: 100,
     numinputs: 2,
     "input 1": "ua3",
-    "input 2": "wms",
+    "input 2": "yps",
     "output": "r20",
     "*eol": 0,
   });
@@ -1184,7 +1184,7 @@ cubemain.rows.push({
     version: 100,
     numinputs: 2,
     "input 1": "ua4",
-    "input 2": "wms",
+    "input 2": "yps",
     "output": "r22",
     "*eol": 0,
   });
@@ -1198,7 +1198,7 @@ cubemain.rows.push({
     version: 100,
     numinputs: 2,
     "input 1": "ua5",
-    "input 2": "wms",
+    "input 2": "yps",
     "output": "r22",
     "*eol": 0,
   });
@@ -1326,7 +1326,7 @@ cubemain.rows.push({
     "input 1": "pk1",
     "input 2": "pk2",
     "input 3": "pk3",
-    "input 4": "wms",
+    "input 4": "yps",
     "output": "r24",
     "*eol": 0,
   });
@@ -7415,7 +7415,7 @@ if (config.junkMarket) {
         numinputs: 4,
         "input 1": "vps",
         "input 2": "r19",
-        "input 3": "cst",
+        "input 3": "gst",
         "input 4": "isc",
         "output": "Lazarus Spire",
         lvl: 100,
@@ -14105,7 +14105,7 @@ if (config.junkMarket) {
         numinputs: 4,
         "input 1": "vps",
         "input 2": "r22",
-        "input 3": "9tw",
+        "input 3": "9lw",
         "input 4": "isc",
         "output": "Cutthroat1",
         lvl: 100,
@@ -28588,6 +28588,27 @@ cubemain.rows.push({
   });
 }
 
+if (config.rawMarket) {
+cubemain.rows.push({
+    description:
+      "r04,r07,r09,r10,r14 -> wad",
+    enabled: 1,
+    version: 100,
+    numinputs: 6,
+    "input 1": "r04",
+    "input 2": "r07",
+    "input 3": "r09",
+    "input 4": "r10",
+    "input 5": "r14",
+    "input 6": "vps",
+    "output": "wad,nor,eth,sock=1",
+    lvl: 100,
+    ilvl: 100,
+    "*eol": 0,
+  });
+}
+
+
 
 if (config.rawMarket) {
 cubemain.rows.push({
@@ -29784,6 +29805,7 @@ cubemain.rows.push({
     "*eol": 0,
   });
 }
+
 
 
     D2RMM.writeTsv(cubemainFilename, cubemain);
